@@ -111,6 +111,90 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
       </tags>
   </entry>
   <entry>
+    <title>PS chapter 2</title>
+    <url>/2021/11/27/PS-chapter-2/</url>
+    <content><![CDATA[<script type="math/tex; mode=display">
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="2-Conditional-Probability"><a href="#2-Conditional-Probability" class="headerlink" title="2. Conditional Probability"></a>2. Conditional Probability</h3><h4 id="2-1-The-Definition-of-Condition-Probability"><a href="#2-1-The-Definition-of-Condition-Probability" class="headerlink" title="2.1 The Definition of Condition Probability"></a>2.1 The Definition of Condition Probability</h4><p> A major use of probability in statistical inference is the updating of probability when certain events are observed. The updated probability of event $A$ after we learn that event $B$ has occurred is the conditional probability of $A$ given $B$.</p>
+<h6 id="Definition-2-1"><a href="#Definition-2-1" class="headerlink" title="Definition 2.1."></a>Definition 2.1.</h6><p>The <strong>condition probability</strong> of $A$ given $B$ is defined as </p>
+<script type="math/tex; mode=display">
+\P{A|B} = \frac{\P{A\cap B}}{\P{B}}</script><p> provided <script type="math/tex">\P{B} >0</script>.</p>
+<p>​    And the conditional probability <script type="math/tex">\P{A|B}</script> is not defined if <script type="math/tex">\P{B}=0</script>.</p>
+<h6 id="Theorem-2-1-Multiplication-Rule"><a href="#Theorem-2-1-Multiplication-Rule" class="headerlink" title="Theorem 2.1 (Multiplication Rule)."></a>Theorem 2.1 (Multiplication Rule).</h6><p>Let $A$, $B$ be events. If <script type="math/tex">\P{B}>0</script>, then </p>
+<script type="math/tex; mode=display">
+\P{A\cap B} =\P{A|B}\P{B}</script><h6 id="Theorem-2-2"><a href="#Theorem-2-2" class="headerlink" title="Theorem 2.2."></a>Theorem 2.2.</h6><p>Suppose that $A_1,A_2,\cdots,A_n$ are events such that <script type="math/tex">\P{A_1\cap A_2\cap\cdots\cap A_{n-1}} >0</script>. Then </p>
+<script type="math/tex; mode=display">
+\P{A_1\cap A_2 \cap\cdots\cap A_n} = \P{A_1}\P{A_2|A_1}\cdots\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}}</script><h6 id="Theorem-2-3"><a href="#Theorem-2-3" class="headerlink" title="Theorem 2.3."></a>Theorem 2.3.</h6><p>Suppose that $A_1,A_2,\cdots A_n$, $B$ are events such that <script type="math/tex">\P{B}>0</script> and <script type="math/tex">\P{A_1\cap A_2\cap\cdots \cap A_{n-1}|B}>0</script>. Then </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\P{A_1\cap A_2 \cap\cdots\cap A_n|B} =& \P{A_1|B}\P{A_2|A_1\cap B} \cdots\\
+&\times\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}\cap B}
+\end{align*}</script><h6 id="Definition-2-2"><a href="#Definition-2-2" class="headerlink" title="Definition 2.2."></a>Definition 2.2.</h6><p>Let $\Omega$ be a sample space and let $B_1, \cdots B_k$ be $k$ events in $\Omega$. If $B_1,\cdots,B_k$ are disjoint and $\cup_{j=1}^k B_j = \Omega$, then these events form a <strong>partition</strong> of $\Omega$. </p>
+<h6 id="Theorem-2-4-Low-of-total-probability"><a href="#Theorem-2-4-Low-of-total-probability" class="headerlink" title="Theorem 2.4 (Low of total probability)."></a>Theorem 2.4 (Low of total probability).</h6><p>Suppose that $B_1,\cdots,B_k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_j}>0</script> for all $j$. Then for every event $A \subset \Omega$, </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><p>$Proof.$ We can rewrite $A$ as </p>
+<script type="math/tex; mode=display">
+A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j\cap A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><h6 id="Theorem-2-5"><a href="#Theorem-2-5" class="headerlink" title="Theorem 2.5."></a>Theorem 2.5.</h6><p>The law of total probability has an analog conditional on another event $C$ </p>
+<script type="math/tex; mode=display">
+\P{A|C} = \sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C}</script><p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{B_j|C}\P{A|B_j\cap C} = \frac{\P{B_j \cap C}\P{A\cap B_j \cap C}}{\P{C} \P{B_j\cap C}} = \P{A\cap B_j|C}</script><p>Thus </p>
+<script type="math/tex; mode=display">
+\sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C} = \sum_{j=1}^k \frac{\P{A\cap C\cap B_j}}{\P{C}} = \frac{\P{A\cap C}}{\P{C}} = \P{A|C}</script><h4 id="2-2-Independent-Events"><a href="#2-2-Independent-Events" class="headerlink" title="2.2 Independent Events."></a>2.2 Independent Events.</h4><p>If learning that $B$ has occurred does not change the probability of $A$, then we say that $A$ and $B$ are independent.</p>
+<h6 id="Definition-2-3"><a href="#Definition-2-3" class="headerlink" title="Definition 2.3."></a>Definition 2.3.</h6><p>Two events $A$ and $B$ are <strong>independent</strong> if </p>
+<script type="math/tex; mode=display">
+\P{A\cap B} = \P{A}\P{B}</script><h6 id="Theorem-2-6"><a href="#Theorem-2-6" class="headerlink" title="Theorem 2.6."></a>Theorem 2.6.</h6><p>Suppose <script type="math/tex">\P{B}>0</script> or <script type="math/tex">\P{A}>0</script>. Then $A$ and $B$ are independent if and only if <script type="math/tex">\P{A|B} = \P{A}</script> or <script type="math/tex">\P{B|A} = \P{B}</script>, respectively.</p>
+<h6 id="Theorem-2-7"><a href="#Theorem-2-7" class="headerlink" title="Theorem 2.7."></a>Theorem 2.7.</h6><p>If $A$ and $B$ are independent, then $A$ and $B^c$ are also independent.</p>
+<p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{A\cap B^c} = \P{A} - \P{A\cap B} = \P{A}(1-\P{B}) = \P{A}\P{B^c}</script><h6 id="Definition-2-4-Mutually-independent"><a href="#Definition-2-4-Mutually-independent" class="headerlink" title="Definition 2.4 (Mutually independent)."></a>Definition 2.4 (Mutually independent).</h6><p>The $k$ events $A_1,\cdots,A_k$ are <strong>mutually independent</strong> if for any subset <script type="math/tex">\mathcal{M} \subset \{1,\cdots,k\}</script>, </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{j \in \mathcal{M}}A_j} = \prod_{j \in \mathcal{M}} \P{A_j}</script><p>​    Note: The arbitrariness of $\mathcal{M}$ is very important for mutually independent. We can give a conquer  example to show that although $A_j$ are <strong>pairwise independent</strong>, $A_j$ are not mutually independent.</p>
+<h6 id="Theorem-2-8"><a href="#Theorem-2-8" class="headerlink" title="Theorem 2.8."></a>Theorem 2.8.</h6><p>Let $A_i (i=1,\cdots,k)$ be events that <script type="math/tex">\P{\cap_{i=1}^k A_i}>0</script>. Then $A_i$ are independent if and only if for every two joint subsets $\mathcal{I},\mathcal{J}\subset\{1,\cdots,k\}$, $\mathcal{I}\cap\mathcal{J}=\varnothing$, we have </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{i\in\mathcal{I}}A_i|\bigcap_{j\in\mathcal{J}}A_j} = \P{\bigcap_{i\in\mathcal{I}} A_i}.</script><p>​    This theorem says that $k$ events are independent if and only if learning that some of the events occur does not change the probability that any combination of the other event occur.</p>
+<h6 id="Definition-2-5"><a href="#Definition-2-5" class="headerlink" title="Definition 2.5."></a>Definition 2.5.</h6><p>We say that event $A_i (i=1,\cdots,k)$ are <strong>conditionally independent</strong> given $B$ if for every subcollection $\mathcal{I} \subset\{1,\cdots,k\}$, </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{i\in\mathcal{I}} A_i|B} = \prod_{i\in\mathcal{I}} \P{A_i|B}</script><p>​    Note: The definition is identical to that of independent events with modification that all probabilities are now conditional on B. It is important that even if we assume $A_i$ are conditionally independent given $B$, it is <strong>not</strong> necessary that $A_i$ are conditionally independent given $B^c$ </p>
+<h6 id="Theorem-2-10"><a href="#Theorem-2-10" class="headerlink" title="Theorem 2.10."></a>Theorem 2.10.</h6><p>Suppose that $A_1, A_2$ and $B$ are events such that <script type="math/tex">\P{A_1\cap B}>0</script>. Then $A_1$ and $A_2$ are conditionally independent given $B$ if and only if <script type="math/tex">\P{A_2|A_1\cap B} = \P{A_2|B}</script></p>
+<p>$Proof.$ If $A_1$ and $A_2$ are independent </p>
+<script type="math/tex; mode=display">
+\P{A_1\cap A_2|B} = \P{A_1|B} \P{A_2|B}</script><p>consider that  <script type="math/tex">\P{A_1\cap A_2 |B} = \P{A_1\cap B}\P{A_2|A_1\cap B}</script>. Comparing could proves the theorem.</p>
+<h4 id="2-3-Bayes’-Theorem"><a href="#2-3-Bayes’-Theorem" class="headerlink" title="2.3. Bayes’ Theorem"></a>2.3. Bayes’ Theorem</h4><h6 id="Theorem-2-11-Bayes’-Theorem"><a href="#Theorem-2-11-Bayes’-Theorem" class="headerlink" title="Theorem 2.11 (Bayes’ Theorem)."></a>Theorem 2.11 (Bayes’ Theorem).</h6><p>Let $B_i$ for $i=1,\cdots,k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_i}>0</script> for all $i$. Let $A$ be an event such that <script type="math/tex">\P{A}>0</script>, then for all $i$:</p>
+<script type="math/tex; mode=display">
+\P{B_i|A} = \frac{\P{B_i}\P{A|B_i}}{\sum_{j=1}^k\P{B_j}\P{A|B_j}}</script><p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{B_i|A} = \frac{\P{B_i \cap A}}{\P{A}} = \frac{\P{B_i}\P{A|B_i}}{\P{A}}</script><p>and </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j} \P{A|B_j}</script><p>Which proves the theorem.</p>
+<hr>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
+]]></content>
+      <tags>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>What&#39;s this?</title>
     <url>/2021/11/25/What&#39;%20this/</url>
     <content><![CDATA[<h3 id="What’s-this"><a href="#What’s-this" class="headerlink" title="What’s this?"></a>What’s this?</h3><p>一个无聊的憨憨整的博客, 内容大概会是很多的学习经历, 要是有出息的话会放一些自己觉得并不trival的东西上来. 前期内容大概就是一些学习笔记之类的, 由于作者学校CS专业课/大部分数学课都是in English的, 很多东西大概也都是用英语写了.</p>

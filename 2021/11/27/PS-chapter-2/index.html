@@ -23,7 +23,7 @@
   
   
 
-  <title>Yewandou's Blog</title>
+  <title>PS chapter 2 | Yewandou's Blog</title>
   
 
 
@@ -162,9 +162,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -180,10 +181,9 @@
       <meta itemprop="name" content="Yewandou's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/27/PS-chapter-2/" class="post-title-link" itemprop="url">PS chapter 2</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          PS chapter 2
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -207,7 +207,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <script type="math/tex; mode=display">
+        <script type="math/tex; mode=display">
 \newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
 
 % For partial derivatives
@@ -284,267 +284,33 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
 <hr>
 <h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Study/" rel="tag"><i class="fa fa-tags"></i> Study</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS%20chapter%201/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yewandou">
-      <meta itemprop="description" content="快乐摸鱼">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yewandou's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/27/PS%20chapter%201/" class="post-title-link" itemprop="url">PS chapter 1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-11-27 11:00:58 / 修改时间：15:10:42" itemprop="dateCreated datePublished" datetime="2021-11-27T11:00:58+08:00">2021-11-27</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Probability-and-Statistics/" itemprop="url" rel="index"><span itemprop="name">Probability and Statistics</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <script type="math/tex; mode=display">
-\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
-
-% For partial derivatives
-\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
-
-% Integral dx
-\newcommand{\dx}{\mathrm{d}x}
-
-% Alias for the Solution section header
-\newcommand{\solution}{\textbf{\large Solution}}
-
-% Probability commands: Expectation, Variance, Covariance, Bias
-\renewcommand{\P}[1]{\mathbf{P}(#1)}
-% \newcommand{\E}[1]{\mathbf{E}(#1)}
-\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Bias}{\mathrm{Bias}}
-\renewcommand{\t}{\times}
-\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="1-Introduce-to-Probability"><a href="#1-Introduce-to-Probability" class="headerlink" title="1. Introduce to Probability"></a>1. Introduce to Probability</h3><h4 id="1-1-Events-and-Sample-Spaces"><a href="#1-1-Events-and-Sample-Spaces" class="headerlink" title="1.1 Events and Sample Spaces."></a>1.1 Events and Sample Spaces.</h4><h6 id="Definition-1-1"><a href="#Definition-1-1" class="headerlink" title="Definition 1.1."></a>Definition 1.1.</h6><p>An <strong>experiment</strong> or <strong>trial</strong> is any procedure, real or hypothetical, that can be infinity repeated and has a well-defined set of possible outcomes, known as the sample space. An <strong>event</strong> is a well-defined set of possible outcomes of the experiment.</p>
-<h6 id="Definition-1-2"><a href="#Definition-1-2" class="headerlink" title="Definition 1.2."></a>Definition 1.2.</h6><p>The collection of all possible outcomes of an experiment is called the <strong>sample space</strong> of the experiment.</p>
-<p>​    If we think the sample space as a set, the outcomes in the set and events are subsets of the sample space.</p>
-<h6 id="Theorem-1-1"><a href="#Theorem-1-1" class="headerlink" title="Theorem 1.1."></a>Theorem 1.1.</h6><p>Let $A, B, C$ be sets. If $A \subset B$ and $B\subset A$, then $A=B$. If $A\subset B$ and $B\subset C$, then $A \subset C$.</p>
-<h6 id="Definition-1-3"><a href="#Definition-1-3" class="headerlink" title="Definition 1.3."></a>Definition 1.3.</h6><p>The set that contains no elements is called <strong>empty set</strong> denote by $\varnothing$. </p>
-<h6 id="Theorem-1-2"><a href="#Theorem-1-2" class="headerlink" title="Theorem 1.2."></a>Theorem 1.2.</h6><p>If $A$ is a set, then $\varnothing \subset A$.</p>
-<h6 id="Definition-1-4"><a href="#Definition-1-4" class="headerlink" title="Definition 1.4."></a>Definition 1.4.</h6><p>A set that contains only finitely many elements are called a <strong>finite set</strong>. Otherwise, it is called an <strong>infinite set</strong>. An infinite set $A$ is called <strong>countable</strong> if there is a one-to-one map between $A$ and $\mathbb{N}$. A set is called <strong>uncountable</strong> if it is neither finite nor countable.</p>
-<p>​    <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cardinal_number">More</a> about cardinal number. We don’t talk about it in Probability and Statistics.</p>
-<h6 id="Definition-1-5"><a href="#Definition-1-5" class="headerlink" title="Definition 1.5."></a>Definition 1.5.</h6><p>The <strong>complement</strong> of $A$ is the set of all elements that do not belong to $A$, denoted by $A^c$.</p>
-<h6 id="Theorem-1-3"><a href="#Theorem-1-3" class="headerlink" title="Theorem 1.3."></a>Theorem 1.3.</h6><p>Let $A$ be a set, then $(A^c)^c = A$. Let $X$ be the whole set, then $X^c = \varnothing$ and $\varnothing^c = X$. </p>
-<h6 id="Definition-1-6"><a href="#Definition-1-6" class="headerlink" title="Definition 1.6."></a>Definition 1.6.</h6><p>Let $A, B$ be two sets. The <strong>union</strong> of $A$ and $B$, denoted by $A\cup B$ is defined as </p>
-<script type="math/tex; mode=display">
-A\cup B = \{x:x\in A\ \text{or}\ x\in B\}</script><p>The <strong>intersection</strong> of $A$ and $B$, denoted by $A \cap B$ is defined as </p>
-<script type="math/tex; mode=display">
-A\cap B = \{x:x\in A\ \text{and}\ x\in B\}</script><h6 id="Conditions-of-Sample-Spaces-Not-every-set-of-possible-outcomes-will-be-called-an-event"><a href="#Conditions-of-Sample-Spaces-Not-every-set-of-possible-outcomes-will-be-called-an-event" class="headerlink" title="Conditions of Sample Spaces (Not every set of possible outcomes will be called an event)"></a>Conditions of Sample Spaces (Not every set of possible outcomes will be called an event)</h6><ul>
-<li>The sample space $\Omega$ must be an event.</li>
-<li>If $A \subset \Omega$, then $A^c$ is also an event.</li>
-<li>If $A_1,A_2\cdots$ is a countable collection of events, then $\cup_{j=1}^\infty A_j$ is also an event. (In fact, the form of $A_j$ means it must be a countable collection)</li>
-</ul>
-<h6 id="Definition-1-7"><a href="#Definition-1-7" class="headerlink" title="Definition 1.7."></a>Definition 1.7.</h6><p>Two sets $A$ and $B$ are <strong>disjoint (mutually exclusive)</strong> if $A$ and $B$ have no elements in common, that is if $A\cap B = \varnothing$</p>
-<h6 id="Theorem-1-4-De-Morgan’s-Laws"><a href="#Theorem-1-4-De-Morgan’s-Laws" class="headerlink" title="Theorem 1.4 (De Morgan’s Laws)."></a>Theorem 1.4 (De Morgan’s Laws).</h6><p>For every two sets $A$ and $B$ we have </p>
-<script type="math/tex; mode=display">
-(A\cup B)^c = A^c\cap B^c\hspace{1cm}and\hspace{1cm}(A\cap B)^c = A^c \cup B^c</script><h6 id="Theorem-1-5-Distributive-Properties"><a href="#Theorem-1-5-Distributive-Properties" class="headerlink" title="Theorem 1.5 (Distributive Properties)."></a>Theorem 1.5 (Distributive Properties).</h6><p>For sets $A, B$ and $C$, we have </p>
-<script type="math/tex; mode=display">
-A\cap(B\cup C) = (A\cap B) \cup (A\cap C)\hspace{1cm}and\hspace{1cm}A\cup(B\cap C) = (A\cup B) \cap (A\cup C)</script><h6 id="Theorem-1-6-Partitioning-a-Set"><a href="#Theorem-1-6-Partitioning-a-Set" class="headerlink" title="Theorem 1.6 (Partitioning a Set)."></a>Theorem 1.6 (Partitioning a Set).</h6><p>For sets $A$ and $B$, we can partition </p>
-<script type="math/tex; mode=display">
-A = (A\cap B)\cup (A\cap B^c)</script><p>In addition </p>
-<script type="math/tex; mode=display">
-A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"><a href="#1-2-The-Definition-of-Probability" class="headerlink" title="1.2 The Definition of Probability"></a>1.2 The Definition of Probability</h4><h6 id="Definition-1-8-Axioms-of-Probability"><a href="#Definition-1-8-Axioms-of-Probability" class="headerlink" title="Definition 1.8 (Axioms of Probability)."></a>Definition 1.8 (Axioms of Probability).</h6><p>Let $\Omega$ be a sample space and $A$ be an event. A <strong>probability measure</strong> on $\Omega$ is a map $\mathbf{P}$ from the set all events to the real interval $[0,1]$ that satisfies the following three axioms.</p>
-<ol>
-<li><p>For every event $A$, <script type="math/tex">\P{A} \geq 0</script>. </p>
-</li>
-<li><p>For the whole sample space $\Omega$, <script type="math/tex">\P{\Omega}=1</script>. </p>
-</li>
-<li><p>For every infinite sequence of disjoint events $A_1,A_2\cdots$,</p>
-<script type="math/tex; mode=display">
-\P{\cup_{j=1}^\infty A_j}=\sum_{j=1}^\infty \P{A_j}</script></li>
-</ol>
-<h6 id="Theorem-1-7"><a href="#Theorem-1-7" class="headerlink" title="Theorem 1.7."></a>Theorem 1.7.</h6><p>For every finite sequence of $n$ disjoint events  $A_1,A_2\cdots A_n$ </p>
-<script type="math/tex; mode=display">
-\P{\bigcup_{j=1}^n A_j} = \sum_{j=1}^n \P{A_j}</script><p>$Proof.$ Let $A_j = \varnothing$ for $j&gt;n$, then </p>
-<script type="math/tex; mode=display">
-\P{\cup_{j=1}^n A_j} = \P{\cup_{j=1}^\infty A_j} = \sum_{j=1}^\infty \P{A_j} = \sum_{j=1}^n \P{A_j}</script><p>Why <script type="math/tex">\P{\varnothing} = 0</script>? Consider a sequence $A_1 = \Omega$ and $A_j = \varnothing$ for $j&gt;1$, which follows </p>
-<script type="math/tex; mode=display">
-1 = 1+\sum_{j=2}^n \P{\varnothing} \Rightarrow \P{\varnothing} = 0</script><h6 id="Theorem-1-8"><a href="#Theorem-1-8" class="headerlink" title="Theorem 1.8."></a>Theorem 1.8.</h6><p>For every event $A$, <script type="math/tex">\P{A^c} = 1-\P{A}</script>. </p>
-<p>$Proof.$ Use Theorem $1.7$ </p>
-<h6 id="Theorem-1-9"><a href="#Theorem-1-9" class="headerlink" title="Theorem 1.9."></a>Theorem 1.9.</h6><p>For every event $A$, we have <script type="math/tex">0\leq \P{A}\leq 1</script>.</p>
-<p>$Proof.$ Follows the definition of probability and sample space.</p>
-<h6 id="Theorem-1-10"><a href="#Theorem-1-10" class="headerlink" title="Theorem 1.10."></a>Theorem 1.10.</h6><p>For events $A$ and $B$, we have </p>
-<script type="math/tex; mode=display">
-\P{A\cap B^c} = \P{A} -\P{A\cap B}</script><p>$Proof.$ Use partition $A = (A\cap B^c) \cup (A\cap B)$ </p>
-<h6 id="Corollary-1"><a href="#Corollary-1" class="headerlink" title="Corollary 1."></a>Corollary 1.</h6><p>If $A \subset B$, then <script type="math/tex">\P{A} \leq \P{B}</script></p>
-<p>$Proof.$ <script type="math/tex">\P{B} = \P{A\cap B^c} + \P{A\cap B} = \P{A}+\P{A\cap B^c} \geq \P{A}</script></p>
-<h6 id="Theorem-1-11"><a href="#Theorem-1-11" class="headerlink" title="Theorem 1.11."></a>Theorem 1.11.</h6><p>For events $A$ and $B$, we have <script type="math/tex">\P{A\cup B} = \P{A}+\P{B} - \P{A\cap B}</script></p>
-<p>$Proof.$ </p>
-<script type="math/tex; mode=display">
-\P{A\cup B} = \P{B} + \P{A\cap B^c}\\
-\P{A} = \P{A\cap B} + \P{A\cap B^c}</script><h6 id="Corollary-1-1"><a href="#Corollary-1-1" class="headerlink" title="Corollary 1."></a>Corollary 1.</h6><p>For a sequence $A_1,A_2\cdots, A_n$, we have </p>
-<script type="math/tex; mode=display">
-\P{\bigcup_{i=1}^n A_i} = \sum_{j=1}^n(-1)^{j-1} \sum_{\substack{I_j\subset\{1,\cdots,n\}\\|I_j|=j}} \P{\bigcap_{i\in I_j} A_i}</script><p>$Proof.$ By induction.</p>
-<h4 id="1-3-Finite-Sample-Spaces"><a href="#1-3-Finite-Sample-Spaces" class="headerlink" title="1.3. Finite Sample Spaces."></a>1.3. Finite Sample Spaces.</h4><h6 id="Definition-1-9"><a href="#Definition-1-9" class="headerlink" title="Definition 1.9."></a>Definition 1.9.</h6><p>A sample space $\Omega$ containing $n$ outcomes $s_1,\cdots, s_n$ is called a <strong>simple sample space</strong> if the probability assigned to each out come is $\frac1n$</p>
-<p>​    If $A$ is an event from a simple sample space and $A$ contains $m$ elements, then <script type="math/tex">\P{A} = \frac{m}{n}</script></p>
-<h4 id="1-4-Counting-Methods"><a href="#1-4-Counting-Methods" class="headerlink" title="1.4. Counting Methods"></a>1.4. Counting Methods</h4><p>​    This part is easy for those who has already known it. I don’t want to waste too much time summarizing this part. Thus I will skip all the theorems or definitions.</p>
-<h4 id="1-5-Combinatorial-Methods"><a href="#1-5-Combinatorial-Methods" class="headerlink" title="1.5. Combinatorial Methods"></a>1.5. Combinatorial Methods</h4><p>​    The same as $1.4.$ But I will summarize some combinatorial identities.</p>
-<h6 id="Definition-1-11"><a href="#Definition-1-11" class="headerlink" title="Definition 1.11."></a>Definition 1.11.</h6><p>Consider a set with $n$ elements. Each subset of size $k$ chosen from this set is called a <strong>combination of $n$ elements</strong> taken $k$ at a time. We denote the number of distinct such combinations by $C_{n,k}$</p>
-<h6 id="Definition-1-12"><a href="#Definition-1-12" class="headerlink" title="Definition 1.12."></a>Definition 1.12.</h6><p>The number $C_{n,k}$ is also denoted by the symbol $n\choose k$. That is, for $k=0,1,\cdots,n$, </p>
-<script type="math/tex; mode=display">
-{n\choose k} = \frac{n!}{k!(n-k)!}</script><h6 id="Combinatorial-identities-1"><a href="#Combinatorial-identities-1" class="headerlink" title="Combinatorial identities 1"></a>Combinatorial identities 1</h6><script type="math/tex; mode=display">
-{n\choose k} = {n\choose n-k}</script><h6 id="Combinatorial-identities-2"><a href="#Combinatorial-identities-2" class="headerlink" title="Combinatorial identities 2"></a>Combinatorial identities 2</h6><script type="math/tex; mode=display">
-\sum_{k=0}^n {n \choose k} = 2^n\hspace{2cm}\sum_{k=0}^n(-1)^k{n\choose k} = 0</script><h6 id="Combinatorial-identities-3"><a href="#Combinatorial-identities-3" class="headerlink" title="Combinatorial identities 3"></a>Combinatorial identities 3</h6><script type="math/tex; mode=display">
-{n\choose k} + {n\choose k+1} = {n+1\choose k+1}</script><h6 id="Combinatorial-identities-4"><a href="#Combinatorial-identities-4" class="headerlink" title="Combinatorial identities 4"></a>Combinatorial identities 4</h6><script type="math/tex; mode=display">
-\sum_{k=0}^m {n+k\choose k} = {n+m+1\choose m}</script><h6 id="Combinatorial-identities-5"><a href="#Combinatorial-identities-5" class="headerlink" title="Combinatorial identities 5"></a>Combinatorial identities 5</h6><script type="math/tex; mode=display">
-{n+m\choose k} = \sum_{i=0}^k {n\choose i}\cdot {m\choose k-i}</script><h6 id="Combinatorial-identities-6"><a href="#Combinatorial-identities-6" class="headerlink" title="Combinatorial identities 6"></a>Combinatorial identities 6</h6><script type="math/tex; mode=display">
-{2n \choose n} = \sum_{i=0}^n {n\choose i}^2</script><h4 id="1-6-Multinomial-Coefficients"><a href="#1-6-Multinomial-Coefficients" class="headerlink" title="1.6. Multinomial Coefficients"></a>1.6. Multinomial Coefficients</h4><h6 id="Definition-1-13"><a href="#Definition-1-13" class="headerlink" title="Definition 1.13."></a>Definition 1.13.</h6><p>A <strong>multinomial coefficient</strong> is </p>
-<script type="math/tex; mode=display">
-{n\choose n_1,n_2,\cdots,n_k} = \frac{n!}{n_1!n_2!\cdots n_k!}</script><p>where $n_1+n_2+\cdots+n_k = n$ </p>
-<hr>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>第一章还不是那么抽象, 讲了一些集合的东西以及event的定义. 比较绕的可能就是event是一个定义出的东西而不是任一possible outcomes的set. 接下来定义probability measure是一个从sample space到[0,1]上的一个映射, 以及给出了simple sample space 的定义以及如何计算其中的概率. 个人认为是在概率论中是很具体也很符合直觉的东西了… </p>
-<p>这一章里好像最难的是计数的部分, 但我觉得这部分确实没什么好写的, 多做点题就会了…</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/27/PS%20chapter%201/" rel="prev" title="PS chapter 1">
+      <i class="fa fa-chevron-left"></i> PS chapter 1
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/25/What'%20this/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yewandou">
-      <meta itemprop="description" content="快乐摸鱼">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yewandou's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/25/What'%20this/" class="post-title-link" itemprop="url">What's this?</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-25 23:44:41" itemprop="dateCreated datePublished" datetime="2021-11-25T23:44:41+08:00">2021-11-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-26 00:34:14" itemprop="dateModified" datetime="2021-11-26T00:34:14+08:00">2021-11-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="What’s-this"><a href="#What’s-this" class="headerlink" title="What’s this?"></a>What’s this?</h3><p>一个无聊的憨憨整的博客, 内容大概会是很多的学习经历, 要是有出息的话会放一些自己觉得并不trival的东西上来. 前期内容大概就是一些学习笔记之类的, 由于作者学校CS专业课/大部分数学课都是in English的, 很多东西大概也都是用英语写了.</p>
-<p>美观在做了别骂了呜呜呜… 这周一定搞成能看的东西.</p>
-<hr>
-<h3 id="Who-is-Yewandou"><a href="#Who-is-Yewandou" class="headerlink" title="Who is Yewandou?"></a>Who is Yewandou?</h3><p>大概是作者的网名叭, 不是名人, 高中整过一些物理什么的, 现某校CS大二学生. </p>
-<h4 id="主要学习方向："><a href="#主要学习方向：" class="headerlink" title="主要学习方向："></a>主要学习方向：</h4><p>无, 主打一个摸鱼</p>
-<h4 id="主要获奖经历："><a href="#主要获奖经历：" class="headerlink" title="主要获奖经历："></a>主要获奖经历：</h4><p>躺了一块ICPC region金牌, 一块ICPC region银牌, 无了.</p>
-<h4 id="努力方向："><a href="#努力方向：" class="headerlink" title="努力方向："></a>努力方向：</h4><ol>
-<li><p>从变态概率论老师手中活下来 </p>
-</li>
-<li><p>把手上的ML的入门书看完 </p>
-</li>
-<li><p>把暑假里看的CS172整理一次笔记.</p>
-</li>
-<li><p>S12上铂金 (先整个小目标)</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -597,6 +363,7 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conditional-Probability"><span class="nav-number">1.</span> <span class="nav-text">2. Conditional Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-The-Definition-of-Condition-Probability"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 The Definition of Condition Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-1"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Definition 2.1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-1-Multiplication-Rule"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Theorem 2.1 (Multiplication Rule).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-2"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Theorem 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-3"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Theorem 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-2"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">Definition 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-4-Low-of-total-probability"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">Theorem 2.4 (Low of total probability).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-5"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">Theorem 2.5.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Independent-Events"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 Independent Events.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-3"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Definition 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-6"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Theorem 2.6.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-7"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Theorem 2.7.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-4-Mutually-independent"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">Definition 2.4 (Mutually independent).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-8"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">Theorem 2.8.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-5"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">Definition 2.5.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-10"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">Theorem 2.10.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.</span> <span class="nav-text">2.3. Bayes’ Theorem</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-11-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">Theorem 2.11 (Bayes’ Theorem).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
