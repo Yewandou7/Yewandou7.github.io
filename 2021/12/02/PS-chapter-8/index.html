@@ -23,7 +23,7 @@
   
   
 
-  <title>PS chapter 2 | Yewandou's Blog</title>
+  <title>PS chapter 8 | Yewandou's Blog</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS-chapter-2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/02/PS-chapter-8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PS chapter 2
+          PS chapter 8
         </h1>
 
         <div class="post-meta">
@@ -192,14 +192,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-11-27 14:18:23" itemprop="dateCreated datePublished" datetime="2021-11-27T14:18:23+08:00">2021-11-27</time>
+              <time title="创建时间：2021-12-02 10:19:19" itemprop="dateCreated datePublished" datetime="2021-12-02T10:19:19+08:00">2021-12-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-05 14:10:00" itemprop="dateModified" datetime="2021-12-05T14:10:00+08:00">2021-12-05</time>
+                <time title="修改时间：2021-12-05 14:11:23" itemprop="dateModified" datetime="2021-12-05T14:11:23+08:00">2021-12-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -217,14 +217,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
+              <span>4.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -256,62 +256,53 @@
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\Bias}{\mathrm{Bias}}
 \renewcommand{\t}{\times}
-\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="2-Conditional-Probability"><a href="#2-Conditional-Probability" class="headerlink" title="2. Conditional Probability"></a>2. Conditional Probability</h3><h4 id="2-1-The-Definition-of-Condition-Probability"><a href="#2-1-The-Definition-of-Condition-Probability" class="headerlink" title="2.1 The Definition of Condition Probability"></a>2.1 The Definition of Condition Probability</h4><p> A major use of probability in statistical inference is the updating of probability when certain events are observed. The updated probability of event $A$ after we learn that event $B$ has occurred is the conditional probability of $A$ given $B$.</p>
-<h6 id="Definition-2-1"><a href="#Definition-2-1" class="headerlink" title="Definition 2.1."></a>Definition 2.1.</h6><p>The <strong>condition probability</strong> of $A$ given $B$ is defined as </p>
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="8-Sampling-Distributions-of-Estimators"><a href="#8-Sampling-Distributions-of-Estimators" class="headerlink" title="8. Sampling Distributions of Estimators"></a>8. Sampling Distributions of Estimators</h3><h4 id="8-1-Sampling-Distribution-of-a-Statistic"><a href="#8-1-Sampling-Distribution-of-a-Statistic" class="headerlink" title="8.1 Sampling Distribution of a Statistic."></a>8.1 Sampling Distribution of a Statistic.</h4><h6 id="Definition-8-1"><a href="#Definition-8-1" class="headerlink" title="Definition 8.1."></a>Definition 8.1.</h6><p>Suppose that the random variables <script type="math/tex">\mathbf{X}</script> form a random sample from a distribution involving an unknown parameter $\theta$. Let $T$ be a function of <script type="math/tex">\mathbf{X}</script> and possibly $\theta$. That is, $T = r(X_1,\cdots,X_n,\theta)$. The distribution of $T$ (given $\theta$) is called the <strong>sampling distribution</strong> of $T$.</p>
+<p>​    We will use the notation $\mathbf{E}_{\theta}(T)$ to denote the mean of $T$ calculated from its sampling distribution</p>
+<h4 id="8-2-The-Chi-Square-Distribution"><a href="#8-2-The-Chi-Square-Distribution" class="headerlink" title="8.2. The Chi-Square Distribution"></a>8.2. The Chi-Square Distribution</h4><h6 id="Definition-8-2"><a href="#Definition-8-2" class="headerlink" title="Definition 8.2."></a>Definition 8.2.</h6><p>For each positive number $m$, $\Gamma(\frac{m}{2}, \frac12)$ is called the $\chi^2$ <strong>distribution with $m$ degrees of freedom</strong>.</p>
+<p>​    The pdf of $X\sim \chi^2(m)$ is </p>
 <script type="math/tex; mode=display">
-\P{A|B} = \frac{\P{A\cap B}}{\P{B}}</script><p> provided <script type="math/tex">\P{B} >0</script>.</p>
-<p>​    And the conditional probability <script type="math/tex">\P{A|B}</script> is not defined if <script type="math/tex">\P{B}=0</script>.</p>
-<h6 id="Theorem-2-1-Multiplication-Rule"><a href="#Theorem-2-1-Multiplication-Rule" class="headerlink" title="Theorem 2.1 (Multiplication Rule)."></a>Theorem 2.1 (Multiplication Rule).</h6><p>Let $A$, $B$ be events. If <script type="math/tex">\P{B}>0</script>, then </p>
+f(x) = \frac{1}{2^{\frac{m}2}\Gamma(\frac{m}2)} x^{\frac{m}2 - 1} e^{-\frac{x}{2}}</script><p>for $x&gt;0$ and zero elsewhere.</p>
+<h6 id="Theorem-8-1-Mean-and-Variance"><a href="#Theorem-8-1-Mean-and-Variance" class="headerlink" title="Theorem 8.1 (Mean and Variance)."></a>Theorem 8.1 (Mean and Variance).</h6><p>If $X \sim \chi^2(m)$, then <script type="math/tex">\E{X} =m</script> and <script type="math/tex">\Var(X) = 2m</script>.</p>
+<p>$Proof.$ <script type="math/tex">\E{X} = \frac{\alpha}{\beta}</script>, <script type="math/tex">\Var(X) = \frac{\alpha}{\beta^2}</script> </p>
+<h6 id="Theorem-8-2"><a href="#Theorem-8-2" class="headerlink" title="Theorem 8.2."></a>Theorem 8.2.</h6><p>If $X_i$ are independent random variables and $X_i \sim \chi^2(m_i)$, then the sum $Y = \sum X_i$ follows the distribution $\chi^2(\sum m_i)$. </p>
+<p>$Proof.$ Use mgf.</p>
+<h6 id="Theorem-8-3"><a href="#Theorem-8-3" class="headerlink" title="Theorem 8.3."></a>Theorem 8.3.</h6><p>Let $X \sim N(0,1)$. Then $Y = X^2\sim \chi^2(1)$ </p>
+<p>$Proof.$ Find pdf of $Y$.</p>
+<h6 id="Corollary-1"><a href="#Corollary-1" class="headerlink" title="Corollary 1."></a>Corollary 1.</h6><p>If $X_1,\cdots,X_m$ are i.i.d. with the standard normal distribution, then the sum of squares $\sum X_i^2$ has the $\chi ^2$ distribution with $m$ degrees of freedom.</p>
+<h6 id="Theorem-8-4"><a href="#Theorem-8-4" class="headerlink" title="Theorem 8.4."></a>Theorem 8.4.</h6><p>Suppose that $X_1,\cdots,X_n$ form a random sample from $N(\mu,\sigma^2)$. Then the sample mean $\overline{X_n}$ and the sample variance $S_n^2 = \frac{1}{n-1}\sum(X_i-\overline{X_n})^2$ are independent random variables. Further, $\overline{X_n}$ follows $N(\mu, \sigma^2/n)$ and $\sum_{i=1}^n (X_i-\overline{X_n})^2/\sigma^2$ follows $\chi^2(n-1)$</p>
+<p>$Proof.$  Firstly we have $\overline{X_n}\sim N(\mu,\sigma^2/n)$. And  the proof of the independence of $\overline{X_n}$ and $S_n^2$  is out of the scope of this course. We consider the random variable</p>
 <script type="math/tex; mode=display">
-\P{A\cap B} =\P{A|B}\P{B}</script><h6 id="Theorem-2-2"><a href="#Theorem-2-2" class="headerlink" title="Theorem 2.2."></a>Theorem 2.2.</h6><p>Suppose that $A_1,A_2,\cdots,A_n$ are events such that <script type="math/tex">\P{A_1\cap A_2\cap\cdots\cap A_{n-1}} >0</script>. Then </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2 \cap\cdots\cap A_n} = \P{A_1}\P{A_2|A_1}\cdots\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}}</script><h6 id="Theorem-2-3"><a href="#Theorem-2-3" class="headerlink" title="Theorem 2.3."></a>Theorem 2.3.</h6><p>Suppose that $A_1,A_2,\cdots A_n$, $B$ are events such that <script type="math/tex">\P{B}>0</script> and <script type="math/tex">\P{A_1\cap A_2\cap\cdots \cap A_{n-1}|B}>0</script>. Then </p>
+V = \sum_{i=1}^n \left(\frac{X_i-\mu}{\sigma}\right)^2</script><p>From Theorem 8.2 we know that $V \sim \chi^2(n)$. And </p>
 <script type="math/tex; mode=display">
 \begin{align*}
-\P{A_1\cap A_2 \cap\cdots\cap A_n|B} =& \P{A_1|B}\P{A_2|A_1\cap B} \cdots\\
-&\times\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}\cap B}
-\end{align*}</script><h6 id="Definition-2-2"><a href="#Definition-2-2" class="headerlink" title="Definition 2.2."></a>Definition 2.2.</h6><p>Let $\Omega$ be a sample space and let $B_1, \cdots B_k$ be $k$ events in $\Omega$. If $B_1,\cdots,B_k$ are disjoint and $\cup_{j=1}^k B_j = \Omega$, then these events form a <strong>partition</strong> of $\Omega$. </p>
-<h6 id="Theorem-2-4-Low-of-total-probability"><a href="#Theorem-2-4-Low-of-total-probability" class="headerlink" title="Theorem 2.4 (Low of total probability)."></a>Theorem 2.4 (Low of total probability).</h6><p>Suppose that $B_1,\cdots,B_k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_j}>0</script> for all $j$. Then for every event $A \subset \Omega$, </p>
+V &= \sum_{i=1}^n \left(\frac{(X_i-\overline{X_n})+(\overline{X_n}-\mu)}{\sigma}\right)^2\\
+&= \sum_{i=1}^n \left(\frac{X_i-\overline{X_n}}{\sigma}\right)^2 + \left(\frac{\overline{X_n}-\mu}{\sigma}\right)^2 + 2\left(\frac{X_i-\overline{X_n}}{\sigma}\right) \cdot \left(\frac{\overline{X_n}-\mu}{\sigma}\right)\\
+&=  \sum_{i=1}^n \left(\frac{X_i-\overline{X_n}}{\sigma}\right)^2 + \left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2\\
+&= \frac{(n-1)S_n^2}{\sigma^2}+\left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2
+\end{align*}</script><p>Consider $V\sim \chi^2(n)$ and $\left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2 \sim \chi^2(1)$ . In addition to $S_n^2$ and $\overline{X_n}$ is independent. We can calculate the mgf of $\frac{(n-1)S_n^2}{\sigma^2}$ and we can prove this question.</p>
+<p><strong>Remark</strong>. Indeed, the sample mean and the sample variance are independent <strong>only when</strong> the random sample is <strong>drawn from a Normal Distribution</strong>.</p>
+<h4 id="8-3-The-t-Distributions"><a href="#8-3-The-t-Distributions" class="headerlink" title="8.3. The t-Distributions."></a>8.3. The t-Distributions.</h4><p>When out data are a sample from the normal distribution with mean $\mu$ and variance $\sigma^2$, the distribution of $Z$ = $n^{1/2}(\hat{\mu}-\mu)/\sigma$ is the standard normal distribution, where $\hat{\mu}$ is the sample mean. If $\sigma^2$ is unknown, we can replace $\sigma^2$ by an estimator (sample variance) in the formula for $Z$. The resulting random variable has the $t$ distribution with $n-1$ degrees of freedom and is useful for making inferences about $\mu$ alone even when both $\mu$ and $\sigma^2$ are unknown.</p>
+<h6 id="Definition-8-3-t-Distributions"><a href="#Definition-8-3-t-Distributions" class="headerlink" title="Definition 8.3 (t Distributions)"></a>Definition 8.3 (t Distributions)</h6><p>Consider two independent random variables $Y$ and $Z$, such that $Y \sim \chi^2(m)$ and $Z\sim N(0,1)$. Suppose that $X$ is defined as </p>
 <script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><p>$Proof.$ We can rewrite $A$ as </p>
+X =  \frac{Z}{(Y/m)^{1/2}}</script><p>Then the distribution of $X$ is called the <strong>t distribution with $m$ degree of freedom</strong>.</p>
+<h6 id="Theorem-8-5"><a href="#Theorem-8-5" class="headerlink" title="Theorem 8.5."></a>Theorem 8.5.</h6><p>The pdf of the distribution with $m$ degrees of freedom is </p>
 <script type="math/tex; mode=display">
-A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </p>
+f(x) = \frac{\Gamma(\frac{m+1}2)}{(m\pi)^{1/2}\Gamma(\frac{m}2)}(1+\frac{x^2}{m})^{-(m+1)/2}</script><p>for $-\infty &lt; x &lt; \infty$</p>
+<p>​    When $m\leq 1$, the mean value of t distribution doesn’t exist. When $m&gt;1$, by the symmetry the mean value is always 0.</p>
+<p>​    In general, if $X$ follows the t distribution with $m$  degrees of freedom, then the k-th absolute value moments <script type="math/tex">\E{|X|^k}<\infty</script> are finite for $k&lt;m$ and it is unbounded for $k\geq m$. Therefore, if m is an integer, the first $m-1$ moments of $X$ exists. Thus, the moment generating function of $X$ doesn’t exist.</p>
+<h6 id="Theorem-8-6"><a href="#Theorem-8-6" class="headerlink" title="Theorem 8.6."></a>Theorem 8.6.</h6><p>Suppose that $X_1,\cdots,X_n$ form a random sample from the normal distribution with mean $\mu$ and $\sigma^2$, Let $\overline{X_n}$ denote the sample mean, and define </p>
 <script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j\cap A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><h6 id="Theorem-2-5"><a href="#Theorem-2-5" class="headerlink" title="Theorem 2.5."></a>Theorem 2.5.</h6><p>The law of total probability has an analog conditional on another event $C$ </p>
-<script type="math/tex; mode=display">
-\P{A|C} = \sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C}</script><p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{B_j|C}\P{A|B_j\cap C} = \frac{\P{B_j \cap C}\P{A\cap B_j \cap C}}{\P{C} \P{B_j\cap C}} = \P{A\cap B_j|C}</script><p>Thus </p>
-<script type="math/tex; mode=display">
-\sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C} = \sum_{j=1}^k \frac{\P{A\cap C\cap B_j}}{\P{C}} = \frac{\P{A\cap C}}{\P{C}} = \P{A|C}</script><h4 id="2-2-Independent-Events"><a href="#2-2-Independent-Events" class="headerlink" title="2.2 Independent Events."></a>2.2 Independent Events.</h4><p>If learning that $B$ has occurred does not change the probability of $A$, then we say that $A$ and $B$ are independent.</p>
-<h6 id="Definition-2-3"><a href="#Definition-2-3" class="headerlink" title="Definition 2.3."></a>Definition 2.3.</h6><p>Two events $A$ and $B$ are <strong>independent</strong> if </p>
-<script type="math/tex; mode=display">
-\P{A\cap B} = \P{A}\P{B}</script><h6 id="Theorem-2-6"><a href="#Theorem-2-6" class="headerlink" title="Theorem 2.6."></a>Theorem 2.6.</h6><p>Suppose <script type="math/tex">\P{B}>0</script> or <script type="math/tex">\P{A}>0</script>. Then $A$ and $B$ are independent if and only if <script type="math/tex">\P{A|B} = \P{A}</script> or <script type="math/tex">\P{B|A} = \P{B}</script>, respectively.</p>
-<h6 id="Theorem-2-7"><a href="#Theorem-2-7" class="headerlink" title="Theorem 2.7."></a>Theorem 2.7.</h6><p>If $A$ and $B$ are independent, then $A$ and $B^c$ are also independent.</p>
+S_n = \left(\frac{\sum_{i=1}^n (X_i-\overline{X_n})}{n-1}\right)^{1/2}</script><p>Then $n^{1/2}(\overline{X_n}-\mu)/S_n$ has the t distribution with $n-1$ degrees of freedom.</p>
 <p>$Proof.$ Consider </p>
 <script type="math/tex; mode=display">
-\P{A\cap B^c} = \P{A} - \P{A\cap B} = \P{A}(1-\P{B}) = \P{A}\P{B^c}</script><h6 id="Definition-2-4-Mutually-independent"><a href="#Definition-2-4-Mutually-independent" class="headerlink" title="Definition 2.4 (Mutually independent)."></a>Definition 2.4 (Mutually independent).</h6><p>The $k$ events $A_1,\cdots,A_k$ are <strong>mutually independent</strong> if for any subset <script type="math/tex">\mathcal{M} \subset \{1,\cdots,k\}</script>, </p>
+\sqrt{n}(\overline{X_n}-\mu)/\sigma \sim N(0,1)\hspace{1cm}and\hspace{1cm}S_n^2/\sigma^2\sim\chi^2(n-1)</script><p>Follows the definition of the t distribution.</p>
+<h3 id="8-4-The-F-Distributions"><a href="#8-4-The-F-Distributions" class="headerlink" title="8.4. The F-Distributions."></a>8.4. The F-Distributions.</h3><h6 id="Definition-8-4"><a href="#Definition-8-4" class="headerlink" title="Definition 8.4."></a>Definition 8.4.</h6><p>Let $Y$ and $W$ be independent random variables that have $\chi^2$ distribution with degrees of freedom $m$ and $n$ respectively. Define a new random variable </p>
 <script type="math/tex; mode=display">
-\P{\bigcap_{j \in \mathcal{M}}A_j} = \prod_{j \in \mathcal{M}} \P{A_j}</script><p>​    Note: The arbitrariness of $\mathcal{M}$ is very important for mutually independent. We can give a conquer  example to show that although $A_j$ are <strong>pairwise independent</strong>, $A_j$ are not mutually independent.</p>
-<h6 id="Theorem-2-8"><a href="#Theorem-2-8" class="headerlink" title="Theorem 2.8."></a>Theorem 2.8.</h6><p>Let $A_i (i=1,\cdots,k)$ be events that <script type="math/tex">\P{\cap_{i=1}^k A_i}>0</script>. Then $A_i$ are independent if and only if for every two joint subsets $\mathcal{I},\mathcal{J}\subset\{1,\cdots,k\}$, $\mathcal{I}\cap\mathcal{J}=\varnothing$, we have </p>
+X = \frac{Y/m}{W/n}</script><p>Then the distribution of $X$ is called the F <strong>distribution with $m$ and $n$ degrees of freedom</strong>.</p>
+<h6 id="Theorem-8-7"><a href="#Theorem-8-7" class="headerlink" title="Theorem 8.7."></a>Theorem 8.7.</h6><p>Let $X$ have the $F$ distribution with $m$ and $n$ degrees of freedom. Then its pdf </p>
 <script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}}A_i|\bigcap_{j\in\mathcal{J}}A_j} = \P{\bigcap_{i\in\mathcal{I}} A_i}.</script><p>​    This theorem says that $k$ events are independent if and only if learning that some of the events occur does not change the probability that any combination of the other event occur.</p>
-<h6 id="Definition-2-5"><a href="#Definition-2-5" class="headerlink" title="Definition 2.5."></a>Definition 2.5.</h6><p>We say that event $A_i (i=1,\cdots,k)$ are <strong>conditionally independent</strong> given $B$ if for every subcollection $\mathcal{I} \subset\{1,\cdots,k\}$, </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}} A_i|B} = \prod_{i\in\mathcal{I}} \P{A_i|B}</script><p>​    Note: The definition is identical to that of independent events with modification that all probabilities are now conditional on B. It is important that even if we assume $A_i$ are conditionally independent given $B$, it is <strong>not</strong> necessary that $A_i$ are conditionally independent given $B^c$ </p>
-<h6 id="Theorem-2-10"><a href="#Theorem-2-10" class="headerlink" title="Theorem 2.10."></a>Theorem 2.10.</h6><p>Suppose that $A_1, A_2$ and $B$ are events such that <script type="math/tex">\P{A_1\cap B}>0</script>. Then $A_1$ and $A_2$ are conditionally independent given $B$ if and only if <script type="math/tex">\P{A_2|A_1\cap B} = \P{A_2|B}</script></p>
-<p>$Proof.$ If $A_1$ and $A_2$ are independent </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2|B} = \P{A_1|B} \P{A_2|B}</script><p>consider that  <script type="math/tex">\P{A_1\cap A_2 |B} = \P{A_1\cap B}\P{A_2|A_1\cap B}</script>. Comparing could proves the theorem.</p>
-<h4 id="2-3-Bayes’-Theorem"><a href="#2-3-Bayes’-Theorem" class="headerlink" title="2.3. Bayes’ Theorem"></a>2.3. Bayes’ Theorem</h4><h6 id="Theorem-2-11-Bayes’-Theorem"><a href="#Theorem-2-11-Bayes’-Theorem" class="headerlink" title="Theorem 2.11 (Bayes’ Theorem)."></a>Theorem 2.11 (Bayes’ Theorem).</h6><p>Let $B_i$ for $i=1,\cdots,k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_i}>0</script> for all $i$. Let $A$ be an event such that <script type="math/tex">\P{A}>0</script>, then for all $i$:</p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i}\P{A|B_i}}{\sum_{j=1}^k\P{B_j}\P{A|B_j}}</script><p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i \cap A}}{\P{A}} = \frac{\P{B_i}\P{A|B_i}}{\P{A}}</script><p>and </p>
-<script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j} \P{A|B_j}</script><p>Which proves the theorem.</p>
-<hr>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
+f_X(x) = \frac{\Gamma(\frac12(m+n))m^{m/2}n^{n/2}}{\Gamma(\frac12 m)\Gamma(\frac12n)} \cdot \frac{x^{(m/2)-1}}{(mx+n)^{(m+n)/2}}</script><p>for $x&gt;0$ and zero elsewhere.</p>
+<h6 id="Theorem-8-8"><a href="#Theorem-8-8" class="headerlink" title="Theorem 8.8."></a>Theorem 8.8.</h6><p>If $X$ has the $F$ distribution with $m$ and $n$ degrees of freedom, then its reciprocal $1/X$ has the $F$ distribution with $n$ and $m$ degrees of freedom. If $Y$ has the $t$ distribution with $n$ degrees of freedom, then $Y^2$ has the $F$ distribution with 1 and $n$ degrees of freedom.</p>
 
     </div>
 
@@ -330,13 +321,10 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/11/27/PS%20chapter%201/" rel="prev" title="PS chapter 1">
-      <i class="fa fa-chevron-left"></i> PS chapter 1
+    <a href="/2021/11/27/PS-chapter-3/" rel="prev" title="PS chapter 3">
+      <i class="fa fa-chevron-left"></i> PS chapter 3
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/11/27/PS-chapter-3/" rel="next" title="PS chapter 3">
-      PS chapter 3 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -395,7 +383,7 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conditional-Probability"><span class="nav-number">1.</span> <span class="nav-text">2. Conditional Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-The-Definition-of-Condition-Probability"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 The Definition of Condition Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-1"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Definition 2.1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-1-Multiplication-Rule"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Theorem 2.1 (Multiplication Rule).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-2"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Theorem 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-3"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Theorem 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-2"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">Definition 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-4-Low-of-total-probability"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">Theorem 2.4 (Low of total probability).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-5"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">Theorem 2.5.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Independent-Events"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 Independent Events.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-3"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Definition 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-6"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Theorem 2.6.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-7"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Theorem 2.7.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-4-Mutually-independent"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">Definition 2.4 (Mutually independent).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-8"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">Theorem 2.8.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-5"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">Definition 2.5.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-10"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">Theorem 2.10.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.</span> <span class="nav-text">2.3. Bayes’ Theorem</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-11-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">Theorem 2.11 (Bayes’ Theorem).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Sampling-Distributions-of-Estimators"><span class="nav-number">1.</span> <span class="nav-text">8. Sampling Distributions of Estimators</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-Sampling-Distribution-of-a-Statistic"><span class="nav-number">1.1.</span> <span class="nav-text">8.1 Sampling Distribution of a Statistic.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-8-1"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Definition 8.1.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-The-Chi-Square-Distribution"><span class="nav-number">1.2.</span> <span class="nav-text">8.2. The Chi-Square Distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-8-2"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Definition 8.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-1-Mean-and-Variance"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Theorem 8.1 (Mean and Variance).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-2"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Theorem 8.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-3"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">Theorem 8.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Corollary-1"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">Corollary 1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-4"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">Theorem 8.4.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-3-The-t-Distributions"><span class="nav-number">1.3.</span> <span class="nav-text">8.3. The t-Distributions.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-8-3-t-Distributions"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">Definition 8.3 (t Distributions)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-5"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">Theorem 8.5.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-6"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">Theorem 8.6.</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-The-F-Distributions"><span class="nav-number">2.</span> <span class="nav-text">8.4. The F-Distributions.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-8-4"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">Definition 8.4.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-7"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">Theorem 8.7.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-8-8"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">Theorem 8.8.</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

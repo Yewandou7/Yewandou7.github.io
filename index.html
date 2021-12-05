@@ -168,6 +168,422 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/02/PS-chapter-8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yewandou">
+      <meta itemprop="description" content="快乐摸鱼">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yewandou's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/12/02/PS-chapter-8/" class="post-title-link" itemprop="url">PS chapter 8</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-02 10:19:19" itemprop="dateCreated datePublished" datetime="2021-12-02T10:19:19+08:00">2021-12-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-05 14:11:23" itemprop="dateModified" datetime="2021-12-05T14:11:23+08:00">2021-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Probability-and-Statistics/" itemprop="url" rel="index"><span itemprop="name">Probability and Statistics</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <script type="math/tex; mode=display">
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="8-Sampling-Distributions-of-Estimators"><a href="#8-Sampling-Distributions-of-Estimators" class="headerlink" title="8. Sampling Distributions of Estimators"></a>8. Sampling Distributions of Estimators</h3><h4 id="8-1-Sampling-Distribution-of-a-Statistic"><a href="#8-1-Sampling-Distribution-of-a-Statistic" class="headerlink" title="8.1 Sampling Distribution of a Statistic."></a>8.1 Sampling Distribution of a Statistic.</h4><h6 id="Definition-8-1"><a href="#Definition-8-1" class="headerlink" title="Definition 8.1."></a>Definition 8.1.</h6><p>Suppose that the random variables <script type="math/tex">\mathbf{X}</script> form a random sample from a distribution involving an unknown parameter $\theta$. Let $T$ be a function of <script type="math/tex">\mathbf{X}</script> and possibly $\theta$. That is, $T = r(X_1,\cdots,X_n,\theta)$. The distribution of $T$ (given $\theta$) is called the <strong>sampling distribution</strong> of $T$.</p>
+<p>​    We will use the notation $\mathbf{E}_{\theta}(T)$ to denote the mean of $T$ calculated from its sampling distribution</p>
+<h4 id="8-2-The-Chi-Square-Distribution"><a href="#8-2-The-Chi-Square-Distribution" class="headerlink" title="8.2. The Chi-Square Distribution"></a>8.2. The Chi-Square Distribution</h4><h6 id="Definition-8-2"><a href="#Definition-8-2" class="headerlink" title="Definition 8.2."></a>Definition 8.2.</h6><p>For each positive number $m$, $\Gamma(\frac{m}{2}, \frac12)$ is called the $\chi^2$ <strong>distribution with $m$ degrees of freedom</strong>.</p>
+<p>​    The pdf of $X\sim \chi^2(m)$ is </p>
+<script type="math/tex; mode=display">
+f(x) = \frac{1}{2^{\frac{m}2}\Gamma(\frac{m}2)} x^{\frac{m}2 - 1} e^{-\frac{x}{2}}</script><p>for $x&gt;0$ and zero elsewhere.</p>
+<h6 id="Theorem-8-1-Mean-and-Variance"><a href="#Theorem-8-1-Mean-and-Variance" class="headerlink" title="Theorem 8.1 (Mean and Variance)."></a>Theorem 8.1 (Mean and Variance).</h6><p>If $X \sim \chi^2(m)$, then <script type="math/tex">\E{X} =m</script> and <script type="math/tex">\Var(X) = 2m</script>.</p>
+<p>$Proof.$ <script type="math/tex">\E{X} = \frac{\alpha}{\beta}</script>, <script type="math/tex">\Var(X) = \frac{\alpha}{\beta^2}</script> </p>
+<h6 id="Theorem-8-2"><a href="#Theorem-8-2" class="headerlink" title="Theorem 8.2."></a>Theorem 8.2.</h6><p>If $X_i$ are independent random variables and $X_i \sim \chi^2(m_i)$, then the sum $Y = \sum X_i$ follows the distribution $\chi^2(\sum m_i)$. </p>
+<p>$Proof.$ Use mgf.</p>
+<h6 id="Theorem-8-3"><a href="#Theorem-8-3" class="headerlink" title="Theorem 8.3."></a>Theorem 8.3.</h6><p>Let $X \sim N(0,1)$. Then $Y = X^2\sim \chi^2(1)$ </p>
+<p>$Proof.$ Find pdf of $Y$.</p>
+<h6 id="Corollary-1"><a href="#Corollary-1" class="headerlink" title="Corollary 1."></a>Corollary 1.</h6><p>If $X_1,\cdots,X_m$ are i.i.d. with the standard normal distribution, then the sum of squares $\sum X_i^2$ has the $\chi ^2$ distribution with $m$ degrees of freedom.</p>
+<h6 id="Theorem-8-4"><a href="#Theorem-8-4" class="headerlink" title="Theorem 8.4."></a>Theorem 8.4.</h6><p>Suppose that $X_1,\cdots,X_n$ form a random sample from $N(\mu,\sigma^2)$. Then the sample mean $\overline{X_n}$ and the sample variance $S_n^2 = \frac{1}{n-1}\sum(X_i-\overline{X_n})^2$ are independent random variables. Further, $\overline{X_n}$ follows $N(\mu, \sigma^2/n)$ and $\sum_{i=1}^n (X_i-\overline{X_n})^2/\sigma^2$ follows $\chi^2(n-1)$</p>
+<p>$Proof.$  Firstly we have $\overline{X_n}\sim N(\mu,\sigma^2/n)$. And  the proof of the independence of $\overline{X_n}$ and $S_n^2$  is out of the scope of this course. We consider the random variable</p>
+<script type="math/tex; mode=display">
+V = \sum_{i=1}^n \left(\frac{X_i-\mu}{\sigma}\right)^2</script><p>From Theorem 8.2 we know that $V \sim \chi^2(n)$. And </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+V &= \sum_{i=1}^n \left(\frac{(X_i-\overline{X_n})+(\overline{X_n}-\mu)}{\sigma}\right)^2\\
+&= \sum_{i=1}^n \left(\frac{X_i-\overline{X_n}}{\sigma}\right)^2 + \left(\frac{\overline{X_n}-\mu}{\sigma}\right)^2 + 2\left(\frac{X_i-\overline{X_n}}{\sigma}\right) \cdot \left(\frac{\overline{X_n}-\mu}{\sigma}\right)\\
+&=  \sum_{i=1}^n \left(\frac{X_i-\overline{X_n}}{\sigma}\right)^2 + \left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2\\
+&= \frac{(n-1)S_n^2}{\sigma^2}+\left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2
+\end{align*}</script><p>Consider $V\sim \chi^2(n)$ and $\left(\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}\right)^2 \sim \chi^2(1)$ . In addition to $S_n^2$ and $\overline{X_n}$ is independent. We can calculate the mgf of $\frac{(n-1)S_n^2}{\sigma^2}$ and we can prove this question.</p>
+<p><strong>Remark</strong>. Indeed, the sample mean and the sample variance are independent <strong>only when</strong> the random sample is <strong>drawn from a Normal Distribution</strong>.</p>
+<h4 id="8-3-The-t-Distributions"><a href="#8-3-The-t-Distributions" class="headerlink" title="8.3. The t-Distributions."></a>8.3. The t-Distributions.</h4><p>When out data are a sample from the normal distribution with mean $\mu$ and variance $\sigma^2$, the distribution of $Z$ = $n^{1/2}(\hat{\mu}-\mu)/\sigma$ is the standard normal distribution, where $\hat{\mu}$ is the sample mean. If $\sigma^2$ is unknown, we can replace $\sigma^2$ by an estimator (sample variance) in the formula for $Z$. The resulting random variable has the $t$ distribution with $n-1$ degrees of freedom and is useful for making inferences about $\mu$ alone even when both $\mu$ and $\sigma^2$ are unknown.</p>
+<h6 id="Definition-8-3-t-Distributions"><a href="#Definition-8-3-t-Distributions" class="headerlink" title="Definition 8.3 (t Distributions)"></a>Definition 8.3 (t Distributions)</h6><p>Consider two independent random variables $Y$ and $Z$, such that $Y \sim \chi^2(m)$ and $Z\sim N(0,1)$. Suppose that $X$ is defined as </p>
+<script type="math/tex; mode=display">
+X =  \frac{Z}{(Y/m)^{1/2}}</script><p>Then the distribution of $X$ is called the <strong>t distribution with $m$ degree of freedom</strong>.</p>
+<h6 id="Theorem-8-5"><a href="#Theorem-8-5" class="headerlink" title="Theorem 8.5."></a>Theorem 8.5.</h6><p>The pdf of the distribution with $m$ degrees of freedom is </p>
+<script type="math/tex; mode=display">
+f(x) = \frac{\Gamma(\frac{m+1}2)}{(m\pi)^{1/2}\Gamma(\frac{m}2)}(1+\frac{x^2}{m})^{-(m+1)/2}</script><p>for $-\infty &lt; x &lt; \infty$</p>
+<p>​    When $m\leq 1$, the mean value of t distribution doesn’t exist. When $m&gt;1$, by the symmetry the mean value is always 0.</p>
+<p>​    In general, if $X$ follows the t distribution with $m$  degrees of freedom, then the k-th absolute value moments <script type="math/tex">\E{|X|^k}<\infty</script> are finite for $k&lt;m$ and it is unbounded for $k\geq m$. Therefore, if m is an integer, the first $m-1$ moments of $X$ exists. Thus, the moment generating function of $X$ doesn’t exist.</p>
+<h6 id="Theorem-8-6"><a href="#Theorem-8-6" class="headerlink" title="Theorem 8.6."></a>Theorem 8.6.</h6><p>Suppose that $X_1,\cdots,X_n$ form a random sample from the normal distribution with mean $\mu$ and $\sigma^2$, Let $\overline{X_n}$ denote the sample mean, and define </p>
+<script type="math/tex; mode=display">
+S_n = \left(\frac{\sum_{i=1}^n (X_i-\overline{X_n})}{n-1}\right)^{1/2}</script><p>Then $n^{1/2}(\overline{X_n}-\mu)/S_n$ has the t distribution with $n-1$ degrees of freedom.</p>
+<p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\sqrt{n}(\overline{X_n}-\mu)/\sigma \sim N(0,1)\hspace{1cm}and\hspace{1cm}S_n^2/\sigma^2\sim\chi^2(n-1)</script><p>Follows the definition of the t distribution.</p>
+<h3 id="8-4-The-F-Distributions"><a href="#8-4-The-F-Distributions" class="headerlink" title="8.4. The F-Distributions."></a>8.4. The F-Distributions.</h3><h6 id="Definition-8-4"><a href="#Definition-8-4" class="headerlink" title="Definition 8.4."></a>Definition 8.4.</h6><p>Let $Y$ and $W$ be independent random variables that have $\chi^2$ distribution with degrees of freedom $m$ and $n$ respectively. Define a new random variable </p>
+<script type="math/tex; mode=display">
+X = \frac{Y/m}{W/n}</script><p>Then the distribution of $X$ is called the F <strong>distribution with $m$ and $n$ degrees of freedom</strong>.</p>
+<h6 id="Theorem-8-7"><a href="#Theorem-8-7" class="headerlink" title="Theorem 8.7."></a>Theorem 8.7.</h6><p>Let $X$ have the $F$ distribution with $m$ and $n$ degrees of freedom. Then its pdf </p>
+<script type="math/tex; mode=display">
+f_X(x) = \frac{\Gamma(\frac12(m+n))m^{m/2}n^{n/2}}{\Gamma(\frac12 m)\Gamma(\frac12n)} \cdot \frac{x^{(m/2)-1}}{(mx+n)^{(m+n)/2}}</script><p>for $x&gt;0$ and zero elsewhere.</p>
+<h6 id="Theorem-8-8"><a href="#Theorem-8-8" class="headerlink" title="Theorem 8.8."></a>Theorem 8.8.</h6><p>If $X$ has the $F$ distribution with $m$ and $n$ degrees of freedom, then its reciprocal $1/X$ has the $F$ distribution with $n$ and $m$ degrees of freedom. If $Y$ has the $t$ distribution with $n$ degrees of freedom, then $Y^2$ has the $F$ distribution with 1 and $n$ degrees of freedom.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS-chapter-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yewandou">
+      <meta itemprop="description" content="快乐摸鱼">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yewandou's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/27/PS-chapter-3/" class="post-title-link" itemprop="url">PS chapter 3</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-27 20:26:06" itemprop="dateCreated datePublished" datetime="2021-11-27T20:26:06+08:00">2021-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-05 14:13:15" itemprop="dateModified" datetime="2021-12-05T14:13:15+08:00">2021-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Probability-and-Statistics/" itemprop="url" rel="index"><span itemprop="name">Probability and Statistics</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <script type="math/tex; mode=display">
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="3-Random-Variables-and-Distributions"><a href="#3-Random-Variables-and-Distributions" class="headerlink" title="3. Random Variables and Distributions"></a>3. Random Variables and Distributions</h3><h4 id="3-1-Discrete-Random-Variables"><a href="#3-1-Discrete-Random-Variables" class="headerlink" title="3.1. Discrete Random Variables."></a>3.1. Discrete Random Variables.</h4><h6 id="Definition-3-1"><a href="#Definition-3-1" class="headerlink" title="Definition 3.1."></a>Definition 3.1.</h6><p>Consider a random experiment with a sample space $\Omega$. A function $X$, which assigns to each element $s \in \Omega$ one and only one number $X(s) = x$, is called a <strong>random variable</strong>. The <strong>space</strong> or <strong>range</strong> of $X$ is the set of real numbers $\mathcal{D} = \{x:x=X(s), s\in\Omega\}$.</p>
+<p>​    In this text, $\mathcal{D}$ generally is a <strong>a countable  set</strong> or <strong>an interval</strong> of real numbers. We call random variables of the first type <strong>discrete</strong> random variables, while we call those of the second type <strong>continuous</strong> random variables.</p>
+<p>​    Given a random variable $X$, its range $\mathcal{D}$ becomes the sample space of interest. Besides inducing the sample space $\mathcal{D}$, $X$ also induces a probability which we call the <strong>distribution</strong> of $X$.</p>
+<h6 id="Definition-3-2"><a href="#Definition-3-2" class="headerlink" title="Definition 3.2."></a>Definition 3.2.</h6><p>Let $X$ be a discrete random variable that takes values in $\mathcal{D} = \{d_1,\cdots,d_m\}$. Define the function </p>
+<script type="math/tex; mode=display">
+p_X(d_i) = \P{\{s\in \Omega:X(s) = d_i\}},\ \ \text{for }i=1,\cdots,m</script><p>This is called the <strong>probability mass function (pmf)</strong> of $X$.</p>
+<p>​    By the definition, for a discrete random variable to find the probability of an event $A$ from a pmf, we can simply calculate </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{x\in A} p_X(x)</script><h6 id="Theorem-3-1"><a href="#Theorem-3-1" class="headerlink" title="Theorem 3.1."></a>Theorem 3.1.</h6><p>Let $X$ be a discrete random variable with pmf $p_X(x)$. If $x$ is not one the possible values of $X$, then $p_X(x) = 0$. Also, if the sequence $d_1,d_2,\cdots$ includes all the possible values of $X$, then $\sum_{i=1}^\infty p_X(d_i) =1$.<br>$Proof.$ Use the fact that </p>
+<script type="math/tex; mode=display">
+\sum_{d_i} p_X(d_i) = \sum_{d_i} \P{X=d_i} = \P{\Omega} = 1</script><h4 id="3-2-Bernoulli-Binomial-and-Geometric-Distributions"><a href="#3-2-Bernoulli-Binomial-and-Geometric-Distributions" class="headerlink" title="3.2 Bernoulli, Binomial, and Geometric Distributions."></a>3.2 Bernoulli, Binomial, and Geometric Distributions.</h4><p>We will introduce these distributions in Chapter  5</p>
+<h4 id="3-3-Continuous-Distributions"><a href="#3-3-Continuous-Distributions" class="headerlink" title="3.3 Continuous Distributions."></a>3.3 Continuous Distributions.</h4><h6 id="Definition-3-7-Continuous-Distribution"><a href="#Definition-3-7-Continuous-Distribution" class="headerlink" title="Definition 3.7 (Continuous Distribution)."></a>Definition 3.7 (Continuous Distribution).</h6><p>A random variable $X$ is continuous if for some function $f:\mathbb{R} \to \mathbb{R} $ and for any $a\le b\in \mathbb{R}$, </p>
+<script type="math/tex; mode=display">
+\P{a\le X\le b} = \int_a^b f(x) dx</script><p>The function has to be $f(x) \ge 0$ for all $x$ and $\int_{-\infty}^\infty f(x) dx = 1$. We call $f$ the <strong>probability density function (pdf)</strong> of $X$.</p>
+<p>​    Note: it is important that we don’t define $f(x)$ without <script type="math/tex">\P{X}</script>, in other words, the pmf of $X$ is defined by <script type="math/tex">p_X(x) = \P{X=x}</script>, but $f(x) = \frac{dP(X)}{dx}|_x$, we couldn’t find $f(x)$ without find <script type="math/tex">\P{X}</script> firstly. (Right, we have some tricks or skills to solve pdf, but the definition is should follow these steps).</p>
+<h4 id="3-4-Cumulative-Distribution-Functions"><a href="#3-4-Cumulative-Distribution-Functions" class="headerlink" title="3.4 Cumulative Distribution Functions."></a>3.4 Cumulative Distribution Functions.</h4><h6 id="Definition-3-9-Cumulative-Distribution-Function"><a href="#Definition-3-9-Cumulative-Distribution-Function" class="headerlink" title="Definition 3.9 (Cumulative Distribution Function)"></a>Definition 3.9 (Cumulative Distribution Function)</h6><p>The <strong>cumulative distribution function (cdf)</strong> $F$ of a random variable $X$ is the function $F:\mathbb{R} \to [0,1]$ defined by </p>
+<script type="math/tex; mode=display">
+F(a) = \P{X\le a}\ \ \ \text{ for }\ -\infty<x<\infty</script><p>​    Both pmf (pdf) and cdf of a random variable contain all probabilistic information of $X$. In particular, if X is a discrete random variable supported on $\{d_1,\cdots,d_m\}$, its cdf can be obtained by </p>
+<script type="math/tex; mode=display">
+F(a) = \sum_{d_i\le a} p_X(d_i)</script><h6 id="Proposition-1"><a href="#Proposition-1" class="headerlink" title="Proposition 1."></a>Proposition 1.</h6><p>The cdf $F(x)$ of $X$ satisfies the following three properties.</p>
+<ul>
+<li><p>For $a\le b$, one has $F(a) \le F(b)$.</p>
+</li>
+<li><p>Since $F(a)$ is a probability, we have </p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\to-\infty}F(x) = 0\ \ \ \ \ \lim\limits_{x\to\infty}F(x) = 1</script></li>
+<li><p>The cdf <script type="math/tex">F(x) = \P{X\le x}</script>, it is always continuous from the right.</p>
+</li>
+</ul>
+<h6 id="Theorem-3-2"><a href="#Theorem-3-2" class="headerlink" title="Theorem 3.2."></a>Theorem 3.2.</h6><p>Let $X$ be a continuous random variable, and let $f(x)$ and $F(x)$ denote its pdf and cdf, respectively. Then for every real $x$</p>
+<script type="math/tex; mode=display">
+F(x) = \int_{-\infty}^x f(t)\ dt</script><p>and</p>
+<script type="math/tex; mode=display">
+\frac{d}{dx} F(x) = f(x)</script><p>at all $x$ where $f(x)$ is continuous.</p>
+<h6 id="Proposition-2-More-Properties"><a href="#Proposition-2-More-Properties" class="headerlink" title="Proposition 2 (More Properties)."></a>Proposition 2 (More Properties).</h6><p>For real numbers $x$ and $a&lt;b$, we have</p>
+<ul>
+<li><script type="math/tex; mode=display">\P{X>x} = 1-F(x)</script></li>
+<li><script type="math/tex; mode=display">\P{a<X\le b} = F(b) - F(a)</script></li>
+<li><script type="math/tex; mode=display">\P{X<x} = \lim_{t\to x^-} F(t)$$ and $$\P{X=x} = F(x) - \lim_{t\to x^-}F(t)</script></li>
+</ul>
+<h6 id="Definition-3-10"><a href="#Definition-3-10" class="headerlink" title="Definition 3.10."></a>Definition 3.10.</h6><p>Let $X$ be a random variable and let $p \in(0,1)$. The $p$ <strong>quantile</strong> or <strong>100$p$th percentile</strong> of the distribution of $X$ is the the smallest number $q_p$ s.t.</p>
+<script type="math/tex; mode=display">
+F(q_p) = \P{X\le q_p} \ge p</script><p>The <strong>median</strong> of a distribution is its $50th$ percentile.</p>
+<p>​    I don’t think this is useful…</p>
+<h4 id="3-5-Joint-Distribution"><a href="#3-5-Joint-Distribution" class="headerlink" title="3.5. Joint Distribution"></a>3.5. Joint Distribution</h4><h6 id="Definition-3-11-Discrete-Joint-Distributions"><a href="#Definition-3-11-Discrete-Joint-Distributions" class="headerlink" title="Definition 3.11 (Discrete Joint Distributions)."></a>Definition 3.11 (Discrete Joint Distributions).</h6><p> The <strong>joint probability mass function</strong> $p_{X,Y}$ of two discrete random variables $X$ and $Y$ is the function $p_{X,Y}:\mathbb{R}^2\to[0,1]$, define by </p>
+<script type="math/tex; mode=display">
+p_{X,Y}(a,b) = \P{X=a, Y=b}\hspace{1cm}\text{for}-\infty<a,b<\infty</script><h6 id="Theorem-3-3"><a href="#Theorem-3-3" class="headerlink" title="Theorem 3.3."></a>Theorem 3.3.</h6><p>Let $X$ and $Y$ have a discrete joint distribution. If $(x,y)$ is not one of the possible values of the pair $(X,Y)$, then $p_{X,Y}(x,y)=0$. Moreover, </p>
+<script type="math/tex; mode=display">
+\sum_{(x,y)\in\mathbb{R}^2}p_{X,Y}(x,y) =1</script><p>For each set $C \subset \mathbb{R}^2$, </p>
+<script type="math/tex; mode=display">
+\P{(X,Y)\in C} = \sum_{(x,y)\in C} p_{X,Y}(x,y)</script><h6 id="Definition-3-12-Continuous-Joint-Distributions"><a href="#Definition-3-12-Continuous-Joint-Distributions" class="headerlink" title="Definition 3.12 (Continuous Joint Distributions)."></a>Definition 3.12 (Continuous Joint Distributions).</h6><p>Random variables $X$ and $Y$ have a <strong>joint continuous distribution</strong> if for some function $f_{X,Y}:\mathbb{R}^2 \to \mathbb{R}$ and for all numbers $a_1, a_2$ and $b_1,b_2$ with $a_1\le b_1$ and $a_2\le b_2$, </p>
+<script type="math/tex; mode=display">
+\P{a_1\le X\le b_1, a_2\le Y\le b_2} = \int_{a_1}^{b_1}\int_{a_2}^{b_2} f_{X,Y}(x,y)dxdy</script><p>The function $f_{X,Y}$ has to be nonnegative for all $x$, $y$, and $\int_{-\infty}^\infty \int_{-\infty}^\infty f_{X,Y}(x,y)dxdy = 1$. We call $f_{X,Y}$ the <strong>joint probability density function</strong> of $X$ and $Y$.</p>
+<p>​    Note: I will omit the subscript $X,Y$ if there is no ambiguity.</p>
+<h6 id="Theorem-3-4"><a href="#Theorem-3-4" class="headerlink" title="Theorem 3.4."></a>Theorem 3.4.</h6><p>For every continuous joint distribution, the following statements hold:</p>
+<ul>
+<li>Every individual point, and every infinite sequence of points, in the $xy$-plane has probability 0.</li>
+<li><p>Let $f$ be one real variable  continuous function defined on $(a,b)$. The sets $\{(x,y):y=f(x), x\in(a,b)\}$ and $\{(x,y):x=f(y), y\in(a,b)\}$ have probability 0.</p>
+<p>Note that if $X$ is a continuous random variable and $Y=X$, then <strong>both $X$ and $Y$ are continuous</strong> but $(X,Y)$ lies on a straight line $y=x$ in $\mathbb{R}^2$. Hence, by Theorem 3.4, $X$ and $Y$ <strong>cannot have a continuous joint distribution</strong>.</p>
+</li>
+</ul>
+<p>​    In this part, we always could choose a part $C \subset \mathbb{R}^2$ to make <script type="math/tex">\P{(X,Y)\in C} <0</script>, which could proves this Theorem.</p>
+<h6 id="Definition-3-13-Mixed-Joint-Distribution"><a href="#Definition-3-13-Mixed-Joint-Distribution" class="headerlink" title="Definition 3.13 (Mixed Joint Distribution)."></a>Definition 3.13 (Mixed Joint Distribution).</h6><p>Let $X$ be a discrete random variable and $Y$ is continuous, They have a <strong>mixed joint distribution</strong> if there is a function $f$ such that </p>
+<script type="math/tex; mode=display">
+\P{X\in A\ \text{and }\ Y\in B} = \int_{B}\sum_{x\in A} f(x,y) dy</script><p>for all pair $A, B\subset \mathbb R$ . The function $f(x,y)$ has to be nonnegative and $\int_{-\infty}^\infty \sum_{-\infty}^\infty f(x,y)dy=1$, We call the <strong>mixed joint probability function</strong> of $X$ and $Y$.</p>
+<h4 id="3-6-Marginal-Distributions"><a href="#3-6-Marginal-Distributions" class="headerlink" title="3.6. Marginal Distributions"></a>3.6. Marginal Distributions</h4><h6 id="Definition-3-14"><a href="#Definition-3-14" class="headerlink" title="Definition 3.14."></a>Definition 3.14.</h6><p>The <strong>joint cumulative distribution function </strong> of two random variables $X$ and $Y$ is define as </p>
+<script type="math/tex; mode=display">
+F_{X,Y}(x,y) = \P{X\le x\ \text{and}\ Y\le y}</script><h6 id="Definition-3-15-Marginal-Distribution"><a href="#Definition-3-15-Marginal-Distribution" class="headerlink" title="Definition 3.15 (Marginal Distribution)."></a>Definition 3.15 (Marginal Distribution).</h6><p>Suppose $F_{X,Y}(x,y)$ is the joint cdf for random variables $X$ and $Y$, The <strong>marginal cdf</strong> of $X$ is </p>
+<script type="math/tex; mode=display">
+F_X(x) = \lim_{y\to\infty} F_{X,Y}(x,y)</script><p>Symmetrically, we can define marginal cdf of $Y$ by taking limit of $F_{X,Y}$ as $x$ goes to infinity.</p>
+<p>​    The pmf(pdf) associated with the joint marginal cdf of $X$ is called the <strong>marginal pmf(pdf)</strong> of $X$.</p>
+<h6 id="Theorem-3-5"><a href="#Theorem-3-5" class="headerlink" title="Theorem 3.5."></a>Theorem 3.5.</h6><p>Suppose $X$, $Y$ are random variables with a joint pf $f_{X,Y}(x,y)$. Then the marginal pmf (pdf) of $X$ can be obtained by </p>
+<script type="math/tex; mode=display">
+f_X(x) = \sum_{y=-\infty}^\infty f_{X,Y}(x,y)</script><p>or </p>
+<script type="math/tex; mode=display">
+f_X(x) = \int_{-\infty}^\infty f_{X,Y}(x,y)\ dy</script><p>depending on whether $Y$ is discrete or continuous.</p>
+<h6 id="Definition-3-16-Independent-Random-Variables"><a href="#Definition-3-16-Independent-Random-Variables" class="headerlink" title="Definition 3.16  (Independent Random Variables)"></a>Definition 3.16  (Independent Random Variables)</h6><p>Two random variables $X$ and $Y$ are said to be independent if for all events $A, B\subset \mathbb{R}$, </p>
+<script type="math/tex; mode=display">
+\P{X\in A\ \text{and}\ Y\in B} = \P{X\in A} \P{Y\in B}.</script><p>Random variables that are <strong>not independent</strong> are called <strong>dependent</strong>.</p>
+<p>​    It follows immediately  from the definition that if $X$ and $Y$ are independent, then</p>
+<script type="math/tex; mode=display">
+\P{X\le x\ \text{and}\ Y\le y} =\P{X\le x}\P{Y\le y}</script><h6 id="Theorem-3-6-Equivalent-Definition-of-Independency"><a href="#Theorem-3-6-Equivalent-Definition-of-Independency" class="headerlink" title="Theorem 3.6 (Equivalent Definition of Independency)."></a>Theorem 3.6 (Equivalent Definition of Independency).</h6><p>Let $F(x,y)$ be the joint cdf of $X$ and $Y$, Let $F_X(x)$ and $F_Y(y)$ be the marginal cdf for $X$ and $Y$ repectively. Then $X$ and $Y$ are independent if and only if </p>
+<script type="math/tex; mode=display">
+F(a,b) = F_X(a)F_Y(b)</script><p>for all real values $a, b$</p>
+<p>​    As a special case we can take $A=\{a\}$ and $B = \{b\}$, then </p>
+<script type="math/tex; mode=display">
+\P{X=a\ \text{and}\ Y=b} = \P{X=a}\P{Y=b}</script><h6 id="Theorem-3-7"><a href="#Theorem-3-7" class="headerlink" title="Theorem 3.7."></a>Theorem 3.7.</h6><p>Suppose $f(x,y)$ is the joint pmf (pdf) of $X$ and $Y$. Then $X$ and $Y$ are independent if and only if </p>
+<script type="math/tex; mode=display">
+f(x,y) = f_X(x)f_Y(y)</script><h4 id="3-7-Conditional-Distributions"><a href="#3-7-Conditional-Distributions" class="headerlink" title="3.7. Conditional Distributions"></a>3.7. Conditional Distributions</h4><h6 id="Definition-3-17"><a href="#Definition-3-17" class="headerlink" title="Definition 3.17."></a>Definition 3.17.</h6><p>Let $X$ and $Y$ be random variables with joint pmf (pdf) $f(x,y)$. Let $f_Y$ denote the marginal pmf (pdf) of $Y$ such that for all $f_Y(y)&gt;0$ for all $y$. Define </p>
+<script type="math/tex; mode=display">
+g_X(x|y) = \frac{f(x,y)}{f_Y(y)}</script><p>Then $g_X(\cdot|y)$ is called the <strong>conditional pmf(pdf)</strong> of $X$ given $Y$. The distribution whose pmf(pdf) is $g_X(\cdot|y)$ is called the <strong>conditional distribution</strong> of $X$ given $Y=y$. </p>
+<h4 id="3-8-Multivariate-Distributions"><a href="#3-8-Multivariate-Distributions" class="headerlink" title="3.8. Multivariate Distributions."></a>3.8. Multivariate Distributions.</h4><p>In this section, we shall extend the results for two random variables to an arbitrary finite number $n$ of random variables $X_1,X_2,\cdots,X_n$. In general, the joint distribution of more than two random variables is called a multivariate distribution.</p>
+<h6 id="Definition-3-18"><a href="#Definition-3-18" class="headerlink" title="Definition 3.18."></a>Definition 3.18.</h6><p>The <strong>joint cumulative distribution function</strong> of $X_1,\cdots,X_n$, which is defined by </p>
+<script type="math/tex; mode=display">
+F(a_1,a_2,\cdots,a_n) = \P{X_1\le a_1, \cdots, X_n\le a_n}</script><p>for $-\infty &lt;a_1,\cdots,a_n&lt;\infty$. </p>
+<p>If the random variables is discrete, the joint distribution can also be characterized by specifying the joint probability mass function $p$ of $X_1,X_2,\cdots,X_n$, defined by </p>
+<script type="math/tex; mode=display">
+p(a_1,a_2,\cdots,a_n) = \P{X_1=a_1,\cdots,X_n=a_n}</script><p>for $-\infty &lt; a_1,\cdots,a_n&lt;\infty$ .</p>
+<h6 id="Theorem-3-8"><a href="#Theorem-3-8" class="headerlink" title="Theorem 3.8."></a>Theorem 3.8.</h6><p>If $\mathbf{X} = (X_i)_{i=1}^n$ has a joint discrete distribution with pmf $f$, then for every subset $C\subset R^n$, </p>
+<script type="math/tex; mode=display">
+\P{\bold{X}\in C} = \sum_{\bold{x}\in C}f(\bold{x})</script><h6 id="Definition-3-19"><a href="#Definition-3-19" class="headerlink" title="Definition 3.19."></a>Definition 3.19.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables. The <strong>joint continuous distribution function</strong> is a nonnegative function $f:\mathbb{R}^n \to \mathbb{R}$ such that for all $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ </p>
+<script type="math/tex; mode=display">
+\P{\cap_{i=1}^n \{a_i\le X_i\le b_i\}} = \int_{a_1}^{b_1}\cdots\int_{a_n}^{b_n} f(x_1,\cdots,x_n)\ dx_1\cdots dx_n</script><p>Here $f$ satisfy $\int f = 1$. We call $f$ the <strong>joint probability density function </strong> of $\mathbf{X}$.</p>
+<h6 id="Theorem-3-9"><a href="#Theorem-3-9" class="headerlink" title="Theorem 3.9."></a>Theorem 3.9.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables. The joint pdf $f$ can derived from the joint cdf $F$ by </p>
+<script type="math/tex; mode=display">
+f(x_1,\cdots,x_n)= \frac{\partial^n}{\partial x_1\cdots\partial x_n}F(x_1,\cdots,x_n)</script><p>​    Similar to the two variable case, the marginal cdf $F_j(x_j)$ of $X_j$ can be obtained by </p>
+<script type="math/tex; mode=display">
+F_j(x_j) = \P{X_j\le x_j}=\lim\limits_{\substack{x_i\to\infty\\i\neq j}} F(x_1,\cdots,x_n)</script><h6 id="Definition-3-20"><a href="#Definition-3-20" class="headerlink" title="Definition 3.20."></a>Definition 3.20.</h6><p>Random variables $(X_i)_{i=1}^n$ are <strong>independent</strong> if for every $n$ sets $A_1,\cdots,A_n$ of real numbers.</p>
+<script type="math/tex; mode=display">
+\P{\cap_{i=1}^n\{X_i\subset A_i\}} = \prod_{i=1}^n \P{X_i\subset A_i}.</script><h6 id="Definition-3-21-i-i-d"><a href="#Definition-3-21-i-i-d" class="headerlink" title="Definition 3.21 (i.i.d.)."></a>Definition 3.21 (i.i.d.).</h6><p> A collection of random variables $(X_i)_{i=1}^n$ is called <strong>independent and identically distributed</strong> if each Xi has the same probability distribution and they are mutually independent. This property is often abbreviated as <strong>i.i.d.</strong></p>
+<h4 id="3-9-Function-of-One-Random-Variable"><a href="#3-9-Function-of-One-Random-Variable" class="headerlink" title="3.9. Function of One Random Variable."></a>3.9. Function of One Random Variable.</h4><h6 id="Theorem-3-10"><a href="#Theorem-3-10" class="headerlink" title="Theorem 3.10."></a>Theorem 3.10.</h6><p>Let $X$ be a discrete random variable with pmf $p_X(x)$ and let $Y = r(X)$ for some function $r$ defined on the support of $X$. Then the pmf of $Y$ is</p>
+<script type="math/tex; mode=display">
+p_Y(y) = \P{Y=y} = \P{r(X) = y} =\sum_{r(x)=y} p_X(x)</script><p>​    If $r$ is invertible on the support of $X$, the above theorem can be simplified to </p>
+<script type="math/tex; mode=display">
+p_Y(y) = \sum_{x=r^{-1}(y)}p_X(x)</script><h6 id="Theorem-3-11-Change-of-Units-Transformation"><a href="#Theorem-3-11-Change-of-Units-Transformation" class="headerlink" title="Theorem 3.11 (Change-of-Units Transformation)."></a>Theorem 3.11 (Change-of-Units Transformation).</h6><p>Suppose $X$ is continuous random variable with pdf $f_X(x)$. If we make a linear variable change $Y=g(X) =aX+b$ for $a\neq 0$, the pdf of $Y$ is </p>
+<script type="math/tex; mode=display">
+f_Y(y) = \frac1{|a|}f_X(\frac{y-b}a)</script><p>for $y\in\mathbb{R}$.</p>
+<p>$Proof.$ By cdf. </p>
+<h6 id="Theorem-3-12-Probability-Integral-Transformation"><a href="#Theorem-3-12-Probability-Integral-Transformation" class="headerlink" title="Theorem 3.12 (Probability Integral Transformation)"></a>Theorem 3.12 (Probability Integral Transformation)</h6><p>Let $X$ have a continuous cdf $F$ and let $Y=F(X)$. The distribution of $Y$ is the uniform distribution on the interval $[0,1]$ </p>
+<p>$Proof$. It equals to $F(y)=y$ for $0\leq y\leq 1$. Let $q_y$ be the $y$ quantile point of $F$. Since $F$ is continuous, $F(q_y)=y$. Then by the property the quantile function, $X\le q_y$ iff $F(X)\le y$.</p>
+<script type="math/tex; mode=display">
+F(y) = \P{Y\le y} = \P{X\le q_y} = F(q_y)=y</script><p>Which proves the theorem.</p>
+<h6 id="Theorem-3-13"><a href="#Theorem-3-13" class="headerlink" title="Theorem 3.13."></a>Theorem 3.13.</h6><p>too trival</p>
+<h4 id="3-10-Functions-of-Two-Random-Variables"><a href="#3-10-Functions-of-Two-Random-Variables" class="headerlink" title="3.10. Functions of Two Random Variables."></a>3.10. Functions of Two Random Variables.</h4><p>Suppose $(X_i)_{i=1}^n$ are random variables with a discrete joint pmf $p_X$. Let </p>
+<script type="math/tex; mode=display">
+Y_i = r_i(X_1,\cdots,X_n)\hspace{1cm}\text{for }\ 1\le i\le m</script><p><img src="C:\Users\85125\AppData\Roaming\Typora\typora-user-images\image-20211204133102452.png" alt="image-20211204133102452"></p>
+<h6 id="Theorem-3-17"><a href="#Theorem-3-17" class="headerlink" title="Theorem 3.17."></a>Theorem 3.17.</h6><p>Let $f_{X_1,X_2}(x_1,x_2)$ be the joint pdf of $X_1$, $X_2$ and let $Y=a_1X_1+a_2X_2+b$ with $a_1\neq 0$, the pdf of $Y$ is </p>
+<script type="math/tex; mode=display">
+f_Y(y) = \int_{-\infty}^\infty f_{X_1,X_2}(\frac{y-b-a_2x_2}{a_1},x_2)\frac1{|a_1|}dx_2</script><h6 id="Definition-3-22-Convolution"><a href="#Definition-3-22-Convolution" class="headerlink" title="Definition 3.22 (Convolution)."></a>Definition 3.22 (Convolution).</h6><p>Let $X_1, X_2$ be independent continuous random variables and let $Y = X_1 + X_2$. The distribution of Y is called the <strong>convolution</strong> of the distributions of $X_1$ and $X_2$.</p>
+<p>​    If $X_1$ and $X_2$ are discrete random variables, then </p>
+<script type="math/tex; mode=display">
+p_Y(y) =\sum_{x=-\infty}^\infty p_1(x)p_2(y-x)</script><p>​    For continuous random variables $X_1,X_2$ with pdf $f_1,f_2$, then </p>
+<script type="math/tex; mode=display">
+f(y) = \int_{-\infty}^\infty f_1(x)f_2(y-x)\ dx</script><h6 id="More-transform"><a href="#More-transform" class="headerlink" title="More transform"></a>More transform</h6><p>​    Suppose $X$ and $Y$ is continuous random variables and let $Z=XY$, then the pdf of $Z$ is  </p>
+<script type="math/tex; mode=display">
+f_Z(z) = \int_{-\infty}^\infty \frac1{|x|}f_{X,Y}(x,\frac{z}{x})\ dx</script><p>​    If we let $Z=\frac{X}{Y}$, the pdf of $Z$ is </p>
+<script type="math/tex; mode=display">
+f_Z(z) = \int_{-\infty}^\infty f_{X,Y}(zy,y)|y|\ dy</script><h6 id="Theorem-3-18"><a href="#Theorem-3-18" class="headerlink" title="Theorem 3.18."></a>Theorem 3.18.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables with joint pdf  $f_X$ and supported on $\mathcal{S} \subset \mathbb{R}^n$, Define </p>
+<script type="math/tex; mode=display">
+Y_j = r_j(\mathbf{X})</script><p>for $j=1,\cdots,n$. Here, we assume that $r_j$ define a one-to-one differentiable transformation of $\mathcal{S}$ onto a subset $\mathcal{T}$ of $\mathbb{R}^n$. Let this inverse of this transformation be given as </p>
+<script type="math/tex; mode=display">
+x_i = s_i(\mathbf{y})</script><p>for $i=1,\cdots,n$. Then the joint pdf of $\mathbf{Y}$ is </p>
+<script type="math/tex; mode=display">
+f_{\mathbf{Y}}(\mathbf{y}) = \cases{f_{\mathbf{X}}(s)|J|\hspace{1cm}&for $\mathbf{y}\in\mathcal{T}$ \\0&otherwise}</script><p>where $J$ is the Jacobian determinant </p>
+<script type="math/tex; mode=display">
+J = \det\begin{bmatrix}
+\frac{\partial s_1}{\partial y_1}&\cdots&\frac{\partial s_1}{\partial y_n}\\
+\vdots&&\vdots\\
+\frac{\partial s_n}{\partial y_1}&\cdots&\frac{\partial s_n}{\partial y_n}
+\end{bmatrix}</script><p>​    Note: The condition $r_j$ is defined a one-to-one differentiable transformation is important. If the $r_j$ isn’t one-to-one, it is always wrong because we ignore some information in the transformation.</p>
+<h4 id="3-11-Markov-Chains"><a href="#3-11-Markov-Chains" class="headerlink" title="3.11. Markov Chains."></a>3.11. Markov Chains.</h4><p>​    This section will not appear in my test. And the difficult part is how to construct the state instead of calculate.</p>
+<hr>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>捏马这一章的东西实在是太多了. 打了好几天才打完…</p>
+<p>首先我们找到了一个map使得sample space上的event可以被映射到$\mathbb{R}$上, 定义这个map叫做 random variable. 在定义了random variable之后我们就可以在$\mathbb{R}$上研究概率, 如此便可以定义一系列的cdf,pdf,以及joint cdf, pdf, marginal cdf, pdf. 另一方面, 类似事件独立我们可以定义随机变量的独立, 这种独立关系又可以等价到pdf与joint pdf的关系上(这是比较显然的).</p>
+<p>在此之后, 对于随机变量的组合变换, 我们可以利用cdf $\Rightarrow$ 概率 $\Rightarrow$ cdf‘ $\Rightarrow$ pdf’ 推导单一随机变量的新的cdf，对于联合分布可以使用雅可比行列式来处理, 本质都是从某个support上的某个微元映射到其他support上, 这个结果虽然不好证明但是非常自然的.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS-chapter-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -191,12 +607,41 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-27 14:18:23 / 修改时间：15:42:33" itemprop="dateCreated datePublished" datetime="2021-11-27T14:18:23+08:00">2021-11-27</time>
+              <time title="创建时间：2021-11-27 14:18:23" itemprop="dateCreated datePublished" datetime="2021-11-27T14:18:23+08:00">2021-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-05 14:10:00" itemprop="dateModified" datetime="2021-12-05T14:10:00+08:00">2021-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Probability-and-Statistics/" itemprop="url" rel="index"><span itemprop="name">Probability and Statistics</span></a>
+                </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -325,10 +770,16 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-11-27 11:00:58 / 修改时间：15:10:42" itemprop="dateCreated datePublished" datetime="2021-11-27T11:00:58+08:00">2021-11-27</time>
+              <time title="创建时间：2021-11-27 11:00:58" itemprop="dateCreated datePublished" datetime="2021-11-27T11:00:58+08:00">2021-11-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-05 14:08:39" itemprop="dateModified" datetime="2021-12-05T14:08:39+08:00">2021-12-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -339,7 +790,21 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
                 </span>
             </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -398,7 +863,8 @@ A\cap(B\cup C) = (A\cap B) \cup (A\cap C)\hspace{1cm}and\hspace{1cm}A\cup(B\cap 
 <script type="math/tex; mode=display">
 A = (A\cap B)\cup (A\cap B^c)</script><p>In addition </p>
 <script type="math/tex; mode=display">
-A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"><a href="#1-2-The-Definition-of-Probability" class="headerlink" title="1.2 The Definition of Probability"></a>1.2 The Definition of Probability</h4><h6 id="Definition-1-8-Axioms-of-Probability"><a href="#Definition-1-8-Axioms-of-Probability" class="headerlink" title="Definition 1.8 (Axioms of Probability)."></a>Definition 1.8 (Axioms of Probability).</h6><p>Let $\Omega$ be a sample space and $A$ be an event. A <strong>probability measure</strong> on $\Omega$ is a map $\mathbf{P}$ from the set all events to the real interval $[0,1]$ that satisfies the following three axioms.</p>
+A \cup B = B \cup (A\cap B^c)</script><hr>
+<h4 id="1-2-The-Definition-of-Probability"><a href="#1-2-The-Definition-of-Probability" class="headerlink" title="1.2 The Definition of Probability"></a>1.2 The Definition of Probability</h4><h6 id="Definition-1-8-Axioms-of-Probability"><a href="#Definition-1-8-Axioms-of-Probability" class="headerlink" title="Definition 1.8 (Axioms of Probability)."></a>Definition 1.8 (Axioms of Probability).</h6><p>Let $\Omega$ be a sample space and $A$ be an event. A <strong>probability measure</strong> on $\Omega$ is a map $\mathbf{P}$ from the set all events to the real interval $[0,1]$ that satisfies the following three axioms.</p>
 <ol>
 <li><p>For every event $A$, <script type="math/tex">\P{A} \geq 0</script>. </p>
 </li>
@@ -430,9 +896,12 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
 \P{A} = \P{A\cap B} + \P{A\cap B^c}</script><h6 id="Corollary-1-1"><a href="#Corollary-1-1" class="headerlink" title="Corollary 1."></a>Corollary 1.</h6><p>For a sequence $A_1,A_2\cdots, A_n$, we have </p>
 <script type="math/tex; mode=display">
 \P{\bigcup_{i=1}^n A_i} = \sum_{j=1}^n(-1)^{j-1} \sum_{\substack{I_j\subset\{1,\cdots,n\}\\|I_j|=j}} \P{\bigcap_{i\in I_j} A_i}</script><p>$Proof.$ By induction.</p>
+<hr>
 <h4 id="1-3-Finite-Sample-Spaces"><a href="#1-3-Finite-Sample-Spaces" class="headerlink" title="1.3. Finite Sample Spaces."></a>1.3. Finite Sample Spaces.</h4><h6 id="Definition-1-9"><a href="#Definition-1-9" class="headerlink" title="Definition 1.9."></a>Definition 1.9.</h6><p>A sample space $\Omega$ containing $n$ outcomes $s_1,\cdots, s_n$ is called a <strong>simple sample space</strong> if the probability assigned to each out come is $\frac1n$</p>
 <p>​    If $A$ is an event from a simple sample space and $A$ contains $m$ elements, then <script type="math/tex">\P{A} = \frac{m}{n}</script></p>
+<hr>
 <h4 id="1-4-Counting-Methods"><a href="#1-4-Counting-Methods" class="headerlink" title="1.4. Counting Methods"></a>1.4. Counting Methods</h4><p>​    This part is easy for those who has already known it. I don’t want to waste too much time summarizing this part. Thus I will skip all the theorems or definitions.</p>
+<hr>
 <h4 id="1-5-Combinatorial-Methods"><a href="#1-5-Combinatorial-Methods" class="headerlink" title="1.5. Combinatorial Methods"></a>1.5. Combinatorial Methods</h4><p>​    The same as $1.4.$ But I will summarize some combinatorial identities.</p>
 <h6 id="Definition-1-11"><a href="#Definition-1-11" class="headerlink" title="Definition 1.11."></a>Definition 1.11.</h6><p>Consider a set with $n$ elements. Each subset of size $k$ chosen from this set is called a <strong>combination of $n$ elements</strong> taken $k$ at a time. We denote the number of distinct such combinations by $C_{n,k}$</p>
 <h6 id="Definition-1-12"><a href="#Definition-1-12" class="headerlink" title="Definition 1.12."></a>Definition 1.12.</h6><p>The number $C_{n,k}$ is also denoted by the symbol $n\choose k$. That is, for $k=0,1,\cdots,n$, </p>
@@ -443,7 +912,8 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
 {n\choose k} + {n\choose k+1} = {n+1\choose k+1}</script><h6 id="Combinatorial-identities-4"><a href="#Combinatorial-identities-4" class="headerlink" title="Combinatorial identities 4"></a>Combinatorial identities 4</h6><script type="math/tex; mode=display">
 \sum_{k=0}^m {n+k\choose k} = {n+m+1\choose m}</script><h6 id="Combinatorial-identities-5"><a href="#Combinatorial-identities-5" class="headerlink" title="Combinatorial identities 5"></a>Combinatorial identities 5</h6><script type="math/tex; mode=display">
 {n+m\choose k} = \sum_{i=0}^k {n\choose i}\cdot {m\choose k-i}</script><h6 id="Combinatorial-identities-6"><a href="#Combinatorial-identities-6" class="headerlink" title="Combinatorial identities 6"></a>Combinatorial identities 6</h6><script type="math/tex; mode=display">
-{2n \choose n} = \sum_{i=0}^n {n\choose i}^2</script><h4 id="1-6-Multinomial-Coefficients"><a href="#1-6-Multinomial-Coefficients" class="headerlink" title="1.6. Multinomial Coefficients"></a>1.6. Multinomial Coefficients</h4><h6 id="Definition-1-13"><a href="#Definition-1-13" class="headerlink" title="Definition 1.13."></a>Definition 1.13.</h6><p>A <strong>multinomial coefficient</strong> is </p>
+{2n \choose n} = \sum_{i=0}^n {n\choose i}^2</script><hr>
+<h4 id="1-6-Multinomial-Coefficients"><a href="#1-6-Multinomial-Coefficients" class="headerlink" title="1.6. Multinomial Coefficients"></a>1.6. Multinomial Coefficients</h4><h6 id="Definition-1-13"><a href="#Definition-1-13" class="headerlink" title="Definition 1.13."></a>Definition 1.13.</h6><p>A <strong>multinomial coefficient</strong> is </p>
 <script type="math/tex; mode=display">
 {n\choose n_1,n_2,\cdots,n_k} = \frac{n!}{n_1!n_2!\cdots n_k!}</script><p>where $n_1+n_2+\cdots+n_k = n$ </p>
 <hr>
@@ -502,7 +972,21 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
                 <time title="修改时间：2021-11-26 00:34:14" itemprop="dateModified" datetime="2021-11-26T00:34:14+08:00">2021-11-26</time>
               </span>
 
-          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>324</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
 
         </div>
       </header>
@@ -610,7 +1094,7 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -664,6 +1148,16 @@ A \cup B = B \cup (A\cap B^c)</script><h4 id="1-2-The-Definition-of-Probability"
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Yewandou</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">19k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">17 分钟</span>
 </div>
 
 <div>

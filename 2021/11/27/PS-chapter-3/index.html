@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  
+  
+
+  <title>PS chapter 3 | Yewandou's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Yewandou's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/Yewandou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS-chapter-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yewandou">
+      <meta itemprop="description" content="快乐摸鱼">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yewandou's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PS chapter 3
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-27 20:26:06" itemprop="dateCreated datePublished" datetime="2021-11-27T20:26:06+08:00">2021-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-05 14:13:15" itemprop="dateModified" datetime="2021-12-05T14:13:15+08:00">2021-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Probability-and-Statistics/" itemprop="url" rel="index"><span itemprop="name">Probability and Statistics</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <script type="math/tex; mode=display">
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="3-Random-Variables-and-Distributions"><a href="#3-Random-Variables-and-Distributions" class="headerlink" title="3. Random Variables and Distributions"></a>3. Random Variables and Distributions</h3><h4 id="3-1-Discrete-Random-Variables"><a href="#3-1-Discrete-Random-Variables" class="headerlink" title="3.1. Discrete Random Variables."></a>3.1. Discrete Random Variables.</h4><h6 id="Definition-3-1"><a href="#Definition-3-1" class="headerlink" title="Definition 3.1."></a>Definition 3.1.</h6><p>Consider a random experiment with a sample space $\Omega$. A function $X$, which assigns to each element $s \in \Omega$ one and only one number $X(s) = x$, is called a <strong>random variable</strong>. The <strong>space</strong> or <strong>range</strong> of $X$ is the set of real numbers $\mathcal{D} = \{x:x=X(s), s\in\Omega\}$.</p>
+<p>​    In this text, $\mathcal{D}$ generally is a <strong>a countable  set</strong> or <strong>an interval</strong> of real numbers. We call random variables of the first type <strong>discrete</strong> random variables, while we call those of the second type <strong>continuous</strong> random variables.</p>
+<p>​    Given a random variable $X$, its range $\mathcal{D}$ becomes the sample space of interest. Besides inducing the sample space $\mathcal{D}$, $X$ also induces a probability which we call the <strong>distribution</strong> of $X$.</p>
+<h6 id="Definition-3-2"><a href="#Definition-3-2" class="headerlink" title="Definition 3.2."></a>Definition 3.2.</h6><p>Let $X$ be a discrete random variable that takes values in $\mathcal{D} = \{d_1,\cdots,d_m\}$. Define the function </p>
+<script type="math/tex; mode=display">
+p_X(d_i) = \P{\{s\in \Omega:X(s) = d_i\}},\ \ \text{for }i=1,\cdots,m</script><p>This is called the <strong>probability mass function (pmf)</strong> of $X$.</p>
+<p>​    By the definition, for a discrete random variable to find the probability of an event $A$ from a pmf, we can simply calculate </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{x\in A} p_X(x)</script><h6 id="Theorem-3-1"><a href="#Theorem-3-1" class="headerlink" title="Theorem 3.1."></a>Theorem 3.1.</h6><p>Let $X$ be a discrete random variable with pmf $p_X(x)$. If $x$ is not one the possible values of $X$, then $p_X(x) = 0$. Also, if the sequence $d_1,d_2,\cdots$ includes all the possible values of $X$, then $\sum_{i=1}^\infty p_X(d_i) =1$.<br>$Proof.$ Use the fact that </p>
+<script type="math/tex; mode=display">
+\sum_{d_i} p_X(d_i) = \sum_{d_i} \P{X=d_i} = \P{\Omega} = 1</script><h4 id="3-2-Bernoulli-Binomial-and-Geometric-Distributions"><a href="#3-2-Bernoulli-Binomial-and-Geometric-Distributions" class="headerlink" title="3.2 Bernoulli, Binomial, and Geometric Distributions."></a>3.2 Bernoulli, Binomial, and Geometric Distributions.</h4><p>We will introduce these distributions in Chapter  5</p>
+<h4 id="3-3-Continuous-Distributions"><a href="#3-3-Continuous-Distributions" class="headerlink" title="3.3 Continuous Distributions."></a>3.3 Continuous Distributions.</h4><h6 id="Definition-3-7-Continuous-Distribution"><a href="#Definition-3-7-Continuous-Distribution" class="headerlink" title="Definition 3.7 (Continuous Distribution)."></a>Definition 3.7 (Continuous Distribution).</h6><p>A random variable $X$ is continuous if for some function $f:\mathbb{R} \to \mathbb{R} $ and for any $a\le b\in \mathbb{R}$, </p>
+<script type="math/tex; mode=display">
+\P{a\le X\le b} = \int_a^b f(x) dx</script><p>The function has to be $f(x) \ge 0$ for all $x$ and $\int_{-\infty}^\infty f(x) dx = 1$. We call $f$ the <strong>probability density function (pdf)</strong> of $X$.</p>
+<p>​    Note: it is important that we don’t define $f(x)$ without <script type="math/tex">\P{X}</script>, in other words, the pmf of $X$ is defined by <script type="math/tex">p_X(x) = \P{X=x}</script>, but $f(x) = \frac{dP(X)}{dx}|_x$, we couldn’t find $f(x)$ without find <script type="math/tex">\P{X}</script> firstly. (Right, we have some tricks or skills to solve pdf, but the definition is should follow these steps).</p>
+<h4 id="3-4-Cumulative-Distribution-Functions"><a href="#3-4-Cumulative-Distribution-Functions" class="headerlink" title="3.4 Cumulative Distribution Functions."></a>3.4 Cumulative Distribution Functions.</h4><h6 id="Definition-3-9-Cumulative-Distribution-Function"><a href="#Definition-3-9-Cumulative-Distribution-Function" class="headerlink" title="Definition 3.9 (Cumulative Distribution Function)"></a>Definition 3.9 (Cumulative Distribution Function)</h6><p>The <strong>cumulative distribution function (cdf)</strong> $F$ of a random variable $X$ is the function $F:\mathbb{R} \to [0,1]$ defined by </p>
+<script type="math/tex; mode=display">
+F(a) = \P{X\le a}\ \ \ \text{ for }\ -\infty<x<\infty</script><p>​    Both pmf (pdf) and cdf of a random variable contain all probabilistic information of $X$. In particular, if X is a discrete random variable supported on $\{d_1,\cdots,d_m\}$, its cdf can be obtained by </p>
+<script type="math/tex; mode=display">
+F(a) = \sum_{d_i\le a} p_X(d_i)</script><h6 id="Proposition-1"><a href="#Proposition-1" class="headerlink" title="Proposition 1."></a>Proposition 1.</h6><p>The cdf $F(x)$ of $X$ satisfies the following three properties.</p>
+<ul>
+<li><p>For $a\le b$, one has $F(a) \le F(b)$.</p>
+</li>
+<li><p>Since $F(a)$ is a probability, we have </p>
+<script type="math/tex; mode=display">
+\lim\limits_{x\to-\infty}F(x) = 0\ \ \ \ \ \lim\limits_{x\to\infty}F(x) = 1</script></li>
+<li><p>The cdf <script type="math/tex">F(x) = \P{X\le x}</script>, it is always continuous from the right.</p>
+</li>
+</ul>
+<h6 id="Theorem-3-2"><a href="#Theorem-3-2" class="headerlink" title="Theorem 3.2."></a>Theorem 3.2.</h6><p>Let $X$ be a continuous random variable, and let $f(x)$ and $F(x)$ denote its pdf and cdf, respectively. Then for every real $x$</p>
+<script type="math/tex; mode=display">
+F(x) = \int_{-\infty}^x f(t)\ dt</script><p>and</p>
+<script type="math/tex; mode=display">
+\frac{d}{dx} F(x) = f(x)</script><p>at all $x$ where $f(x)$ is continuous.</p>
+<h6 id="Proposition-2-More-Properties"><a href="#Proposition-2-More-Properties" class="headerlink" title="Proposition 2 (More Properties)."></a>Proposition 2 (More Properties).</h6><p>For real numbers $x$ and $a&lt;b$, we have</p>
+<ul>
+<li><script type="math/tex; mode=display">\P{X>x} = 1-F(x)</script></li>
+<li><script type="math/tex; mode=display">\P{a<X\le b} = F(b) - F(a)</script></li>
+<li><script type="math/tex; mode=display">\P{X<x} = \lim_{t\to x^-} F(t)$$ and $$\P{X=x} = F(x) - \lim_{t\to x^-}F(t)</script></li>
+</ul>
+<h6 id="Definition-3-10"><a href="#Definition-3-10" class="headerlink" title="Definition 3.10."></a>Definition 3.10.</h6><p>Let $X$ be a random variable and let $p \in(0,1)$. The $p$ <strong>quantile</strong> or <strong>100$p$th percentile</strong> of the distribution of $X$ is the the smallest number $q_p$ s.t.</p>
+<script type="math/tex; mode=display">
+F(q_p) = \P{X\le q_p} \ge p</script><p>The <strong>median</strong> of a distribution is its $50th$ percentile.</p>
+<p>​    I don’t think this is useful…</p>
+<h4 id="3-5-Joint-Distribution"><a href="#3-5-Joint-Distribution" class="headerlink" title="3.5. Joint Distribution"></a>3.5. Joint Distribution</h4><h6 id="Definition-3-11-Discrete-Joint-Distributions"><a href="#Definition-3-11-Discrete-Joint-Distributions" class="headerlink" title="Definition 3.11 (Discrete Joint Distributions)."></a>Definition 3.11 (Discrete Joint Distributions).</h6><p> The <strong>joint probability mass function</strong> $p_{X,Y}$ of two discrete random variables $X$ and $Y$ is the function $p_{X,Y}:\mathbb{R}^2\to[0,1]$, define by </p>
+<script type="math/tex; mode=display">
+p_{X,Y}(a,b) = \P{X=a, Y=b}\hspace{1cm}\text{for}-\infty<a,b<\infty</script><h6 id="Theorem-3-3"><a href="#Theorem-3-3" class="headerlink" title="Theorem 3.3."></a>Theorem 3.3.</h6><p>Let $X$ and $Y$ have a discrete joint distribution. If $(x,y)$ is not one of the possible values of the pair $(X,Y)$, then $p_{X,Y}(x,y)=0$. Moreover, </p>
+<script type="math/tex; mode=display">
+\sum_{(x,y)\in\mathbb{R}^2}p_{X,Y}(x,y) =1</script><p>For each set $C \subset \mathbb{R}^2$, </p>
+<script type="math/tex; mode=display">
+\P{(X,Y)\in C} = \sum_{(x,y)\in C} p_{X,Y}(x,y)</script><h6 id="Definition-3-12-Continuous-Joint-Distributions"><a href="#Definition-3-12-Continuous-Joint-Distributions" class="headerlink" title="Definition 3.12 (Continuous Joint Distributions)."></a>Definition 3.12 (Continuous Joint Distributions).</h6><p>Random variables $X$ and $Y$ have a <strong>joint continuous distribution</strong> if for some function $f_{X,Y}:\mathbb{R}^2 \to \mathbb{R}$ and for all numbers $a_1, a_2$ and $b_1,b_2$ with $a_1\le b_1$ and $a_2\le b_2$, </p>
+<script type="math/tex; mode=display">
+\P{a_1\le X\le b_1, a_2\le Y\le b_2} = \int_{a_1}^{b_1}\int_{a_2}^{b_2} f_{X,Y}(x,y)dxdy</script><p>The function $f_{X,Y}$ has to be nonnegative for all $x$, $y$, and $\int_{-\infty}^\infty \int_{-\infty}^\infty f_{X,Y}(x,y)dxdy = 1$. We call $f_{X,Y}$ the <strong>joint probability density function</strong> of $X$ and $Y$.</p>
+<p>​    Note: I will omit the subscript $X,Y$ if there is no ambiguity.</p>
+<h6 id="Theorem-3-4"><a href="#Theorem-3-4" class="headerlink" title="Theorem 3.4."></a>Theorem 3.4.</h6><p>For every continuous joint distribution, the following statements hold:</p>
+<ul>
+<li>Every individual point, and every infinite sequence of points, in the $xy$-plane has probability 0.</li>
+<li><p>Let $f$ be one real variable  continuous function defined on $(a,b)$. The sets $\{(x,y):y=f(x), x\in(a,b)\}$ and $\{(x,y):x=f(y), y\in(a,b)\}$ have probability 0.</p>
+<p>Note that if $X$ is a continuous random variable and $Y=X$, then <strong>both $X$ and $Y$ are continuous</strong> but $(X,Y)$ lies on a straight line $y=x$ in $\mathbb{R}^2$. Hence, by Theorem 3.4, $X$ and $Y$ <strong>cannot have a continuous joint distribution</strong>.</p>
+</li>
+</ul>
+<p>​    In this part, we always could choose a part $C \subset \mathbb{R}^2$ to make <script type="math/tex">\P{(X,Y)\in C} <0</script>, which could proves this Theorem.</p>
+<h6 id="Definition-3-13-Mixed-Joint-Distribution"><a href="#Definition-3-13-Mixed-Joint-Distribution" class="headerlink" title="Definition 3.13 (Mixed Joint Distribution)."></a>Definition 3.13 (Mixed Joint Distribution).</h6><p>Let $X$ be a discrete random variable and $Y$ is continuous, They have a <strong>mixed joint distribution</strong> if there is a function $f$ such that </p>
+<script type="math/tex; mode=display">
+\P{X\in A\ \text{and }\ Y\in B} = \int_{B}\sum_{x\in A} f(x,y) dy</script><p>for all pair $A, B\subset \mathbb R$ . The function $f(x,y)$ has to be nonnegative and $\int_{-\infty}^\infty \sum_{-\infty}^\infty f(x,y)dy=1$, We call the <strong>mixed joint probability function</strong> of $X$ and $Y$.</p>
+<h4 id="3-6-Marginal-Distributions"><a href="#3-6-Marginal-Distributions" class="headerlink" title="3.6. Marginal Distributions"></a>3.6. Marginal Distributions</h4><h6 id="Definition-3-14"><a href="#Definition-3-14" class="headerlink" title="Definition 3.14."></a>Definition 3.14.</h6><p>The <strong>joint cumulative distribution function </strong> of two random variables $X$ and $Y$ is define as </p>
+<script type="math/tex; mode=display">
+F_{X,Y}(x,y) = \P{X\le x\ \text{and}\ Y\le y}</script><h6 id="Definition-3-15-Marginal-Distribution"><a href="#Definition-3-15-Marginal-Distribution" class="headerlink" title="Definition 3.15 (Marginal Distribution)."></a>Definition 3.15 (Marginal Distribution).</h6><p>Suppose $F_{X,Y}(x,y)$ is the joint cdf for random variables $X$ and $Y$, The <strong>marginal cdf</strong> of $X$ is </p>
+<script type="math/tex; mode=display">
+F_X(x) = \lim_{y\to\infty} F_{X,Y}(x,y)</script><p>Symmetrically, we can define marginal cdf of $Y$ by taking limit of $F_{X,Y}$ as $x$ goes to infinity.</p>
+<p>​    The pmf(pdf) associated with the joint marginal cdf of $X$ is called the <strong>marginal pmf(pdf)</strong> of $X$.</p>
+<h6 id="Theorem-3-5"><a href="#Theorem-3-5" class="headerlink" title="Theorem 3.5."></a>Theorem 3.5.</h6><p>Suppose $X$, $Y$ are random variables with a joint pf $f_{X,Y}(x,y)$. Then the marginal pmf (pdf) of $X$ can be obtained by </p>
+<script type="math/tex; mode=display">
+f_X(x) = \sum_{y=-\infty}^\infty f_{X,Y}(x,y)</script><p>or </p>
+<script type="math/tex; mode=display">
+f_X(x) = \int_{-\infty}^\infty f_{X,Y}(x,y)\ dy</script><p>depending on whether $Y$ is discrete or continuous.</p>
+<h6 id="Definition-3-16-Independent-Random-Variables"><a href="#Definition-3-16-Independent-Random-Variables" class="headerlink" title="Definition 3.16  (Independent Random Variables)"></a>Definition 3.16  (Independent Random Variables)</h6><p>Two random variables $X$ and $Y$ are said to be independent if for all events $A, B\subset \mathbb{R}$, </p>
+<script type="math/tex; mode=display">
+\P{X\in A\ \text{and}\ Y\in B} = \P{X\in A} \P{Y\in B}.</script><p>Random variables that are <strong>not independent</strong> are called <strong>dependent</strong>.</p>
+<p>​    It follows immediately  from the definition that if $X$ and $Y$ are independent, then</p>
+<script type="math/tex; mode=display">
+\P{X\le x\ \text{and}\ Y\le y} =\P{X\le x}\P{Y\le y}</script><h6 id="Theorem-3-6-Equivalent-Definition-of-Independency"><a href="#Theorem-3-6-Equivalent-Definition-of-Independency" class="headerlink" title="Theorem 3.6 (Equivalent Definition of Independency)."></a>Theorem 3.6 (Equivalent Definition of Independency).</h6><p>Let $F(x,y)$ be the joint cdf of $X$ and $Y$, Let $F_X(x)$ and $F_Y(y)$ be the marginal cdf for $X$ and $Y$ repectively. Then $X$ and $Y$ are independent if and only if </p>
+<script type="math/tex; mode=display">
+F(a,b) = F_X(a)F_Y(b)</script><p>for all real values $a, b$</p>
+<p>​    As a special case we can take $A=\{a\}$ and $B = \{b\}$, then </p>
+<script type="math/tex; mode=display">
+\P{X=a\ \text{and}\ Y=b} = \P{X=a}\P{Y=b}</script><h6 id="Theorem-3-7"><a href="#Theorem-3-7" class="headerlink" title="Theorem 3.7."></a>Theorem 3.7.</h6><p>Suppose $f(x,y)$ is the joint pmf (pdf) of $X$ and $Y$. Then $X$ and $Y$ are independent if and only if </p>
+<script type="math/tex; mode=display">
+f(x,y) = f_X(x)f_Y(y)</script><h4 id="3-7-Conditional-Distributions"><a href="#3-7-Conditional-Distributions" class="headerlink" title="3.7. Conditional Distributions"></a>3.7. Conditional Distributions</h4><h6 id="Definition-3-17"><a href="#Definition-3-17" class="headerlink" title="Definition 3.17."></a>Definition 3.17.</h6><p>Let $X$ and $Y$ be random variables with joint pmf (pdf) $f(x,y)$. Let $f_Y$ denote the marginal pmf (pdf) of $Y$ such that for all $f_Y(y)&gt;0$ for all $y$. Define </p>
+<script type="math/tex; mode=display">
+g_X(x|y) = \frac{f(x,y)}{f_Y(y)}</script><p>Then $g_X(\cdot|y)$ is called the <strong>conditional pmf(pdf)</strong> of $X$ given $Y$. The distribution whose pmf(pdf) is $g_X(\cdot|y)$ is called the <strong>conditional distribution</strong> of $X$ given $Y=y$. </p>
+<h4 id="3-8-Multivariate-Distributions"><a href="#3-8-Multivariate-Distributions" class="headerlink" title="3.8. Multivariate Distributions."></a>3.8. Multivariate Distributions.</h4><p>In this section, we shall extend the results for two random variables to an arbitrary finite number $n$ of random variables $X_1,X_2,\cdots,X_n$. In general, the joint distribution of more than two random variables is called a multivariate distribution.</p>
+<h6 id="Definition-3-18"><a href="#Definition-3-18" class="headerlink" title="Definition 3.18."></a>Definition 3.18.</h6><p>The <strong>joint cumulative distribution function</strong> of $X_1,\cdots,X_n$, which is defined by </p>
+<script type="math/tex; mode=display">
+F(a_1,a_2,\cdots,a_n) = \P{X_1\le a_1, \cdots, X_n\le a_n}</script><p>for $-\infty &lt;a_1,\cdots,a_n&lt;\infty$. </p>
+<p>If the random variables is discrete, the joint distribution can also be characterized by specifying the joint probability mass function $p$ of $X_1,X_2,\cdots,X_n$, defined by </p>
+<script type="math/tex; mode=display">
+p(a_1,a_2,\cdots,a_n) = \P{X_1=a_1,\cdots,X_n=a_n}</script><p>for $-\infty &lt; a_1,\cdots,a_n&lt;\infty$ .</p>
+<h6 id="Theorem-3-8"><a href="#Theorem-3-8" class="headerlink" title="Theorem 3.8."></a>Theorem 3.8.</h6><p>If $\mathbf{X} = (X_i)_{i=1}^n$ has a joint discrete distribution with pmf $f$, then for every subset $C\subset R^n$, </p>
+<script type="math/tex; mode=display">
+\P{\bold{X}\in C} = \sum_{\bold{x}\in C}f(\bold{x})</script><h6 id="Definition-3-19"><a href="#Definition-3-19" class="headerlink" title="Definition 3.19."></a>Definition 3.19.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables. The <strong>joint continuous distribution function</strong> is a nonnegative function $f:\mathbb{R}^n \to \mathbb{R}$ such that for all $(a_i)_{i=1}^n$ and $(b_i)_{i=1}^n$ </p>
+<script type="math/tex; mode=display">
+\P{\cap_{i=1}^n \{a_i\le X_i\le b_i\}} = \int_{a_1}^{b_1}\cdots\int_{a_n}^{b_n} f(x_1,\cdots,x_n)\ dx_1\cdots dx_n</script><p>Here $f$ satisfy $\int f = 1$. We call $f$ the <strong>joint probability density function </strong> of $\mathbf{X}$.</p>
+<h6 id="Theorem-3-9"><a href="#Theorem-3-9" class="headerlink" title="Theorem 3.9."></a>Theorem 3.9.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables. The joint pdf $f$ can derived from the joint cdf $F$ by </p>
+<script type="math/tex; mode=display">
+f(x_1,\cdots,x_n)= \frac{\partial^n}{\partial x_1\cdots\partial x_n}F(x_1,\cdots,x_n)</script><p>​    Similar to the two variable case, the marginal cdf $F_j(x_j)$ of $X_j$ can be obtained by </p>
+<script type="math/tex; mode=display">
+F_j(x_j) = \P{X_j\le x_j}=\lim\limits_{\substack{x_i\to\infty\\i\neq j}} F(x_1,\cdots,x_n)</script><h6 id="Definition-3-20"><a href="#Definition-3-20" class="headerlink" title="Definition 3.20."></a>Definition 3.20.</h6><p>Random variables $(X_i)_{i=1}^n$ are <strong>independent</strong> if for every $n$ sets $A_1,\cdots,A_n$ of real numbers.</p>
+<script type="math/tex; mode=display">
+\P{\cap_{i=1}^n\{X_i\subset A_i\}} = \prod_{i=1}^n \P{X_i\subset A_i}.</script><h6 id="Definition-3-21-i-i-d"><a href="#Definition-3-21-i-i-d" class="headerlink" title="Definition 3.21 (i.i.d.)."></a>Definition 3.21 (i.i.d.).</h6><p> A collection of random variables $(X_i)_{i=1}^n$ is called <strong>independent and identically distributed</strong> if each Xi has the same probability distribution and they are mutually independent. This property is often abbreviated as <strong>i.i.d.</strong></p>
+<h4 id="3-9-Function-of-One-Random-Variable"><a href="#3-9-Function-of-One-Random-Variable" class="headerlink" title="3.9. Function of One Random Variable."></a>3.9. Function of One Random Variable.</h4><h6 id="Theorem-3-10"><a href="#Theorem-3-10" class="headerlink" title="Theorem 3.10."></a>Theorem 3.10.</h6><p>Let $X$ be a discrete random variable with pmf $p_X(x)$ and let $Y = r(X)$ for some function $r$ defined on the support of $X$. Then the pmf of $Y$ is</p>
+<script type="math/tex; mode=display">
+p_Y(y) = \P{Y=y} = \P{r(X) = y} =\sum_{r(x)=y} p_X(x)</script><p>​    If $r$ is invertible on the support of $X$, the above theorem can be simplified to </p>
+<script type="math/tex; mode=display">
+p_Y(y) = \sum_{x=r^{-1}(y)}p_X(x)</script><h6 id="Theorem-3-11-Change-of-Units-Transformation"><a href="#Theorem-3-11-Change-of-Units-Transformation" class="headerlink" title="Theorem 3.11 (Change-of-Units Transformation)."></a>Theorem 3.11 (Change-of-Units Transformation).</h6><p>Suppose $X$ is continuous random variable with pdf $f_X(x)$. If we make a linear variable change $Y=g(X) =aX+b$ for $a\neq 0$, the pdf of $Y$ is </p>
+<script type="math/tex; mode=display">
+f_Y(y) = \frac1{|a|}f_X(\frac{y-b}a)</script><p>for $y\in\mathbb{R}$.</p>
+<p>$Proof.$ By cdf. </p>
+<h6 id="Theorem-3-12-Probability-Integral-Transformation"><a href="#Theorem-3-12-Probability-Integral-Transformation" class="headerlink" title="Theorem 3.12 (Probability Integral Transformation)"></a>Theorem 3.12 (Probability Integral Transformation)</h6><p>Let $X$ have a continuous cdf $F$ and let $Y=F(X)$. The distribution of $Y$ is the uniform distribution on the interval $[0,1]$ </p>
+<p>$Proof$. It equals to $F(y)=y$ for $0\leq y\leq 1$. Let $q_y$ be the $y$ quantile point of $F$. Since $F$ is continuous, $F(q_y)=y$. Then by the property the quantile function, $X\le q_y$ iff $F(X)\le y$.</p>
+<script type="math/tex; mode=display">
+F(y) = \P{Y\le y} = \P{X\le q_y} = F(q_y)=y</script><p>Which proves the theorem.</p>
+<h6 id="Theorem-3-13"><a href="#Theorem-3-13" class="headerlink" title="Theorem 3.13."></a>Theorem 3.13.</h6><p>too trival</p>
+<h4 id="3-10-Functions-of-Two-Random-Variables"><a href="#3-10-Functions-of-Two-Random-Variables" class="headerlink" title="3.10. Functions of Two Random Variables."></a>3.10. Functions of Two Random Variables.</h4><p>Suppose $(X_i)_{i=1}^n$ are random variables with a discrete joint pmf $p_X$. Let </p>
+<script type="math/tex; mode=display">
+Y_i = r_i(X_1,\cdots,X_n)\hspace{1cm}\text{for }\ 1\le i\le m</script><p><img src="C:\Users\85125\AppData\Roaming\Typora\typora-user-images\image-20211204133102452.png" alt="image-20211204133102452"></p>
+<h6 id="Theorem-3-17"><a href="#Theorem-3-17" class="headerlink" title="Theorem 3.17."></a>Theorem 3.17.</h6><p>Let $f_{X_1,X_2}(x_1,x_2)$ be the joint pdf of $X_1$, $X_2$ and let $Y=a_1X_1+a_2X_2+b$ with $a_1\neq 0$, the pdf of $Y$ is </p>
+<script type="math/tex; mode=display">
+f_Y(y) = \int_{-\infty}^\infty f_{X_1,X_2}(\frac{y-b-a_2x_2}{a_1},x_2)\frac1{|a_1|}dx_2</script><h6 id="Definition-3-22-Convolution"><a href="#Definition-3-22-Convolution" class="headerlink" title="Definition 3.22 (Convolution)."></a>Definition 3.22 (Convolution).</h6><p>Let $X_1, X_2$ be independent continuous random variables and let $Y = X_1 + X_2$. The distribution of Y is called the <strong>convolution</strong> of the distributions of $X_1$ and $X_2$.</p>
+<p>​    If $X_1$ and $X_2$ are discrete random variables, then </p>
+<script type="math/tex; mode=display">
+p_Y(y) =\sum_{x=-\infty}^\infty p_1(x)p_2(y-x)</script><p>​    For continuous random variables $X_1,X_2$ with pdf $f_1,f_2$, then </p>
+<script type="math/tex; mode=display">
+f(y) = \int_{-\infty}^\infty f_1(x)f_2(y-x)\ dx</script><h6 id="More-transform"><a href="#More-transform" class="headerlink" title="More transform"></a>More transform</h6><p>​    Suppose $X$ and $Y$ is continuous random variables and let $Z=XY$, then the pdf of $Z$ is  </p>
+<script type="math/tex; mode=display">
+f_Z(z) = \int_{-\infty}^\infty \frac1{|x|}f_{X,Y}(x,\frac{z}{x})\ dx</script><p>​    If we let $Z=\frac{X}{Y}$, the pdf of $Z$ is </p>
+<script type="math/tex; mode=display">
+f_Z(z) = \int_{-\infty}^\infty f_{X,Y}(zy,y)|y|\ dy</script><h6 id="Theorem-3-18"><a href="#Theorem-3-18" class="headerlink" title="Theorem 3.18."></a>Theorem 3.18.</h6><p>Let $(X_i)_{i=1}^n$ be continuous random variables with joint pdf  $f_X$ and supported on $\mathcal{S} \subset \mathbb{R}^n$, Define </p>
+<script type="math/tex; mode=display">
+Y_j = r_j(\mathbf{X})</script><p>for $j=1,\cdots,n$. Here, we assume that $r_j$ define a one-to-one differentiable transformation of $\mathcal{S}$ onto a subset $\mathcal{T}$ of $\mathbb{R}^n$. Let this inverse of this transformation be given as </p>
+<script type="math/tex; mode=display">
+x_i = s_i(\mathbf{y})</script><p>for $i=1,\cdots,n$. Then the joint pdf of $\mathbf{Y}$ is </p>
+<script type="math/tex; mode=display">
+f_{\mathbf{Y}}(\mathbf{y}) = \cases{f_{\mathbf{X}}(s)|J|\hspace{1cm}&for $\mathbf{y}\in\mathcal{T}$ \\0&otherwise}</script><p>where $J$ is the Jacobian determinant </p>
+<script type="math/tex; mode=display">
+J = \det\begin{bmatrix}
+\frac{\partial s_1}{\partial y_1}&\cdots&\frac{\partial s_1}{\partial y_n}\\
+\vdots&&\vdots\\
+\frac{\partial s_n}{\partial y_1}&\cdots&\frac{\partial s_n}{\partial y_n}
+\end{bmatrix}</script><p>​    Note: The condition $r_j$ is defined a one-to-one differentiable transformation is important. If the $r_j$ isn’t one-to-one, it is always wrong because we ignore some information in the transformation.</p>
+<h4 id="3-11-Markov-Chains"><a href="#3-11-Markov-Chains" class="headerlink" title="3.11. Markov Chains."></a>3.11. Markov Chains.</h4><p>​    This section will not appear in my test. And the difficult part is how to construct the state instead of calculate.</p>
+<hr>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>捏马这一章的东西实在是太多了. 打了好几天才打完…</p>
+<p>首先我们找到了一个map使得sample space上的event可以被映射到$\mathbb{R}$上, 定义这个map叫做 random variable. 在定义了random variable之后我们就可以在$\mathbb{R}$上研究概率, 如此便可以定义一系列的cdf,pdf,以及joint cdf, pdf, marginal cdf, pdf. 另一方面, 类似事件独立我们可以定义随机变量的独立, 这种独立关系又可以等价到pdf与joint pdf的关系上(这是比较显然的).</p>
+<p>在此之后, 对于随机变量的组合变换, 我们可以利用cdf $\Rightarrow$ 概率 $\Rightarrow$ cdf‘ $\Rightarrow$ pdf’ 推导单一随机变量的新的cdf，对于联合分布可以使用雅可比行列式来处理, 本质都是从某个support上的某个微元映射到其他support上, 这个结果虽然不好证明但是非常自然的.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Study/" rel="tag"><i class="fa fa-tags"></i> Study</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/27/PS-chapter-2/" rel="prev" title="PS chapter 2">
+      <i class="fa fa-chevron-left"></i> PS chapter 2
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/02/PS-chapter-8/" rel="next" title="PS chapter 8">
+      PS chapter 8 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Random-Variables-and-Distributions"><span class="nav-number">1.</span> <span class="nav-text">3. Random Variables and Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-Discrete-Random-Variables"><span class="nav-number">1.1.</span> <span class="nav-text">3.1. Discrete Random Variables.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-1"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Definition 3.1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-2"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Definition 3.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-1"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Theorem 3.1.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-Bernoulli-Binomial-and-Geometric-Distributions"><span class="nav-number">1.2.</span> <span class="nav-text">3.2 Bernoulli, Binomial, and Geometric Distributions.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-Continuous-Distributions"><span class="nav-number">1.3.</span> <span class="nav-text">3.3 Continuous Distributions.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-7-Continuous-Distribution"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">Definition 3.7 (Continuous Distribution).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-Cumulative-Distribution-Functions"><span class="nav-number">1.4.</span> <span class="nav-text">3.4 Cumulative Distribution Functions.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-9-Cumulative-Distribution-Function"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">Definition 3.9 (Cumulative Distribution Function)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Proposition-1"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">Proposition 1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-2"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">Theorem 3.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Proposition-2-More-Properties"><span class="nav-number">1.4.0.4.</span> <span class="nav-text">Proposition 2 (More Properties).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-10"><span class="nav-number">1.4.0.5.</span> <span class="nav-text">Definition 3.10.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-Joint-Distribution"><span class="nav-number">1.5.</span> <span class="nav-text">3.5. Joint Distribution</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-11-Discrete-Joint-Distributions"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">Definition 3.11 (Discrete Joint Distributions).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-3"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">Theorem 3.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-12-Continuous-Joint-Distributions"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">Definition 3.12 (Continuous Joint Distributions).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-4"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">Theorem 3.4.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-13-Mixed-Joint-Distribution"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">Definition 3.13 (Mixed Joint Distribution).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-Marginal-Distributions"><span class="nav-number">1.6.</span> <span class="nav-text">3.6. Marginal Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-14"><span class="nav-number">1.6.0.1.</span> <span class="nav-text">Definition 3.14.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-15-Marginal-Distribution"><span class="nav-number">1.6.0.2.</span> <span class="nav-text">Definition 3.15 (Marginal Distribution).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-5"><span class="nav-number">1.6.0.3.</span> <span class="nav-text">Theorem 3.5.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-16-Independent-Random-Variables"><span class="nav-number">1.6.0.4.</span> <span class="nav-text">Definition 3.16  (Independent Random Variables)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-6-Equivalent-Definition-of-Independency"><span class="nav-number">1.6.0.5.</span> <span class="nav-text">Theorem 3.6 (Equivalent Definition of Independency).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-7"><span class="nav-number">1.6.0.6.</span> <span class="nav-text">Theorem 3.7.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-7-Conditional-Distributions"><span class="nav-number">1.7.</span> <span class="nav-text">3.7. Conditional Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-17"><span class="nav-number">1.7.0.1.</span> <span class="nav-text">Definition 3.17.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-8-Multivariate-Distributions"><span class="nav-number">1.8.</span> <span class="nav-text">3.8. Multivariate Distributions.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-18"><span class="nav-number">1.8.0.1.</span> <span class="nav-text">Definition 3.18.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-8"><span class="nav-number">1.8.0.2.</span> <span class="nav-text">Theorem 3.8.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-19"><span class="nav-number">1.8.0.3.</span> <span class="nav-text">Definition 3.19.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-9"><span class="nav-number">1.8.0.4.</span> <span class="nav-text">Theorem 3.9.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-20"><span class="nav-number">1.8.0.5.</span> <span class="nav-text">Definition 3.20.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-21-i-i-d"><span class="nav-number">1.8.0.6.</span> <span class="nav-text">Definition 3.21 (i.i.d.).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-9-Function-of-One-Random-Variable"><span class="nav-number">1.9.</span> <span class="nav-text">3.9. Function of One Random Variable.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-10"><span class="nav-number">1.9.0.1.</span> <span class="nav-text">Theorem 3.10.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-11-Change-of-Units-Transformation"><span class="nav-number">1.9.0.2.</span> <span class="nav-text">Theorem 3.11 (Change-of-Units Transformation).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-12-Probability-Integral-Transformation"><span class="nav-number">1.9.0.3.</span> <span class="nav-text">Theorem 3.12 (Probability Integral Transformation)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-13"><span class="nav-number">1.9.0.4.</span> <span class="nav-text">Theorem 3.13.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-10-Functions-of-Two-Random-Variables"><span class="nav-number">1.10.</span> <span class="nav-text">3.10. Functions of Two Random Variables.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-17"><span class="nav-number">1.10.0.1.</span> <span class="nav-text">Theorem 3.17.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-3-22-Convolution"><span class="nav-number">1.10.0.2.</span> <span class="nav-text">Definition 3.22 (Convolution).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#More-transform"><span class="nav-number">1.10.0.3.</span> <span class="nav-text">More transform</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-3-18"><span class="nav-number">1.10.0.4.</span> <span class="nav-text">Theorem 3.18.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-11-Markov-Chains"><span class="nav-number">1.11.</span> <span class="nav-text">3.11. Markov Chains.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">1.12.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Yewandou</p>
+  <div class="site-description" itemprop="description">快乐摸鱼</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Yewandou7" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Yewandou7" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yewandou</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">19k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">17 分钟</span>
+</div>
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("11/26/2021 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+        
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_lines.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+  
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
