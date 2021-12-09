@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>PS chapter 2</title>
+    <url>/2021/11/27/PS-chapter-2/</url>
+    <content><![CDATA[<script type="math/tex; mode=display">
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="2-Conditional-Probability"><a href="#2-Conditional-Probability" class="headerlink" title="2. Conditional Probability"></a>2. Conditional Probability</h3><h4 id="2-1-The-Definition-of-Condition-Probability"><a href="#2-1-The-Definition-of-Condition-Probability" class="headerlink" title="2.1 The Definition of Condition Probability"></a>2.1 The Definition of Condition Probability</h4><p> A major use of probability in statistical inference is the updating of probability when certain events are observed. The updated probability of event $A$ after we learn that event $B$ has occurred is the conditional probability of $A$ given $B$.</p>
+<h6 id="Definition-2-1"><a href="#Definition-2-1" class="headerlink" title="Definition 2.1."></a>Definition 2.1.</h6><p>The <strong>condition probability</strong> of $A$ given $B$ is defined as </p>
+<script type="math/tex; mode=display">
+\P{A|B} = \frac{\P{A\cap B}}{\P{B}}</script><p> provided <script type="math/tex">\P{B} >0</script>.</p>
+<p>​    And the conditional probability <script type="math/tex">\P{A|B}</script> is not defined if <script type="math/tex">\P{B}=0</script>.</p>
+<h6 id="Theorem-2-1-Multiplication-Rule"><a href="#Theorem-2-1-Multiplication-Rule" class="headerlink" title="Theorem 2.1 (Multiplication Rule)."></a>Theorem 2.1 (Multiplication Rule).</h6><p>Let $A$, $B$ be events. If <script type="math/tex">\P{B}>0</script>, then </p>
+<script type="math/tex; mode=display">
+\P{A\cap B} =\P{A|B}\P{B}</script><h6 id="Theorem-2-2"><a href="#Theorem-2-2" class="headerlink" title="Theorem 2.2."></a>Theorem 2.2.</h6><p>Suppose that $A_1,A_2,\cdots,A_n$ are events such that <script type="math/tex">\P{A_1\cap A_2\cap\cdots\cap A_{n-1}} >0</script>. Then </p>
+<script type="math/tex; mode=display">
+\P{A_1\cap A_2 \cap\cdots\cap A_n} = \P{A_1}\P{A_2|A_1}\cdots\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}}</script><h6 id="Theorem-2-3"><a href="#Theorem-2-3" class="headerlink" title="Theorem 2.3."></a>Theorem 2.3.</h6><p>Suppose that $A_1,A_2,\cdots A_n$, $B$ are events such that <script type="math/tex">\P{B}>0</script> and <script type="math/tex">\P{A_1\cap A_2\cap\cdots \cap A_{n-1}|B}>0</script>. Then </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\P{A_1\cap A_2 \cap\cdots\cap A_n|B} =& \P{A_1|B}\P{A_2|A_1\cap B} \cdots\\
+&\times\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}\cap B}
+\end{align*}</script><h6 id="Definition-2-2"><a href="#Definition-2-2" class="headerlink" title="Definition 2.2."></a>Definition 2.2.</h6><p>Let $\Omega$ be a sample space and let $B_1, \cdots B_k$ be $k$ events in $\Omega$. If $B_1,\cdots,B_k$ are disjoint and $\cup_{j=1}^k B_j = \Omega$, then these events form a <strong>partition</strong> of $\Omega$. </p>
+<h6 id="Theorem-2-4-Low-of-total-probability"><a href="#Theorem-2-4-Low-of-total-probability" class="headerlink" title="Theorem 2.4 (Low of total probability)."></a>Theorem 2.4 (Low of total probability).</h6><p>Suppose that $B_1,\cdots,B_k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_j}>0</script> for all $j$. Then for every event $A \subset \Omega$, </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><p>$Proof.$ We can rewrite $A$ as </p>
+<script type="math/tex; mode=display">
+A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j\cap A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><h6 id="Theorem-2-5"><a href="#Theorem-2-5" class="headerlink" title="Theorem 2.5."></a>Theorem 2.5.</h6><p>The law of total probability has an analog conditional on another event $C$ </p>
+<script type="math/tex; mode=display">
+\P{A|C} = \sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C}</script><p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{B_j|C}\P{A|B_j\cap C} = \frac{\P{B_j \cap C}\P{A\cap B_j \cap C}}{\P{C} \P{B_j\cap C}} = \P{A\cap B_j|C}</script><p>Thus </p>
+<script type="math/tex; mode=display">
+\sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C} = \sum_{j=1}^k \frac{\P{A\cap C\cap B_j}}{\P{C}} = \frac{\P{A\cap C}}{\P{C}} = \P{A|C}</script><h4 id="2-2-Independent-Events"><a href="#2-2-Independent-Events" class="headerlink" title="2.2 Independent Events."></a>2.2 Independent Events.</h4><p>If learning that $B$ has occurred does not change the probability of $A$, then we say that $A$ and $B$ are independent.</p>
+<h6 id="Definition-2-3"><a href="#Definition-2-3" class="headerlink" title="Definition 2.3."></a>Definition 2.3.</h6><p>Two events $A$ and $B$ are <strong>independent</strong> if </p>
+<script type="math/tex; mode=display">
+\P{A\cap B} = \P{A}\P{B}</script><h6 id="Theorem-2-6"><a href="#Theorem-2-6" class="headerlink" title="Theorem 2.6."></a>Theorem 2.6.</h6><p>Suppose <script type="math/tex">\P{B}>0</script> or <script type="math/tex">\P{A}>0</script>. Then $A$ and $B$ are independent if and only if <script type="math/tex">\P{A|B} = \P{A}</script> or <script type="math/tex">\P{B|A} = \P{B}</script>, respectively.</p>
+<h6 id="Theorem-2-7"><a href="#Theorem-2-7" class="headerlink" title="Theorem 2.7."></a>Theorem 2.7.</h6><p>If $A$ and $B$ are independent, then $A$ and $B^c$ are also independent.</p>
+<p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{A\cap B^c} = \P{A} - \P{A\cap B} = \P{A}(1-\P{B}) = \P{A}\P{B^c}</script><h6 id="Definition-2-4-Mutually-independent"><a href="#Definition-2-4-Mutually-independent" class="headerlink" title="Definition 2.4 (Mutually independent)."></a>Definition 2.4 (Mutually independent).</h6><p>The $k$ events $A_1,\cdots,A_k$ are <strong>mutually independent</strong> if for any subset <script type="math/tex">\mathcal{M} \subset \{1,\cdots,k\}</script>, </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{j \in \mathcal{M}}A_j} = \prod_{j \in \mathcal{M}} \P{A_j}</script><p>​    Note: The arbitrariness of $\mathcal{M}$ is very important for mutually independent. We can give a conquer  example to show that although $A_j$ are <strong>pairwise independent</strong>, $A_j$ are not mutually independent.</p>
+<h6 id="Theorem-2-8"><a href="#Theorem-2-8" class="headerlink" title="Theorem 2.8."></a>Theorem 2.8.</h6><p>Let $A_i (i=1,\cdots,k)$ be events that <script type="math/tex">\P{\cap_{i=1}^k A_i}>0</script>. Then $A_i$ are independent if and only if for every two joint subsets $\mathcal{I},\mathcal{J}\subset\{1,\cdots,k\}$, $\mathcal{I}\cap\mathcal{J}=\varnothing$, we have </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{i\in\mathcal{I}}A_i|\bigcap_{j\in\mathcal{J}}A_j} = \P{\bigcap_{i\in\mathcal{I}} A_i}.</script><p>​    This theorem says that $k$ events are independent if and only if learning that some of the events occur does not change the probability that any combination of the other event occur.</p>
+<h6 id="Definition-2-5"><a href="#Definition-2-5" class="headerlink" title="Definition 2.5."></a>Definition 2.5.</h6><p>We say that event $A_i (i=1,\cdots,k)$ are <strong>conditionally independent</strong> given $B$ if for every subcollection $\mathcal{I} \subset\{1,\cdots,k\}$, </p>
+<script type="math/tex; mode=display">
+\P{\bigcap_{i\in\mathcal{I}} A_i|B} = \prod_{i\in\mathcal{I}} \P{A_i|B}</script><p>​    Note: The definition is identical to that of independent events with modification that all probabilities are now conditional on B. It is important that even if we assume $A_i$ are conditionally independent given $B$, it is <strong>not</strong> necessary that $A_i$ are conditionally independent given $B^c$ </p>
+<h6 id="Theorem-2-10"><a href="#Theorem-2-10" class="headerlink" title="Theorem 2.10."></a>Theorem 2.10.</h6><p>Suppose that $A_1, A_2$ and $B$ are events such that <script type="math/tex">\P{A_1\cap B}>0</script>. Then $A_1$ and $A_2$ are conditionally independent given $B$ if and only if <script type="math/tex">\P{A_2|A_1\cap B} = \P{A_2|B}</script></p>
+<p>$Proof.$ If $A_1$ and $A_2$ are independent </p>
+<script type="math/tex; mode=display">
+\P{A_1\cap A_2|B} = \P{A_1|B} \P{A_2|B}</script><p>consider that  <script type="math/tex">\P{A_1\cap A_2 |B} = \P{A_1\cap B}\P{A_2|A_1\cap B}</script>. Comparing could proves the theorem.</p>
+<h4 id="2-3-Bayes’-Theorem"><a href="#2-3-Bayes’-Theorem" class="headerlink" title="2.3. Bayes’ Theorem"></a>2.3. Bayes’ Theorem</h4><h6 id="Theorem-2-11-Bayes’-Theorem"><a href="#Theorem-2-11-Bayes’-Theorem" class="headerlink" title="Theorem 2.11 (Bayes’ Theorem)."></a>Theorem 2.11 (Bayes’ Theorem).</h6><p>Let $B_i$ for $i=1,\cdots,k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_i}>0</script> for all $i$. Let $A$ be an event such that <script type="math/tex">\P{A}>0</script>, then for all $i$:</p>
+<script type="math/tex; mode=display">
+\P{B_i|A} = \frac{\P{B_i}\P{A|B_i}}{\sum_{j=1}^k\P{B_j}\P{A|B_j}}</script><p>$Proof.$ Consider </p>
+<script type="math/tex; mode=display">
+\P{B_i|A} = \frac{\P{B_i \cap A}}{\P{A}} = \frac{\P{B_i}\P{A|B_i}}{\P{A}}</script><p>and </p>
+<script type="math/tex; mode=display">
+\P{A} = \sum_{j=1}^k \P{B_j} \P{A|B_j}</script><p>Which proves the theorem.</p>
+<hr>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
+]]></content>
+      <categories>
+        <category>Probability and Statistics</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PS chapter 1</title>
     <url>/2021/11/27/PS%20chapter%201/</url>
     <content><![CDATA[<script type="math/tex; mode=display">
@@ -113,117 +200,6 @@ A \cup B = B \cup (A\cap B^c)</script><hr>
       </categories>
       <tags>
         <tag>Study</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PS chapter 2</title>
-    <url>/2021/11/27/PS-chapter-2/</url>
-    <content><![CDATA[<script type="math/tex; mode=display">
-\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
-
-% For partial derivatives
-\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
-
-% Integral dx
-\newcommand{\dx}{\mathrm{d}x}
-
-% Alias for the Solution section header
-\newcommand{\solution}{\textbf{\large Solution}}
-
-% Probability commands: Expectation, Variance, Covariance, Bias
-\renewcommand{\P}[1]{\mathbf{P}(#1)}
-% \newcommand{\E}[1]{\mathbf{E}(#1)}
-\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
-\newcommand{\Var}{\mathrm{Var}}
-\newcommand{\Cov}{\mathrm{Cov}}
-\newcommand{\Bias}{\mathrm{Bias}}
-\renewcommand{\t}{\times}
-\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="2-Conditional-Probability"><a href="#2-Conditional-Probability" class="headerlink" title="2. Conditional Probability"></a>2. Conditional Probability</h3><h4 id="2-1-The-Definition-of-Condition-Probability"><a href="#2-1-The-Definition-of-Condition-Probability" class="headerlink" title="2.1 The Definition of Condition Probability"></a>2.1 The Definition of Condition Probability</h4><p> A major use of probability in statistical inference is the updating of probability when certain events are observed. The updated probability of event $A$ after we learn that event $B$ has occurred is the conditional probability of $A$ given $B$.</p>
-<h6 id="Definition-2-1"><a href="#Definition-2-1" class="headerlink" title="Definition 2.1."></a>Definition 2.1.</h6><p>The <strong>condition probability</strong> of $A$ given $B$ is defined as </p>
-<script type="math/tex; mode=display">
-\P{A|B} = \frac{\P{A\cap B}}{\P{B}}</script><p> provided <script type="math/tex">\P{B} >0</script>.</p>
-<p>​    And the conditional probability <script type="math/tex">\P{A|B}</script> is not defined if <script type="math/tex">\P{B}=0</script>.</p>
-<h6 id="Theorem-2-1-Multiplication-Rule"><a href="#Theorem-2-1-Multiplication-Rule" class="headerlink" title="Theorem 2.1 (Multiplication Rule)."></a>Theorem 2.1 (Multiplication Rule).</h6><p>Let $A$, $B$ be events. If <script type="math/tex">\P{B}>0</script>, then </p>
-<script type="math/tex; mode=display">
-\P{A\cap B} =\P{A|B}\P{B}</script><h6 id="Theorem-2-2"><a href="#Theorem-2-2" class="headerlink" title="Theorem 2.2."></a>Theorem 2.2.</h6><p>Suppose that $A_1,A_2,\cdots,A_n$ are events such that <script type="math/tex">\P{A_1\cap A_2\cap\cdots\cap A_{n-1}} >0</script>. Then </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2 \cap\cdots\cap A_n} = \P{A_1}\P{A_2|A_1}\cdots\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}}</script><h6 id="Theorem-2-3"><a href="#Theorem-2-3" class="headerlink" title="Theorem 2.3."></a>Theorem 2.3.</h6><p>Suppose that $A_1,A_2,\cdots A_n$, $B$ are events such that <script type="math/tex">\P{B}>0</script> and <script type="math/tex">\P{A_1\cap A_2\cap\cdots \cap A_{n-1}|B}>0</script>. Then </p>
-<script type="math/tex; mode=display">
-\begin{align*}
-\P{A_1\cap A_2 \cap\cdots\cap A_n|B} =& \P{A_1|B}\P{A_2|A_1\cap B} \cdots\\
-&\times\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}\cap B}
-\end{align*}</script><h6 id="Definition-2-2"><a href="#Definition-2-2" class="headerlink" title="Definition 2.2."></a>Definition 2.2.</h6><p>Let $\Omega$ be a sample space and let $B_1, \cdots B_k$ be $k$ events in $\Omega$. If $B_1,\cdots,B_k$ are disjoint and $\cup_{j=1}^k B_j = \Omega$, then these events form a <strong>partition</strong> of $\Omega$. </p>
-<h6 id="Theorem-2-4-Low-of-total-probability"><a href="#Theorem-2-4-Low-of-total-probability" class="headerlink" title="Theorem 2.4 (Low of total probability)."></a>Theorem 2.4 (Low of total probability).</h6><p>Suppose that $B_1,\cdots,B_k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_j}>0</script> for all $j$. Then for every event $A \subset \Omega$, </p>
-<script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><p>$Proof.$ We can rewrite $A$ as </p>
-<script type="math/tex; mode=display">
-A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </p>
-<script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j\cap A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><h6 id="Theorem-2-5"><a href="#Theorem-2-5" class="headerlink" title="Theorem 2.5."></a>Theorem 2.5.</h6><p>The law of total probability has an analog conditional on another event $C$ </p>
-<script type="math/tex; mode=display">
-\P{A|C} = \sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C}</script><p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{B_j|C}\P{A|B_j\cap C} = \frac{\P{B_j \cap C}\P{A\cap B_j \cap C}}{\P{C} \P{B_j\cap C}} = \P{A\cap B_j|C}</script><p>Thus </p>
-<script type="math/tex; mode=display">
-\sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C} = \sum_{j=1}^k \frac{\P{A\cap C\cap B_j}}{\P{C}} = \frac{\P{A\cap C}}{\P{C}} = \P{A|C}</script><h4 id="2-2-Independent-Events"><a href="#2-2-Independent-Events" class="headerlink" title="2.2 Independent Events."></a>2.2 Independent Events.</h4><p>If learning that $B$ has occurred does not change the probability of $A$, then we say that $A$ and $B$ are independent.</p>
-<h6 id="Definition-2-3"><a href="#Definition-2-3" class="headerlink" title="Definition 2.3."></a>Definition 2.3.</h6><p>Two events $A$ and $B$ are <strong>independent</strong> if </p>
-<script type="math/tex; mode=display">
-\P{A\cap B} = \P{A}\P{B}</script><h6 id="Theorem-2-6"><a href="#Theorem-2-6" class="headerlink" title="Theorem 2.6."></a>Theorem 2.6.</h6><p>Suppose <script type="math/tex">\P{B}>0</script> or <script type="math/tex">\P{A}>0</script>. Then $A$ and $B$ are independent if and only if <script type="math/tex">\P{A|B} = \P{A}</script> or <script type="math/tex">\P{B|A} = \P{B}</script>, respectively.</p>
-<h6 id="Theorem-2-7"><a href="#Theorem-2-7" class="headerlink" title="Theorem 2.7."></a>Theorem 2.7.</h6><p>If $A$ and $B$ are independent, then $A$ and $B^c$ are also independent.</p>
-<p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{A\cap B^c} = \P{A} - \P{A\cap B} = \P{A}(1-\P{B}) = \P{A}\P{B^c}</script><h6 id="Definition-2-4-Mutually-independent"><a href="#Definition-2-4-Mutually-independent" class="headerlink" title="Definition 2.4 (Mutually independent)."></a>Definition 2.4 (Mutually independent).</h6><p>The $k$ events $A_1,\cdots,A_k$ are <strong>mutually independent</strong> if for any subset <script type="math/tex">\mathcal{M} \subset \{1,\cdots,k\}</script>, </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{j \in \mathcal{M}}A_j} = \prod_{j \in \mathcal{M}} \P{A_j}</script><p>​    Note: The arbitrariness of $\mathcal{M}$ is very important for mutually independent. We can give a conquer  example to show that although $A_j$ are <strong>pairwise independent</strong>, $A_j$ are not mutually independent.</p>
-<h6 id="Theorem-2-8"><a href="#Theorem-2-8" class="headerlink" title="Theorem 2.8."></a>Theorem 2.8.</h6><p>Let $A_i (i=1,\cdots,k)$ be events that <script type="math/tex">\P{\cap_{i=1}^k A_i}>0</script>. Then $A_i$ are independent if and only if for every two joint subsets $\mathcal{I},\mathcal{J}\subset\{1,\cdots,k\}$, $\mathcal{I}\cap\mathcal{J}=\varnothing$, we have </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}}A_i|\bigcap_{j\in\mathcal{J}}A_j} = \P{\bigcap_{i\in\mathcal{I}} A_i}.</script><p>​    This theorem says that $k$ events are independent if and only if learning that some of the events occur does not change the probability that any combination of the other event occur.</p>
-<h6 id="Definition-2-5"><a href="#Definition-2-5" class="headerlink" title="Definition 2.5."></a>Definition 2.5.</h6><p>We say that event $A_i (i=1,\cdots,k)$ are <strong>conditionally independent</strong> given $B$ if for every subcollection $\mathcal{I} \subset\{1,\cdots,k\}$, </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}} A_i|B} = \prod_{i\in\mathcal{I}} \P{A_i|B}</script><p>​    Note: The definition is identical to that of independent events with modification that all probabilities are now conditional on B. It is important that even if we assume $A_i$ are conditionally independent given $B$, it is <strong>not</strong> necessary that $A_i$ are conditionally independent given $B^c$ </p>
-<h6 id="Theorem-2-10"><a href="#Theorem-2-10" class="headerlink" title="Theorem 2.10."></a>Theorem 2.10.</h6><p>Suppose that $A_1, A_2$ and $B$ are events such that <script type="math/tex">\P{A_1\cap B}>0</script>. Then $A_1$ and $A_2$ are conditionally independent given $B$ if and only if <script type="math/tex">\P{A_2|A_1\cap B} = \P{A_2|B}</script></p>
-<p>$Proof.$ If $A_1$ and $A_2$ are independent </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2|B} = \P{A_1|B} \P{A_2|B}</script><p>consider that  <script type="math/tex">\P{A_1\cap A_2 |B} = \P{A_1\cap B}\P{A_2|A_1\cap B}</script>. Comparing could proves the theorem.</p>
-<h4 id="2-3-Bayes’-Theorem"><a href="#2-3-Bayes’-Theorem" class="headerlink" title="2.3. Bayes’ Theorem"></a>2.3. Bayes’ Theorem</h4><h6 id="Theorem-2-11-Bayes’-Theorem"><a href="#Theorem-2-11-Bayes’-Theorem" class="headerlink" title="Theorem 2.11 (Bayes’ Theorem)."></a>Theorem 2.11 (Bayes’ Theorem).</h6><p>Let $B_i$ for $i=1,\cdots,k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_i}>0</script> for all $i$. Let $A$ be an event such that <script type="math/tex">\P{A}>0</script>, then for all $i$:</p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i}\P{A|B_i}}{\sum_{j=1}^k\P{B_j}\P{A|B_j}}</script><p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i \cap A}}{\P{A}} = \frac{\P{B_i}\P{A|B_i}}{\P{A}}</script><p>and </p>
-<script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j} \P{A|B_j}</script><p>Which proves the theorem.</p>
-<hr>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
-]]></content>
-      <categories>
-        <category>Probability and Statistics</category>
-      </categories>
-      <tags>
-        <tag>Study</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>What&#39;s this?</title>
-    <url>/2021/11/25/What&#39;%20this/</url>
-    <content><![CDATA[<h3 id="What’s-this"><a href="#What’s-this" class="headerlink" title="What’s this?"></a>What’s this?</h3><p>一个无聊的憨憨整的博客, 内容大概会是很多的学习经历, 要是有出息的话会放一些自己觉得并不trival的东西上来. 前期内容大概就是一些学习笔记之类的, 由于作者学校CS专业课/大部分数学课都是in English的, 很多东西大概也都是用英语写了.</p>
-<p>美观在做了别骂了呜呜呜… 这周一定搞成能看的东西.</p>
-<hr>
-<h3 id="Who-is-Yewandou"><a href="#Who-is-Yewandou" class="headerlink" title="Who is Yewandou?"></a>Who is Yewandou?</h3><p>大概是作者的网名叭, 不是名人, 高中整过一些物理什么的, 现某校CS大二学生. </p>
-<h4 id="主要学习方向："><a href="#主要学习方向：" class="headerlink" title="主要学习方向："></a>主要学习方向：</h4><p>无, 主打一个摸鱼</p>
-<h4 id="主要获奖经历："><a href="#主要获奖经历：" class="headerlink" title="主要获奖经历："></a>主要获奖经历：</h4><p>躺了一块ICPC region金牌, 一块ICPC region银牌, 无了.</p>
-<h4 id="努力方向："><a href="#努力方向：" class="headerlink" title="努力方向："></a>努力方向：</h4><ol>
-<li><p>从变态概率论老师手中活下来 </p>
-</li>
-<li><p>把手上的ML的入门书看完 </p>
-</li>
-<li><p>把暑假里看的CS172整理一次笔记.</p>
-</li>
-<li><p>S12上铂金 (先整个小目标)</p>
-</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>nothing</tag>
       </tags>
   </entry>
   <entry>
@@ -413,6 +389,30 @@ J = \det\begin{bmatrix}
       </tags>
   </entry>
   <entry>
+    <title>What&#39;s this?</title>
+    <url>/2021/11/25/What&#39;%20this/</url>
+    <content><![CDATA[<h3 id="What’s-this"><a href="#What’s-this" class="headerlink" title="What’s this?"></a>What’s this?</h3><p>一个无聊的憨憨整的博客, 内容大概会是很多的学习经历, 要是有出息的话会放一些自己觉得并不trival的东西上来. 前期内容大概就是一些学习笔记之类的, 由于作者学校CS专业课/大部分数学课都是in English的, 很多东西大概也都是用英语写了.</p>
+<p>美观在做了别骂了呜呜呜… 这周一定搞成能看的东西.</p>
+<hr>
+<h3 id="Who-is-Yewandou"><a href="#Who-is-Yewandou" class="headerlink" title="Who is Yewandou?"></a>Who is Yewandou?</h3><p>大概是作者的网名叭, 不是名人, 高中整过一些物理什么的, 现某校CS大二学生. </p>
+<h4 id="主要学习方向："><a href="#主要学习方向：" class="headerlink" title="主要学习方向："></a>主要学习方向：</h4><p>无, 主打一个摸鱼</p>
+<h4 id="主要获奖经历："><a href="#主要获奖经历：" class="headerlink" title="主要获奖经历："></a>主要获奖经历：</h4><p>躺了一块ICPC region金牌, 一块ICPC region银牌, 无了.</p>
+<h4 id="努力方向："><a href="#努力方向：" class="headerlink" title="努力方向："></a>努力方向：</h4><ol>
+<li><p>从变态概率论老师手中活下来 </p>
+</li>
+<li><p>把手上的ML的入门书看完 </p>
+</li>
+<li><p>把暑假里看的CS172整理一次笔记.</p>
+</li>
+<li><p>S12上铂金 (先整个小目标)</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>nothing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PS chapter 8</title>
     <url>/2021/12/02/PS-chapter-8/</url>
     <content><![CDATA[<script type="math/tex; mode=display">
@@ -464,17 +464,19 @@ V &= \sum_{i=1}^n \left(\frac{(X_i-\overline{X_n})+(\overline{X_n}-\mu)}{\sigma}
 <h6 id="Definition-8-3-t-Distributions"><a href="#Definition-8-3-t-Distributions" class="headerlink" title="Definition 8.3 (t Distributions)"></a>Definition 8.3 (t Distributions)</h6><p>Consider two independent random variables $Y$ and $Z$, such that $Y \sim \chi^2(m)$ and $Z\sim N(0,1)$. Suppose that $X$ is defined as </p>
 <script type="math/tex; mode=display">
 X =  \frac{Z}{(Y/m)^{1/2}}</script><p>Then the distribution of $X$ is called the <strong>t distribution with $m$ degree of freedom</strong>.</p>
-<h6 id="Theorem-8-5"><a href="#Theorem-8-5" class="headerlink" title="Theorem 8.5."></a>Theorem 8.5.</h6><p>The pdf of the distribution with $m$ degrees of freedom is </p>
+<h6 id="Theorem-8-5"><a href="#Theorem-8-5" class="headerlink" title="Theorem 8.5."></a>Theorem 8.5.</h6><p>The pdf of the t distribution with $m$ degrees of freedom is </p>
 <script type="math/tex; mode=display">
 f(x) = \frac{\Gamma(\frac{m+1}2)}{(m\pi)^{1/2}\Gamma(\frac{m}2)}(1+\frac{x^2}{m})^{-(m+1)/2}</script><p>for $-\infty &lt; x &lt; \infty$</p>
 <p>​    When $m\leq 1$, the mean value of t distribution doesn’t exist. When $m&gt;1$, by the symmetry the mean value is always 0.</p>
 <p>​    In general, if $X$ follows the t distribution with $m$  degrees of freedom, then the k-th absolute value moments <script type="math/tex">\E{|X|^k}<\infty</script> are finite for $k&lt;m$ and it is unbounded for $k\geq m$. Therefore, if m is an integer, the first $m-1$ moments of $X$ exists. Thus, the moment generating function of $X$ doesn’t exist.</p>
 <h6 id="Theorem-8-6"><a href="#Theorem-8-6" class="headerlink" title="Theorem 8.6."></a>Theorem 8.6.</h6><p>Suppose that $X_1,\cdots,X_n$ form a random sample from the normal distribution with mean $\mu$ and $\sigma^2$, Let $\overline{X_n}$ denote the sample mean, and define </p>
 <script type="math/tex; mode=display">
-S_n = \left(\frac{\sum_{i=1}^n (X_i-\overline{X_n})}{n-1}\right)^{1/2}</script><p>Then $n^{1/2}(\overline{X_n}-\mu)/S_n$ has the t distribution with $n-1$ degrees of freedom.</p>
+S_n = \left(\frac{\sum_{i=1}^n (X_i-\overline{X_n})^2}{n-1}\right)^{1/2}</script><p>Then $n^{1/2}(\overline{X_n}-\mu)/S_n$ has the t distribution with $n-1$ degrees of freedom.</p>
 <p>$Proof.$ Consider </p>
 <script type="math/tex; mode=display">
-\sqrt{n}(\overline{X_n}-\mu)/\sigma \sim N(0,1)\hspace{1cm}and\hspace{1cm}S_n^2/\sigma^2\sim\chi^2(n-1)</script><p>Follows the definition of the t distribution.</p>
+\sqrt{n}(\overline{X_n}-\mu)/\sigma \sim N(0,1)\hspace{1cm}and\hspace{1cm}(n-1)S_n^2/\sigma^2\sim\chi^2(n-1)</script><p>Then </p>
+<script type="math/tex; mode=display">
+\frac{\sqrt{n}(\overline{X_n}-\mu)}{S_n} = \frac{\sqrt{n}(X_n-\mu)/\sigma}{\sqrt{\frac{(n-1)S_n^2}{\sigma^2}/(n-1)}}\sim \frac{N(0,1)}{\chi^2(n-1)}</script><p>Follows the definition of the t distribution.</p>
 <h3 id="8-4-The-F-Distributions"><a href="#8-4-The-F-Distributions" class="headerlink" title="8.4. The F-Distributions."></a>8.4. The F-Distributions.</h3><h6 id="Definition-8-4"><a href="#Definition-8-4" class="headerlink" title="Definition 8.4."></a>Definition 8.4.</h6><p>Let $Y$ and $W$ be independent random variables that have $\chi^2$ distribution with degrees of freedom $m$ and $n$ respectively. Define a new random variable </p>
 <script type="math/tex; mode=display">
 X = \frac{Y/m}{W/n}</script><p>Then the distribution of $X$ is called the F <strong>distribution with $m$ and $n$ degrees of freedom</strong>.</p>
@@ -482,6 +484,95 @@ X = \frac{Y/m}{W/n}</script><p>Then the distribution of $X$ is called the F <str
 <script type="math/tex; mode=display">
 f_X(x) = \frac{\Gamma(\frac12(m+n))m^{m/2}n^{n/2}}{\Gamma(\frac12 m)\Gamma(\frac12n)} \cdot \frac{x^{(m/2)-1}}{(mx+n)^{(m+n)/2}}</script><p>for $x&gt;0$ and zero elsewhere.</p>
 <h6 id="Theorem-8-8"><a href="#Theorem-8-8" class="headerlink" title="Theorem 8.8."></a>Theorem 8.8.</h6><p>If $X$ has the $F$ distribution with $m$ and $n$ degrees of freedom, then its reciprocal $1/X$ has the $F$ distribution with $n$ and $m$ degrees of freedom. If $Y$ has the $t$ distribution with $n$ degrees of freedom, then $Y^2$ has the $F$ distribution with 1 and $n$ degrees of freedom.</p>
+<p>$Proof.$ The first part is </p>
+<script type="math/tex; mode=display">
+X=\frac{Y/m}{Z/n}\Rightarrow 1/X = \frac{Z/n}{Y/m}</script><p>which means $1/X $ is a $F$ distribution with $n$ and $m$ distribution.</p>
+<p>The second part is </p>
+<script type="math/tex; mode=display">
+Y = \frac{X}{(Z/n)^{1/2}} \Rightarrow Y^2 = \frac{X^2}{Z/n}</script><p>where $X\sim N(0,1)$ thus $X^2 \sim \chi^2(1)$, and $Y^2$ is a $F$ distribution with $n$ and $m$ distribution.</p>
+<h4 id="8-5-Confidence-Intervals"><a href="#8-5-Confidence-Intervals" class="headerlink" title="8.5. Confidence Intervals."></a>8.5. Confidence Intervals.</h4><h6 id="Definition-8-5-Confidence-Interval"><a href="#Definition-8-5-Confidence-Interval" class="headerlink" title="Definition 8.5 (Confidence Interval)."></a>Definition 8.5 (Confidence Interval).</h6><p>Let $X_1,X_2,\cdots,X_n$ be a sample on a random variable $X$, where $X$ has the pdf $f(x;\theta)$, $\theta \in \Omega$. Let $\alpha \in (0,1)$ be specified. Let $L=L(X_1,\cdots,X_n)$ and $U=U(X_1,\cdots,X_n)$ be two statistics and let $g(\cdot)$ be a real function. We say that the interval $(L,U)$ is a $(1-\alpha)\times100\%$ <strong>confidence interval</strong> for $g(\theta)$ if </p>
+<script type="math/tex; mode=display">
+P_{\theta}(L<g(\theta)\le U) \ge 1-\alpha</script><p>Which means the probability that the interval $(L,U)$ contains $g(\theta)$ is $1-\alpha$</p>
+<h6 id="Theorem-8-9-For-a-Normal-Distribution-with-known-sigma-2"><a href="#Theorem-8-9-For-a-Normal-Distribution-with-known-sigma-2" class="headerlink" title="Theorem 8.9 (For a Normal Distribution with known  $\sigma^2$)"></a>Theorem 8.9 (For a Normal Distribution with known  $\sigma^2$)</h6><p>Let $(X_i)_{i=1}^n$ be a random sample from $N(\mu, \sigma^2)$. For each $0&lt;\alpha&lt;1$, the interval $(L,U)$ with the following endpoints is an exact coefficient $1-\alpha$ confidence interval for $\mu$: </p>
+<script type="math/tex; mode=display">
+L=\overline{X_n}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\\
+R=\overline{X_n}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}</script><p>where $z_{\alpha/2}$ is the value for <script type="math/tex">\P{X>z_{\alpha/2}}=\frac{\alpha}{2}</script></p>
+<p>$Proof.$ Consider $\overline{X_n} \sim N(\mu,\frac{\sigma^2}{n})$, thus </p>
+<script type="math/tex; mode=display">
+\P{-z_{\alpha/2} < \frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}}<z_{\alpha/2}} = 1-\alpha\\
+\P{\overline{X_n}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} <\mu < \overline{X_n}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}}} = 1-\alpha</script><h6 id="Theorem-8-10-For-a-Normal-Distribution-with-unknown-sigma-2"><a href="#Theorem-8-10-For-a-Normal-Distribution-with-unknown-sigma-2" class="headerlink" title="Theorem 8.10 (For a Normal Distribution with unknown $\sigma^2$)"></a>Theorem 8.10 (For a Normal Distribution with unknown $\sigma^2$)</h6><p>Let $(X_i)_{i=1}^n$ be a random sample from $N(\mu, \sigma^2)$. For each $0&lt;\alpha&lt;1$, the interval $(L,U)$ with the following endpoints is an exact coefficient $1-\alpha$ confidence interval for $\mu$: </p>
+<script type="math/tex; mode=display">
+L=\overline{X_n} -t_{\alpha/2,n-1}\frac{S_n}{\sqrt{n}}\\
+R=\overline{X_n} +t_{\alpha/2,n-1}\frac{S_n}{\sqrt{n}}</script><p>$Proof.$ From Theorem 8.6 we know </p>
+<script type="math/tex; mode=display">
+\frac{\sqrt{n}(\overline{X_n}-\mu)}{S_n}</script><p>follows the t distribution with degree of freedom $n-1$, thus </p>
+<script type="math/tex; mode=display">
+\P{-t_{\alpha/2,n-1}<\frac{\overline{X_n}-\mu}{S_n/\sqrt{n}}<t_{\alpha/2,n-1}} = 1-\alpha\\
+\P{\overline{X_n}-t_{\alpha/2,n-1}<\mu<\overline{X_n}+t_{\alpha/2,n-1}} = 1-\alpha</script><h6 id="Definition-8-6-One-Sided-Confidence-Intervals"><a href="#Definition-8-6-One-Sided-Confidence-Intervals" class="headerlink" title="Definition 8.6 (One-Sided Confidence Intervals)."></a>Definition 8.6 (One-Sided Confidence Intervals).</h6><p>Let $\mathbf{X}$ be a random sample from a distribution that depends on a parameter (or parameter vector) $\theta$, Let $g(\theta)$ be a real-valued function. Let $L$ be a statistic such that for all $\theta$, </p>
+<script type="math/tex; mode=display">
+\P{L<g(\theta)}\ge 1-\alpha</script><p>Then the random interval $(L,\infty)$ is called <strong>one-sided coefficient</strong> $1-\alpha$ confidence interval for $g(\theta)$. Also, $L$ is called a <strong>coefficient $1-\alpha$ lower confidence limit</strong> for $g(\theta)$. Similar we can define $U$ be a <strong>coefficient $1-\alpha$ upper confidence limit</strong> for $g(\theta)$ if </p>
+<script type="math/tex; mode=display">
+\P{g(\theta)<U} \ge 1-\alpha</script><h6 id="Theorem-8-11-Confidence-Intervals-for-the-Variance-of-a-Normal-Distribution"><a href="#Theorem-8-11-Confidence-Intervals-for-the-Variance-of-a-Normal-Distribution" class="headerlink" title="Theorem 8.11 (Confidence Intervals for the Variance of a Normal Distribution)"></a>Theorem 8.11 (Confidence Intervals for the Variance of a Normal Distribution)</h6><p>Let $(X_i)_{i=1}^n$ be a random sample from $N(\mu,\sigma^2)$. For each $\alpha\in(0,1)$, the following statistic are lower and upper coefficient $1-\alpha$ confidence limits for $\sigma^2$ </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+L=\frac{(n-1)S_n^2}{\chi^2_{\alpha/2,n-1}}\\
+R=\frac{(n-1)S_n^2}{\chi^2_{1-\alpha/2,n-1}}
+\end{align*}</script><p>$Proof.$ We know that $\frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2(n-1)$, thus </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\P{\chi^2_{1-\alpha/2,n-1}< \frac{(n-1)S_n^2}{\sigma^2}<\chi^2_{\alpha/2,n-1}} = 1-\alpha\\
+\P{\frac{(n-1)S_n^2}{\chi^2_{\alpha/2,n-1}}<\sigma^2<\frac{(n-1)S_n^2}{\chi^2_{1-\alpha/2,n-1}}} = 1-\alpha
+\end{align*}</script><h6 id="Example-8-4-Estimating-the-Difference-in-Means-of-Two-Normal-Distribution-with-known-sigma-1-2-and-sigma-2-2"><a href="#Example-8-4-Estimating-the-Difference-in-Means-of-Two-Normal-Distribution-with-known-sigma-1-2-and-sigma-2-2" class="headerlink" title="Example 8.4 (Estimating the Difference in Means of Two Normal Distribution with known $\sigma_1^2$ and $\sigma_2^2$)"></a>Example 8.4 (Estimating the Difference in Means of Two Normal Distribution with known $\sigma_1^2$ and $\sigma_2^2$)</h6><p>Let $(X_i)_{i=1}^n$ be a random sample of size $n$ from $N(\mu_1,\sigma_1^2)$ and $(Y_i)_{i=1}^m$ be a random sample of size $m$ from $N(\mu_2,\sigma_2^2)$. We want to find the confidence interval for $\mu_1-\mu_2$.</p>
+<p>Firstly we have </p>
+<script type="math/tex; mode=display">
+\overline{X_n}-\overline{Y_m} \sim N(\mu_1-\mu_2, \frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m})</script><p> Thus we define </p>
+<script type="math/tex; mode=display">
+Z = \frac{\overline{X_n}-\overline{Y_m} - (\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n}+\frac{\sigma_2^2}{m}}} \sim N(0,1)</script><p>Thus </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\P{-z_{\alpha/2}<Z<z_{\alpha/2}} = 1-\alpha\\
+L = \overline{X_n}-\overline{Y_m} - z_{\alpha/2}\sqrt{\frac{\sigma_1^2}n+\frac{\sigma_2^2}{m}}\\
+U = \overline{X_n}-\overline{Y_m} + z_{\alpha/2}\sqrt{\frac{\sigma_1^2}n+\frac{\sigma_2^2}{m}}
+\end{align*}</script><h4 id="8-6-Confidence-Intervals-for-Parameters-of-Discrete-Distributions"><a href="#8-6-Confidence-Intervals-for-Parameters-of-Discrete-Distributions" class="headerlink" title="8.6 Confidence Intervals for Parameters of Discrete Distributions."></a>8.6 Confidence Intervals for Parameters of Discrete Distributions.</h4><p>In this section we try to find the exact confidence intervals for the parameters of discrete random variables. Let $X_1,\cdots,X_n$ be a random sample on a discreet random variable $X$ with pmf $p(x;\theta)$, $\theta\in\Omega$, where $\Omega$ is an interval of real numbers. Let $T=T(X_1,\cdots,X_n)$ be an estimator of $\theta$ with cdf $F_T(t;\theta)$. Assume $F_T(t;\theta)$ is a <strong>nonincreasing and continuous</strong> function of $\theta$ for every $t$ in the support of $T$. Let $\alpha_1&gt;0$ and $\alpha_2&gt;0$ be given such that $\alpha = \alpha_1+\alpha_2&lt;0.5$, Let $\underline{\theta}$ and $\overline{\theta}$ be the solutions of </p>
+<script type="math/tex; mode=display">
+\P{T\le t^*;\underline{\theta}} = 1-\alpha_2\hspace{1cm}and\hspace{1cm}\P{T\le t; \overline{\theta}}=\alpha_1</script><p>where $t^*&lt;t$ are the consecutive support values.</p>
+<p>​    Under these conditions, the interval $(\underline\theta,\overline\theta)$ is a confidence interval for $\theta$ with confidence coefficient of at least $1-\alpha$</p>
+<hr>
+<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary."></a>Summary.</h4><p>这一章应该比想象中要简单一点, 主要是有很多概念. </p>
+<p>首先介绍的就是卡方分布$\chi^2(n)$以及其对应的自由度, 事实上我不知道这个自由度和物理里的自由度有没有关联, 但现在在我看来就是一个$\chi^2(n) \sim \Gamma(\frac{n}{2},\frac12)$的关系. 接下来给出了一个卡方分布与正态分布之间的关系即$X\sim N(0,1)\Rightarrow X^2\sim\chi^2(1)$. 由于CLT的存在, 我们总可以对样本近似正态分布后去处理一些情况. 然后呢, 卡方分布实际上是对正态分布的变量取平方, 所以说卡方分布的作用是在方差上进行的. 对于样本方差$S_n^2$, 我们有非常重要的结论是$(n-1)S_n^2/\sigma^2 \sim \chi^2(n-1)$, 这个式子揭露了样本方差与真实方差的关系. </p>
+<p>接下来引入了$t$分布, 定义为$\frac{X}{(Y/n)^{1/2}} \sim t(n)$. 同样也有一个非常重要的结论是$\sqrt{n}(\overline{X_n}-\mu)/S_n \sim t(n-1)$. 至于这个东西的用处稍等再说. </p>
+<p>最后是引入了$F$分布, 定义为$\frac{X/m}{Y/n} \sim F(m,n)$. 这个分布我并不知道他有什么用(至少没学到)… 但在计算上来看, 他的$k$阶矩是易求的, 原因是卡方分布的$k$阶矩是很好求得的. 给出一个结论是</p>
+<script type="math/tex; mode=display">
+\E{Z^k} = \frac{n^k}{m^k}\E{X^k}\E{Y^{-k}} = \frac{n^k}{m^k} \frac{\Gamma(\frac{n}{2}+k)}{\Gamma(\frac{n}2)}\cdot \frac{\Gamma(\frac{m}2-k)}{\Gamma(\frac{m}2)}</script><p>在给出三大分布之后, 我们介绍了confidence interval这个概念. 即给出一个区间$(L,U)$使得以参数$\theta$为变量的实函数$g(\cdot)$，对给定的$1-\alpha$,有 </p>
+<script type="math/tex; mode=display">
+\P{L\le g(\theta)\le U} = 1-\alpha</script><p>其中$L, U$都是测量量. 即对某组$\mathbf{X}$来说, $L=L(\mathbf{X})$ 及 $U = U(\mathbf{X})$. 由于CLT的存在, 我们总能将任意的分布近似到正态分布上, 而对于正态分布来说, 如果我们要通过一组测量量$\mathbf{X}$ 来估计参数$\mu$和$\sigma^2$, 无非就三种情况</p>
+<ol>
+<li>$\mu$未知, $\sigma^2$已知.</li>
+<li>$\mu$未知, $\sigma^2$未知.</li>
+<li>$\mu$已知, $\sigma^2$未知.</li>
+</ol>
+<p>先梳理我们已知的几个通用信息, 首先有最基本的$\overline{X_n} \sim N(\mu,\frac{\sigma^2}{n})$，这个是我们所熟知的. 再加上我们这章所学的</p>
+<script type="math/tex; mode=display">
+\frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2(n-1)\\
+\frac{\sqrt{n}(\overline{X_n}-\mu)}{S_n} \sim t(n-1)</script><p>总共有三个分布我们可以使用.</p>
+<p>先考虑对$\mu$的估计. </p>
+<p>​    对于情况1来说, 我们考虑正态分布</p>
+<script type="math/tex; mode=display">
+\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)</script><p>​    这个式子里只有$\mu$是未知量, 可以通过这个式子来给出一个$\mu$的置信区间的估计. 适用于知道$\overline{X_n}$但不知道$S_n$的情况.</p>
+<p>​    对于情况2来说, 我们考虑$t$分布</p>
+<script type="math/tex; mode=display">
+\frac{\sqrt{n}(\overline{X_n}-\mu)}{S_n} \sim t(n-1)</script><p>​    这个式子里同样只有$\mu$是未知量, 可以通过t分布表来给出$\mu$的置信区间的估计. 适用于知道$\overline{X_n}$与$S_n$的情况, 是一种用样本方差代替总体方差的思想.</p>
+<p>再考虑对$\sigma^2$的估计. </p>
+<p>​    对于情况2来说, 我们考虑卡方分布</p>
+<script type="math/tex; mode=display">
+\frac{(n-1)S_n^2}{\sigma^2} \sim \chi^2(n-1)</script><p>​    这个式子里只有$\sigma^2$是未知量, 可以通过卡方分布表来给出$\sigma^2$的置信区间的估计. 适用于只知道$S_n$的情况.</p>
+<p>​    对于情况3来说, 我们还是可以通过正态分布</p>
+<script type="math/tex; mode=display">
+\frac{\overline{X_n}-\mu}{\sigma/\sqrt{n}} \sim N(0,1)</script><p>​    给出一个$\sigma$置信区间的估计. 适用于知道$\overline{X_n}$的情况. </p>
+<p>最后讲了一个对于离散随机变量参数的置信区间, 定义比较鬼畜, 总的来说就是对于给定的一个pmf $p(x;\theta)$, 给定一个$\alpha$及两个参数$\alpha_1+\alpha_2=\alpha&lt;0.5$, 对于某组测量量$\mathbf{X}$及对应的$\overline{x} = \overline{X_n}$, 设$\overline{x}-$是与$\overline{x}$相邻的值 有</p>
+<script type="math/tex; mode=display">
+\P{\overline{X_n}\le \overline{x}-;\underline\theta} = 1-\alpha_1\\
+\P{\overline{X_n}\le \overline{x};\overline\theta} = \alpha_2</script><p>如此求得的$(\underline\theta,\overline{\theta})$便被称为参数的置信区间.</p>
 ]]></content>
       <categories>
         <category>Probability and Statistics</category>
