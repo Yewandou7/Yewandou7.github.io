@@ -23,7 +23,7 @@
   
   
 
-  <title>PS chapter 2 | Yewandou's Blog</title>
+  <title>依概率分布的一些判定 | Yewandou's Blog</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/27/PS-chapter-2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/10/%E4%BE%9D%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PS chapter 2
+          依概率分布的一些判定
         </h1>
 
         <div class="post-meta">
@@ -191,16 +191,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-11-27 14:18:23" itemprop="dateCreated datePublished" datetime="2021-11-27T14:18:23+08:00">2021-11-27</time>
+              <time title="创建时间：2021-12-10 16:39:40 / 修改时间：18:21:14" itemprop="dateCreated datePublished" datetime="2021-12-10T16:39:40+08:00">2021-12-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-05 14:10:00" itemprop="dateModified" datetime="2021-12-05T14:10:00+08:00">2021-12-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -217,14 +211,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.2k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -256,63 +250,89 @@
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\Bias}{\mathrm{Bias}}
 \renewcommand{\t}{\times}
-\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}</script><h3 id="2-Conditional-Probability"><a href="#2-Conditional-Probability" class="headerlink" title="2. Conditional Probability"></a>2. Conditional Probability</h3><h4 id="2-1-The-Definition-of-Condition-Probability"><a href="#2-1-The-Definition-of-Condition-Probability" class="headerlink" title="2.1 The Definition of Condition Probability"></a>2.1 The Definition of Condition Probability</h4><p> A major use of probability in statistical inference is the updating of probability when certain events are observed. The updated probability of event $A$ after we learn that event $B$ has occurred is the conditional probability of $A$ given $B$.</p>
-<h6 id="Definition-2-1"><a href="#Definition-2-1" class="headerlink" title="Definition 2.1."></a>Definition 2.1.</h6><p>The <strong>condition probability</strong> of $A$ given $B$ is defined as </p>
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pc}{\stackrel{p}{\longrightarrow}}
+\newcommand{\dc}{\stackrel{d}{\longrightarrow}}</script><script type="math/tex; mode=display">
+</script><p>123</p>
 <script type="math/tex; mode=display">
-\P{A|B} = \frac{\P{A\cap B}}{\P{B}}</script><p> provided <script type="math/tex">\P{B} >0</script>.</p>
-<p>​    And the conditional probability <script type="math/tex">\P{A|B}</script> is not defined if <script type="math/tex">\P{B}=0</script>.</p>
-<h6 id="Theorem-2-1-Multiplication-Rule"><a href="#Theorem-2-1-Multiplication-Rule" class="headerlink" title="Theorem 2.1 (Multiplication Rule)."></a>Theorem 2.1 (Multiplication Rule).</h6><p>Let $A$, $B$ be events. If <script type="math/tex">\P{B}>0</script>, then </p>
-<script type="math/tex; mode=display">
-\P{A\cap B} =\P{A|B}\P{B}</script><h6 id="Theorem-2-2"><a href="#Theorem-2-2" class="headerlink" title="Theorem 2.2."></a>Theorem 2.2.</h6><p>Suppose that $A_1,A_2,\cdots,A_n$ are events such that <script type="math/tex">\P{A_1\cap A_2\cap\cdots\cap A_{n-1}} >0</script>. Then </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2 \cap\cdots\cap A_n} = \P{A_1}\P{A_2|A_1}\cdots\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}}</script><h6 id="Theorem-2-3"><a href="#Theorem-2-3" class="headerlink" title="Theorem 2.3."></a>Theorem 2.3.</h6><p>Suppose that $A_1,A_2,\cdots A_n$, $B$ are events such that <script type="math/tex">\P{B}>0</script> and <script type="math/tex">\P{A_1\cap A_2\cap\cdots \cap A_{n-1}|B}>0</script>. Then </p>
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}t} \left(#1\right)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\renewcommand{\P}[1]{\mathbf{P}(#1)}
+% \newcommand{\E}[1]{\mathbf{E}(#1)}
+\newcommand{\E}[1]{\mathrm{E}\left(#1\right)}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+\renewcommand{\t}{\times}
+\newcommand{\p}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pc}{\stackrel{p}{\longrightarrow}}
+\newcommand{\dc}{\stackrel{d}{\longrightarrow}}</script><p>最近做作业里用到了依概率分布的四则运算, 不过并没有找到证明, 自己查了查搞了搞算是会用了. 我们要考虑两个随机变量列$X_n$和$Y_n$, 设其收敛到$X$和$Y$, 即</p>
 <script type="math/tex; mode=display">
 \begin{align*}
-\P{A_1\cap A_2 \cap\cdots\cap A_n|B} =& \P{A_1|B}\P{A_2|A_1\cap B} \cdots\\
-&\times\P{A_n|A_1\cap A_2\cap\cdots\cap A_{n-1}\cap B}
-\end{align*}</script><h6 id="Definition-2-2"><a href="#Definition-2-2" class="headerlink" title="Definition 2.2."></a>Definition 2.2.</h6><p>Let $\Omega$ be a sample space and let $B_1, \cdots B_k$ be $k$ events in $\Omega$. If $B_1,\cdots,B_k$ are disjoint and $\cup_{j=1}^k B_j = \Omega$, then these events form a <strong>partition</strong> of $\Omega$. </p>
-<h6 id="Theorem-2-4-Low-of-total-probability"><a href="#Theorem-2-4-Low-of-total-probability" class="headerlink" title="Theorem 2.4 (Low of total probability)."></a>Theorem 2.4 (Low of total probability).</h6><p>Suppose that $B_1,\cdots,B_k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_j}>0</script> for all $j$. Then for every event $A \subset \Omega$, </p>
+X_n &\pc X\\
+Y_n &\pc y
+\end{align*}</script><h6 id="定理1"><a href="#定理1" class="headerlink" title="定理1"></a>定理1</h6><p>若<script type="math/tex">X_n \pc X</script>, <script type="math/tex">Y_n \pc Y</script>, 则<script type="math/tex">X_n+Y_n \pc X+Y</script></p>
+<p>$Proof.$考虑绝对值不等式, 有</p>
 <script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><p>$Proof.$ We can rewrite $A$ as </p>
+|(X_n+Y_n) - (X+Y)| \le |X_n-X|+|Y_n-Y|</script><p>考虑概率函数$P$是单调的, 对于任意给定的$\varepsilon&gt;0$, 都有</p>
 <script type="math/tex; mode=display">
-A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </p>
+\begin{align*}
+\P{|(X_n+Y_n)-(X+Y)| \geq \varepsilon} &\le \P{|X_n-X|+|Y_n-Y|\ge \varepsilon}\\
+&\le \P{|X_n-X|\ge \frac{\varepsilon}{2}} + \P{|Y_n-Y|\ge \frac{\varepsilon}{2}}
+\end{align*}</script><p>由于后两项是趋于0的, 所以不等式左侧是趋于0的, 所以说<script type="math/tex">X_n+Y_n \pc X+Y</script>, 证毕.</p>
+<h6 id="定理2"><a href="#定理2" class="headerlink" title="定理2"></a>定理2</h6><p>若<script type="math/tex">X_n \pc X</script>, <script type="math/tex">Y_n \pc Y</script>, 则<script type="math/tex">X_n-Y_n \pc X-Y</script>.</p>
+<p>$Proof.$ 同理定理1, 略.</p>
+<h6 id="定理3"><a href="#定理3" class="headerlink" title="定理3"></a>定理3</h6><p>若<script type="math/tex">X_n \pc X</script>, 且函数$f$连续, 则<script type="math/tex">f(X_n) \pc f(X)</script></p>
+<p>$Proof$. 对$\forall \delta&gt;0$, $\exists T&gt;0$, 使得当$|X|&gt;\frac{T}2$时, 有<script type="math/tex">\P{|X|>\frac{T}2} < \frac\delta6</script>. 又对$\frac{T}{2}$, $\exists N_1$, 当$n&gt;N_1$时, 有<script type="math/tex">\P{|X_n-X|>\frac{T}{2}} < \frac{\delta}6</script>, 则当$n&gt;N_1$时有</p>
 <script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j\cap A} = \sum_{j=1}^k \P{B_j}\P{A|B_j}</script><h6 id="Theorem-2-5"><a href="#Theorem-2-5" class="headerlink" title="Theorem 2.5."></a>Theorem 2.5.</h6><p>The law of total probability has an analog conditional on another event $C$ </p>
+\P{|X_n| \geq T}\le \P{|X_n-X|>\frac{T}2} + \P{|X|>\frac{T}2}< \frac{\delta}{3}</script><p>考虑到$f$在$[-T,T]$上一致连续, 则对$\varepsilon&gt;0$, $\exists \varepsilon_1&gt;0$, 使当$x_1,x_2\in[-T,T]$且$|x_1-x_2|&lt;\varepsilon_1$时, 有$|f(x_1)-f(x_2)|&lt;\varepsilon$. 则当$|f(x_2)-f(x_1)|\geq \varepsilon$时, $|x_2-x_1|\geq \varepsilon_1$. 则</p>
 <script type="math/tex; mode=display">
-\P{A|C} = \sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C}</script><p>$Proof.$ Consider </p>
+\begin{align*}
+\P{|f(X_n)-f(X)|\geq \varepsilon} \le& \P{|f(X_n)-f(X)|\ge \varepsilon\big||X|, |X_n|<T} \\
+&+\P{|X|>T} + \P{|X_n|>T}
+\end{align*}</script><p>接下来考虑每一项, <script type="math/tex">\P{|X|>T}</script>和<script type="math/tex">\P{|X_n|>T}</script>都通过上面的方式控制在了$\delta$内, 我们只用考虑第一项, 我们有</p>
 <script type="math/tex; mode=display">
-\P{B_j|C}\P{A|B_j\cap C} = \frac{\P{B_j \cap C}\P{A\cap B_j \cap C}}{\P{C} \P{B_j\cap C}} = \P{A\cap B_j|C}</script><p>Thus </p>
+\begin{align*}
+\P{|f(X_n)-f(X)|\ge \varepsilon\big||X|, |X_n|<T} =\P{|X-X_n|\geq \varepsilon_1}
+\end{align*}</script><p>右侧可以通过控制$n$使得这一项也在$\delta$内, 我们就证明了</p>
 <script type="math/tex; mode=display">
-\sum_{j=1}^k \P{B_j|C}\P{A|B_j\cap C} = \sum_{j=1}^k \frac{\P{A\cap C\cap B_j}}{\P{C}} = \frac{\P{A\cap C}}{\P{C}} = \P{A|C}</script><h4 id="2-2-Independent-Events"><a href="#2-2-Independent-Events" class="headerlink" title="2.2 Independent Events."></a>2.2 Independent Events.</h4><p>If learning that $B$ has occurred does not change the probability of $A$, then we say that $A$ and $B$ are independent.</p>
-<h6 id="Definition-2-3"><a href="#Definition-2-3" class="headerlink" title="Definition 2.3."></a>Definition 2.3.</h6><p>Two events $A$ and $B$ are <strong>independent</strong> if </p>
+\lim\limits_{n\to\infty} \P{|f(X_n)-f(X)|\ge \varepsilon} =0</script><p>即<script type="math/tex">f(X_n) \pc f(X)</script>, 证毕.</p>
+<h6 id="定理4"><a href="#定理4" class="headerlink" title="定理4"></a>定理4</h6><p>若<script type="math/tex">X_n\pc X</script>, <script type="math/tex">Y_n \pc Y</script>, 则<script type="math/tex">X_nY_n\pc XY</script>.</p>
+<p>$Proof.$ 考虑</p>
 <script type="math/tex; mode=display">
-\P{A\cap B} = \P{A}\P{B}</script><h6 id="Theorem-2-6"><a href="#Theorem-2-6" class="headerlink" title="Theorem 2.6."></a>Theorem 2.6.</h6><p>Suppose <script type="math/tex">\P{B}>0</script> or <script type="math/tex">\P{A}>0</script>. Then $A$ and $B$ are independent if and only if <script type="math/tex">\P{A|B} = \P{A}</script> or <script type="math/tex">\P{B|A} = \P{B}</script>, respectively.</p>
-<h6 id="Theorem-2-7"><a href="#Theorem-2-7" class="headerlink" title="Theorem 2.7."></a>Theorem 2.7.</h6><p>If $A$ and $B$ are independent, then $A$ and $B^c$ are also independent.</p>
-<p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{A\cap B^c} = \P{A} - \P{A\cap B} = \P{A}(1-\P{B}) = \P{A}\P{B^c}</script><h6 id="Definition-2-4-Mutually-independent"><a href="#Definition-2-4-Mutually-independent" class="headerlink" title="Definition 2.4 (Mutually independent)."></a>Definition 2.4 (Mutually independent).</h6><p>The $k$ events $A_1,\cdots,A_k$ are <strong>mutually independent</strong> if for any subset <script type="math/tex">\mathcal{M} \subset \{1,\cdots,k\}</script>, </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{j \in \mathcal{M}}A_j} = \prod_{j \in \mathcal{M}} \P{A_j}</script><p>​    Note: The arbitrariness of $\mathcal{M}$ is very important for mutually independent. We can give a conquer  example to show that although $A_j$ are <strong>pairwise independent</strong>, $A_j$ are not mutually independent.</p>
-<h6 id="Theorem-2-8"><a href="#Theorem-2-8" class="headerlink" title="Theorem 2.8."></a>Theorem 2.8.</h6><p>Let $A_i (i=1,\cdots,k)$ be events that <script type="math/tex">\P{\cap_{i=1}^k A_i}>0</script>. Then $A_i$ are independent if and only if for every two joint subsets $\mathcal{I},\mathcal{J}\subset\{1,\cdots,k\}$, $\mathcal{I}\cap\mathcal{J}=\varnothing$, we have </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}}A_i|\bigcap_{j\in\mathcal{J}}A_j} = \P{\bigcap_{i\in\mathcal{I}} A_i}.</script><p>​    This theorem says that $k$ events are independent if and only if learning that some of the events occur does not change the probability that any combination of the other event occur.</p>
-<h6 id="Definition-2-5"><a href="#Definition-2-5" class="headerlink" title="Definition 2.5."></a>Definition 2.5.</h6><p>We say that event $A_i (i=1,\cdots,k)$ are <strong>conditionally independent</strong> given $B$ if for every subcollection $\mathcal{I} \subset\{1,\cdots,k\}$, </p>
-<script type="math/tex; mode=display">
-\P{\bigcap_{i\in\mathcal{I}} A_i|B} = \prod_{i\in\mathcal{I}} \P{A_i|B}</script><p>​    Note: The definition is identical to that of independent events with modification that all probabilities are now conditional on B. It is important that even if we assume $A_i$ are conditionally independent given $B$, it is <strong>not</strong> necessary that $A_i$ are conditionally independent given $B^c$ </p>
-<h6 id="Theorem-2-10"><a href="#Theorem-2-10" class="headerlink" title="Theorem 2.10."></a>Theorem 2.10.</h6><p>Suppose that $A_1, A_2$ and $B$ are events such that <script type="math/tex">\P{A_1\cap B}>0</script>. Then $A_1$ and $A_2$ are conditionally independent given $B$ if and only if <script type="math/tex">\P{A_2|A_1\cap B} = \P{A_2|B}</script></p>
-<p>$Proof.$ If $A_1$ and $A_2$ are independent </p>
-<script type="math/tex; mode=display">
-\P{A_1\cap A_2|B} = \P{A_1|B} \P{A_2|B}</script><p>consider that  <script type="math/tex">\P{A_1\cap A_2 |B} = \P{A_1\cap B}\P{A_2|A_1\cap B}</script>. Comparing could proves the theorem.</p>
-<h4 id="2-3-Bayes’-Theorem"><a href="#2-3-Bayes’-Theorem" class="headerlink" title="2.3. Bayes’ Theorem"></a>2.3. Bayes’ Theorem</h4><h6 id="Theorem-2-11-Bayes’-Theorem"><a href="#Theorem-2-11-Bayes’-Theorem" class="headerlink" title="Theorem 2.11 (Bayes’ Theorem)."></a>Theorem 2.11 (Bayes’ Theorem).</h6><p>Let $B_i$ for $i=1,\cdots,k$ form a partition of the space $\Omega$ and <script type="math/tex">\P{B_i}>0</script> for all $i$. Let $A$ be an event such that <script type="math/tex">\P{A}>0</script>, then for all $i$:</p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i}\P{A|B_i}}{\sum_{j=1}^k\P{B_j}\P{A|B_j}}</script><p>$Proof.$ Consider </p>
-<script type="math/tex; mode=display">
-\P{B_i|A} = \frac{\P{B_i \cap A}}{\P{A}} = \frac{\P{B_i}\P{A|B_i}}{\P{A}}</script><p>and </p>
-<script type="math/tex; mode=display">
-\P{A} = \sum_{j=1}^k \P{B_j} \P{A|B_j}</script><p>Which proves the theorem.</p>
+X_nY_n = \frac12X_n^2+\frac12Y_n^2-\frac12(X_n-Y_n)^2</script><p>应用定理3考虑$f(\cdot) =\cdot^2$, 证毕.</p>
+<h6 id="定理5"><a href="#定理5" class="headerlink" title="定理5"></a>定理5</h6><p>若<script type="math/tex">X_n\pc X</script>, <script type="math/tex">Y_n \pc Y</script>, 则<script type="math/tex">X_n/Y_n \pc X/Y</script>. <script type="math/tex">(Y, Y_n\neq 0)</script></p>
+<p>$Proof.$ 我们可以先证明<script type="math/tex">1/Y_n \pc 1/Y</script>, 应用定理3考虑$f(\cdot)=\frac1\cdot$, 引理得证. 再运用定理4, 则原命题得证.</p>
 <hr>
-<h4 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h4><p>这一章围绕着条件概率展开, 主要研究的是如果某些events被观测到后, 其余event的概率会发生怎样的变化. 接下来就按照是否会发生影响来定义了事件的相互独立, 以及类似地 mutually independent 和 conditionally independent (这两个是对一个序列的事件而言的). 以及给出了一个很常用的定理Bayes’ Theorem, 这个定理给出了一个<strong>prior probability</strong>与<strong>posterior probability</strong>的关系, 因此也会带来很多反直觉的结果. 应用这个定理时最重要的时要确定每一步的过程的条件究竟是什么样的, 否则必然带来一些奇怪的错误. </p>
-
+<p>至此, 我们便完成了对依概率分布四则运算的证明, 有亿点麻烦, 但结论才是重要的.</p>
+<hr>
+<p>我们的问题实际上是判别一个estimator是否是consistent的, 除去定义和四则运算之外, 我们还有一个很有用的定理是</p>
+<h6 id="定理6"><a href="#定理6" class="headerlink" title="定理6"></a>定理6</h6><p>对于给定的$X_n$, $X$ 若满足</p>
+<script type="math/tex; mode=display">
+\lim\limits_{n\to\infty} \E{X_n} = X\hspace{1cm}and\hspace{1cm}\lim\limits_{n\to\infty}\Var(X_n)=0</script><p>则有<script type="math/tex">X_n \pc X</script></p>
+<p>$Proof.$ 我们应用切比雪夫不等式, 有</p>
+<script type="math/tex; mode=display">
+\P{|X_n-\E{X_n}| \geq \frac\varepsilon{2}} \leq \frac{4\Var(X_n)}{\varepsilon^2}</script><p>我们考虑</p>
+<script type="math/tex; mode=display">
+|X_n-X|\le |X_n-\E{X_n}| + |\E{X_n}-X|</script><p>当<script type="math/tex">|X_n-\E{X_n}|<\frac{\varepsilon}2</script>时, 我们可以控制$n$使得<script type="math/tex">|\E{X_n}-X|<\frac\varepsilon2</script>, 那么相当于是对于任意给定的$\varepsilon$, 对于充分大的$n$而言, 只要<script type="math/tex">|X_n-\E{X_n}|<\frac{\varepsilon}2</script>, 一定有$|X_n-X|&lt;\varepsilon$, 那么就说明了对充分大的$n$</p>
+<script type="math/tex; mode=display">
+\{|X_n-X|\ge \varepsilon\} \subset\{|X_n-\E{X_n}|\ge\varepsilon\}</script><p>那么</p>
+<script type="math/tex; mode=display">
+\P{|X_n-X|\geq\varepsilon}\le\P{|X_n-\E{X_n}|\ge\frac\varepsilon2} \le \frac{4\Var(X_n)}{\varepsilon^2}</script><p>即证明了</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty} \P{|X_n-X|\ge\varepsilon} =0</script><p>即</p>
+<script type="math/tex; mode=display">
+X_n\pc X</script>
     </div>
 
     
@@ -330,13 +350,10 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/11/27/PS%20chapter%201/" rel="prev" title="PS chapter 1">
-      <i class="fa fa-chevron-left"></i> PS chapter 1
+    <a href="/2021/12/02/PS-chapter-8/" rel="prev" title="PS chapter 8">
+      <i class="fa fa-chevron-left"></i> PS chapter 8
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/11/27/PS-chapter-3/" rel="next" title="PS chapter 3">
-      PS chapter 3 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -395,7 +412,7 @@ A = (B_1 \cap A) \cup (B_2\cap A) \cup\cdots \cup(B_k \cap A)</script><p>Thus </
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Conditional-Probability"><span class="nav-number">1.</span> <span class="nav-text">2. Conditional Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-The-Definition-of-Condition-Probability"><span class="nav-number">1.1.</span> <span class="nav-text">2.1 The Definition of Condition Probability</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-1"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Definition 2.1.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-1-Multiplication-Rule"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Theorem 2.1 (Multiplication Rule).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-2"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">Theorem 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-3"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">Theorem 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-2"><span class="nav-number">1.1.0.5.</span> <span class="nav-text">Definition 2.2.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-4-Low-of-total-probability"><span class="nav-number">1.1.0.6.</span> <span class="nav-text">Theorem 2.4 (Low of total probability).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-5"><span class="nav-number">1.1.0.7.</span> <span class="nav-text">Theorem 2.5.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-Independent-Events"><span class="nav-number">1.2.</span> <span class="nav-text">2.2 Independent Events.</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-3"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Definition 2.3.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-6"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Theorem 2.6.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-7"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">Theorem 2.7.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-4-Mutually-independent"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">Definition 2.4 (Mutually independent).</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-8"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">Theorem 2.8.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Definition-2-5"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">Definition 2.5.</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-10"><span class="nav-number">1.2.0.7.</span> <span class="nav-text">Theorem 2.10.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.</span> <span class="nav-text">2.3. Bayes’ Theorem</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Theorem-2-11-Bayes%E2%80%99-Theorem"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">Theorem 2.11 (Bayes’ Theorem).</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%861"><span class="nav-number">1.</span> <span class="nav-text">定理1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%862"><span class="nav-number">2.</span> <span class="nav-text">定理2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%863"><span class="nav-number">3.</span> <span class="nav-text">定理3</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%864"><span class="nav-number">4.</span> <span class="nav-text">定理4</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%865"><span class="nav-number">5.</span> <span class="nav-text">定理5</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%AE%9A%E7%90%866"><span class="nav-number">6.</span> <span class="nav-text">定理6</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
